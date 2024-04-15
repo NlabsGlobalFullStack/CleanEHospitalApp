@@ -1,0 +1,6 @@
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Persistance\obj\Debug\net8.0\eHospitalServer.Persistance.csproj.AssemblyReference.cache
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Persistance\obj\Debug\net8.0\eHospitalServer.Persistance.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Persistance\obj\Debug\net8.0\eHospitalServer.Persistance.AssemblyInfoInputs.cache
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Persistance\obj\Debug\net8.0\eHospitalServer.Persistance.AssemblyInfo.cs
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Persistance\obj\Debug\net8.0\eHospitalServer.Persistance.csproj.CoreCompileInputs.cache
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Persistance\obj\Debug\net8.0\eHospitalServer.Persistance.sourcelink.json
