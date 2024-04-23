@@ -4,14 +4,14 @@
     "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Infrastructure\\eHospitalServer.Infrastructure.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Infrastructure\\eHospitalServer.Infrastructure.csproj": {
+    "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Infrastructure\\eHospitalServer.Infrastructure.csproj",
-        "projectName": "eHospitalServer.Infrastructure",
-        "projectPath": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Infrastructure\\eHospitalServer.Infrastructure.csproj",
+        "projectUniqueName": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj",
+        "projectName": "eHospitalServer.Domain",
+        "projectPath": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj",
         "packagesPath": "C:\\Users\\root\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Infrastructure\\obj\\",
+        "outputPath": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\root\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -44,6 +44,94 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Ardalis.SmartEnum": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Infrastructure\\eHospitalServer.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Infrastructure\\eHospitalServer.Infrastructure.csproj",
+        "projectName": "eHospitalServer.Infrastructure",
+        "projectPath": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Infrastructure\\eHospitalServer.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\root\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\root\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj": {
+                "projectPath": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.Extensions.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.8.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

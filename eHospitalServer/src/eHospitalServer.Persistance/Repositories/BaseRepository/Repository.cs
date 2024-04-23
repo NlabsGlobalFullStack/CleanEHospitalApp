@@ -125,6 +125,6 @@ public class Repository<T, Context> : IRepository<T>
 
     public IQueryable<T> WhereWithTracking(Expression<Func<T, bool>> predicate)
     {
-        throw new NotImplementedException();
+        return _entity.Where(predicate).AsQueryable();
     }
 }

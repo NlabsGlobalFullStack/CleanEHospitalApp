@@ -1,14 +1,9 @@
 ﻿using eHospitalServer.Domain.Abstraction;
 
 namespace eHospitalServer.Domain.Entities;
-public sealed class Patient : Entity
+public class Patient : Personal
 {
-    public string FirstName { get; set; } = string.Empty;
-    public string LastName { get; set; } = string.Empty;
-    public string FullName => string.Join(" ", FirstName, LastName);
-    public string IdentityNumber { get; set; } = string.Empty;
-    public string City { get; set; } = string.Empty;
-    public string Town { get; set; } = string.Empty;
-    public string Distrcit { get; set; } = string.Empty;
-    public string FullAddress { get; set; } = string.Empty;
+    public ICollection<Appointment>? Appointments { get; set; }
+    public ICollection<RoomAction>? RoomActions { get; set; }
+    public ICollection<VehicleMission>? VehicleMissions { get; set; }
 }

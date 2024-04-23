@@ -2,6 +2,4 @@
 using eHospitalServer.Domain.Repositories.DefaultRepositories;
 
 namespace eHospitalServer.Domain.Repositories;
-public interface IEmployeeRepository : IRepository<Employee>
-{
-}
+public interface IEmployeeRepository : IRepository<Employee> {}

@@ -2,6 +2,4 @@
 using eHospitalServer.Domain.Repositories.DefaultRepositories;
 
 namespace eHospitalServer.Domain.Repositories;
-public interface IAnnouncementRepository : IRepository<Announcement>
-{
-}
+public interface IAnnouncementRepository : IRepository<Announcement> {}

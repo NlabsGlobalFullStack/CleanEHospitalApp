@@ -4,3 +4,15 @@ D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Persistan
 D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Persistance\obj\Debug\net8.0\eHospitalServer.Persistance.AssemblyInfo.cs
 D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Persistance\obj\Debug\net8.0\eHospitalServer.Persistance.csproj.CoreCompileInputs.cache
 D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Persistance\obj\Debug\net8.0\eHospitalServer.Persistance.sourcelink.json
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Persistance\bin\Debug\net8.0\eHospitalServer.Persistance.deps.json
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Persistance\bin\Debug\net8.0\eHospitalServer.Persistance.runtimeconfig.json
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Persistance\bin\Debug\net8.0\eHospitalServer.Persistance.dll
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Persistance\bin\Debug\net8.0\eHospitalServer.Persistance.pdb
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Persistance\bin\Debug\net8.0\eHospitalServer.Domain.dll
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Persistance\bin\Debug\net8.0\eHospitalServer.Domain.pdb
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Persistance\obj\Debug\net8.0\eHospita.7E889A0F.Up2Date
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Persistance\obj\Debug\net8.0\eHospitalServer.Persistance.dll
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Persistance\obj\Debug\net8.0\refint\eHospitalServer.Persistance.dll
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Persistance\obj\Debug\net8.0\eHospitalServer.Persistance.pdb
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Persistance\obj\Debug\net8.0\eHospitalServer.Persistance.genruntimeconfig.cache
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Persistance\obj\Debug\net8.0\ref\eHospitalServer.Persistance.dll

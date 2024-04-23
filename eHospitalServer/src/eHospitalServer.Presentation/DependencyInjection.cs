@@ -1,5 +1,7 @@
 ﻿using eHospitalServer.Application;
+using eHospitalServer.Infrastructure.Utilities;
 using eHospitalServer.Persistance;
+using eHospitalServer.Presentation.Middlewares;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -19,8 +21,18 @@ public static class DependencyInjection
             });
         });
 
-        services.AddApplication();
+        services.AddExceptionHandler<ExceptionMiddleware>();
+        services.AddProblemDetails();
+
+        services.AddApplication(configuration);
+
         services.AddPersistance(configuration);
+
+        //ServiceTool
+        services.CreateServiceTool();
+        //ServiceTool
+
+        services.AddTransient<ExceptionMiddleware>();
 
         return services;
     }

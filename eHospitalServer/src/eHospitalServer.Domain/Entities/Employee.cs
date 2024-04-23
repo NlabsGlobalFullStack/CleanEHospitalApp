@@ -2,12 +2,12 @@
 using eHospitalServer.Domain.Enums;
 
 namespace eHospitalServer.Domain.Entities;
-public sealed class Employee : Entity
+public class Employee : Personal
 {
-    public string FirstName { get; set; } = string.Empty;
-    public string LastName { get; set; } = string.Empty;
-    public string FullName => string.Join(" ", FirstName, LastName);
-    public EmployeePositionEnum Position { get; set; } = EmployeePositionEnum.Janitor;
     public DepartmentEnum Department { get; set; } = DepartmentEnum.Emergency;
-    public bool IsActive { get; set; } = true;
+    public EmployeePositionEnum Position { get; set; } = EmployeePositionEnum.Driver;
+
+    public ICollection<RoomAction>? RoomActions { get; set; }
+    public ICollection<VehicleAction>? VehicleActions { get; set; }
+    public ICollection<VehicleMission>? VehicleMissions { get; set; }
 }

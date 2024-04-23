@@ -1,0 +1,16 @@
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Infrastructure\bin\Debug\net8.0\eHospitalServer.Infrastructure.deps.json
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Infrastructure\bin\Debug\net8.0\eHospitalServer.Infrastructure.dll
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Infrastructure\bin\Debug\net8.0\eHospitalServer.Infrastructure.pdb
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Infrastructure\obj\Debug\net8.0\eHospitalServer.Infrastructure.csproj.AssemblyReference.cache
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Infrastructure\obj\Debug\net8.0\eHospitalServer.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Infrastructure\obj\Debug\net8.0\eHospitalServer.Infrastructure.AssemblyInfoInputs.cache
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Infrastructure\obj\Debug\net8.0\eHospitalServer.Infrastructure.AssemblyInfo.cs
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Infrastructure\obj\Debug\net8.0\eHospitalServer.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Infrastructure\obj\Debug\net8.0\eHospitalServer.Infrastructure.sourcelink.json
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Infrastructure\obj\Debug\net8.0\eHospitalServer.Infrastructure.dll
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Infrastructure\obj\Debug\net8.0\refint\eHospitalServer.Infrastructure.dll
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Infrastructure\obj\Debug\net8.0\eHospitalServer.Infrastructure.pdb
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Infrastructure\obj\Debug\net8.0\ref\eHospitalServer.Infrastructure.dll
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Infrastructure\bin\Debug\net8.0\eHospitalServer.Domain.dll
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Infrastructure\bin\Debug\net8.0\eHospitalServer.Domain.pdb
+D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Infrastructure\obj\Debug\net8.0\eHospita.6A2E9BBE.Up2Date

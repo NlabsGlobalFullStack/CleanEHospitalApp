@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eHospitalServer.Application", "eHospitalServer.Application\eHospitalServer.Application.csproj", "{B7C729D2-F7A7-47D9-9F2E-50F35D37327D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eHospitalServer.Domain", "eHospitalServer.Domain\eHospitalServer.Domain.csproj", "{21F5179F-AE0A-448A-B20A-007DF26C3619}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eHospitalServer.Infrastructure", "eHospitalServer.Infrastructure\eHospitalServer.Infrastructure.csproj", "{170A38E4-E2CE-4395-B65A-2EED9358A584}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eHospitalServer.Persistance", "eHospitalServer.Persistance\eHospitalServer.Persistance.csproj", "{585541D8-6A00-4CD0-98B0-5AFA6EE18425}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eHospitalServer.Presentation", "eHospitalServer.Presentation\eHospitalServer.Presentation.csproj", "{5C88DDAF-D4AC-472E-9AAC-D51B778F793F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eHospitalServer.WebAPI", "eHospitalServer.WebAPI\eHospitalServer.WebAPI.csproj", "{6B66A14C-7B50-48A6-BB6F-19486B41D425}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7C729D2-F7A7-47D9-9F2E-50F35D37327D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7C729D2-F7A7-47D9-9F2E-50F35D37327D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7C729D2-F7A7-47D9-9F2E-50F35D37327D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7C729D2-F7A7-47D9-9F2E-50F35D37327D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21F5179F-AE0A-448A-B20A-007DF26C3619}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21F5179F-AE0A-448A-B20A-007DF26C3619}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21F5179F-AE0A-448A-B20A-007DF26C3619}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21F5179F-AE0A-448A-B20A-007DF26C3619}.Release|Any CPU.Build.0 = Release|Any CPU
+		{170A38E4-E2CE-4395-B65A-2EED9358A584}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{170A38E4-E2CE-4395-B65A-2EED9358A584}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{170A38E4-E2CE-4395-B65A-2EED9358A584}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{170A38E4-E2CE-4395-B65A-2EED9358A584}.Release|Any CPU.Build.0 = Release|Any CPU
+		{585541D8-6A00-4CD0-98B0-5AFA6EE18425}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{585541D8-6A00-4CD0-98B0-5AFA6EE18425}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{585541D8-6A00-4CD0-98B0-5AFA6EE18425}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{585541D8-6A00-4CD0-98B0-5AFA6EE18425}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C88DDAF-D4AC-472E-9AAC-D51B778F793F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C88DDAF-D4AC-472E-9AAC-D51B778F793F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C88DDAF-D4AC-472E-9AAC-D51B778F793F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C88DDAF-D4AC-472E-9AAC-D51B778F793F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B66A14C-7B50-48A6-BB6F-19486B41D425}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B66A14C-7B50-48A6-BB6F-19486B41D425}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B66A14C-7B50-48A6-BB6F-19486B41D425}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B66A14C-7B50-48A6-BB6F-19486B41D425}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C501FD5-1227-49ED-99B3-BD55B44FF161}
+	EndGlobalSection
+EndGlobal

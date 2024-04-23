@@ -2,11 +2,13 @@
 using eHospitalServer.Domain.Enums;
 
 namespace eHospitalServer.Domain.Entities;
-public sealed class Doctor : Entity
+public class Doctor : Personal
 {
-    public string FirstName { get; set; } = string.Empty;
-    public string LastName { get; set; } = string.Empty;
-    public string FullName => string.Join(" ", FirstName, LastName);
     public DepartmentEnum Department { get; set; } = DepartmentEnum.Emergency;
-    public DoctorSpecialtyEnum Specialt { get; set; } = DoctorSpecialtyEnum.Assistant;
+    public DoctorSpecialtyEnum Specialty { get; set; } = DoctorSpecialtyEnum.Surgeon;
+    public decimal AppointmentPrice { get; set; }
+
+    public ICollection<Appointment>? Appointments { get; set; }
+    public ICollection<RoomAction>? RoomActions { get; set; }
+    public ICollection<VehicleMission>? VehicleMissions { get; set; }
 }
