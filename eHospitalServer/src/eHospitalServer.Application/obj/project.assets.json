@@ -34,7 +34,7 @@
           }
         }
       },
-      "FluentValidation/11.9.0": {
+      "FluentValidation/11.9.1": {
         "type": "package",
         "compile": {
           "lib/net8.0/FluentValidation.dll": {
@@ -47,10 +47,10 @@
           }
         }
       },
-      "FluentValidation.DependencyInjectionExtensions/11.9.0": {
+      "FluentValidation.DependencyInjectionExtensions/11.9.1": {
         "type": "package",
         "dependencies": {
-          "FluentValidation": "11.9.0",
+          "FluentValidation": "11.9.1",
           "Microsoft.Extensions.Dependencyinjection.Abstractions": "2.1.0"
         },
         "compile": {
@@ -1081,16 +1081,16 @@
         "lib/net6.0/AutoMapper.xml"
       ]
     },
-    "FluentValidation/11.9.0": {
-      "sha512": "VneVlTvwYDkfHV5av3QrQ0amALgrLX6LV94wlYyEsh0B/klJBW7C8y2eAtj5tOZ3jH6CAVpr4s1ZGgew/QWyig==",
+    "FluentValidation/11.9.1": {
+      "sha512": "C+PqISSMdlOZZJx0Hx25atW32tv4vbpsaiQB+PLjK+ZGLzOFuHl1fUJ3Lny77mIZ31ZtYtNG0JgUjxa3wwLsWg==",
       "type": "package",
-      "path": "fluentvalidation/11.9.0",
+      "path": "fluentvalidation/11.9.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.11.9.0.nupkg.sha512",
+        "fluentvalidation.11.9.1.nupkg.sha512",
         "fluentvalidation.nuspec",
         "lib/net5.0/FluentValidation.dll",
         "lib/net5.0/FluentValidation.xml",
@@ -1106,16 +1106,16 @@
         "lib/netstandard2.1/FluentValidation.xml"
       ]
     },
-    "FluentValidation.DependencyInjectionExtensions/11.9.0": {
-      "sha512": "Ko++xvN7HUf4WlHJL6bhsybUj/uho8ApOYIdxGjpF8Ot7Fukz6LRfRJ06H0KXhWqmMHWEbu89hJbjKJHtg7b9g==",
+    "FluentValidation.DependencyInjectionExtensions/11.9.1": {
+      "sha512": "3jJbFcCWhiXhrCKFPjKihzccmosv+CleYewd2zEYS4aaUHx9zQSgOvkYbWUGTbDwJ5j2nDWE0Pr1EQ2xY4pryg==",
       "type": "package",
-      "path": "fluentvalidation.dependencyinjectionextensions/11.9.0",
+      "path": "fluentvalidation.dependencyinjectionextensions/11.9.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.dependencyinjectionextensions.11.9.0.nupkg.sha512",
+        "fluentvalidation.dependencyinjectionextensions.11.9.1.nupkg.sha512",
         "fluentvalidation.dependencyinjectionextensions.nuspec",
         "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll",
         "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml",
@@ -2481,7 +2481,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "AutoMapper >= 13.0.1",
-      "FluentValidation.DependencyInjectionExtensions >= 11.9.0",
+      "FluentValidation.DependencyInjectionExtensions >= 11.9.1",
       "MediatR >= 12.2.0",
       "Microsoft.AspNetCore.Identity >= 2.2.0",
       "Microsoft.Extensions.Configuration.Abstractions >= 8.0.0",
@@ -2495,11 +2495,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Application\\eHospitalServer.Application.csproj",
+      "projectUniqueName": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Application\\eHospitalServer.Application.csproj",
       "projectName": "eHospitalServer.Application",
-      "projectPath": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Application\\eHospitalServer.Application.csproj",
+      "projectPath": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Application\\eHospitalServer.Application.csproj",
       "packagesPath": "C:\\Users\\root\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Application\\obj\\",
+      "outputPath": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\root\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2510,17 +2510,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj": {
-              "projectPath": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj"
+            "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj": {
+              "projectPath": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj"
             },
-            "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Infrastructure\\eHospitalServer.Infrastructure.csproj": {
-              "projectPath": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Infrastructure\\eHospitalServer.Infrastructure.csproj"
+            "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Infrastructure\\eHospitalServer.Infrastructure.csproj": {
+              "projectPath": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Infrastructure\\eHospitalServer.Infrastructure.csproj"
             }
           }
         }
@@ -2546,7 +2547,7 @@
           },
           "FluentValidation.DependencyInjectionExtensions": {
             "target": "Package",
-            "version": "[11.9.0, )"
+            "version": "[11.9.1, )"
           },
           "MediatR": {
             "target": "Package",
@@ -2577,7 +2578,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

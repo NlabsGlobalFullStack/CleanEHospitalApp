@@ -1,0 +1,45 @@
+.footer {
+    background: #021222;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.link-secondary-social{
+    color: white;
+    font-size: 22px;
+    border: none;
+    border-radius: 50px;
+    transition: all ease 0.6s;
+    margin: -10px;
+}
+.link-secondary-social:hover{
+    color: white;
+    background-color: transparent;
+    border: solid 1px black;
+}
+
+.link-secondary-footer{
+    color: white;
+}
+
+.myFooter a:hover{
+    cursor: pointer;
+}
+
+.myFooter{
+    background-color: #021222;
+    color: white;
+    font-weight: bold;
+}
+
+
+.py-5{
+    color: white;
+    font-weight: bold;
+}
+.flex-column{
+    cursor: pointer;
+    color: white !important;
+    font-weight: bold;
+}

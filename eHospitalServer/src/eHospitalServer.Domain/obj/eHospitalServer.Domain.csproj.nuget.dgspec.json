@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj": {}
+    "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj": {
+    "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj",
+        "projectUniqueName": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj",
         "projectName": "eHospitalServer.Domain",
-        "projectPath": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj",
+        "projectPath": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj",
         "packagesPath": "C:\\Users\\root\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\obj\\",
+        "outputPath": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\root\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -70,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

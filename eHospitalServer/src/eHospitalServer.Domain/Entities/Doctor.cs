@@ -4,11 +4,8 @@ using eHospitalServer.Domain.Enums;
 namespace eHospitalServer.Domain.Entities;
 public class Doctor : Personal
 {
-    public DepartmentEnum Department { get; set; } = DepartmentEnum.Emergency;
-    public DoctorSpecialtyEnum Specialty { get; set; } = DoctorSpecialtyEnum.Surgeon;
+    public string DepartmentId { get; set; } = string.Empty;
+    public Department? Department { get; set; }
+    public SpecialtyEnum Specialty { get; set; } = SpecialtyEnum.Surgeon;
     public decimal AppointmentPrice { get; set; }
-
-    public ICollection<Appointment>? Appointments { get; set; }
-    public ICollection<RoomAction>? RoomActions { get; set; }
-    public ICollection<VehicleMission>? VehicleMissions { get; set; }
 }

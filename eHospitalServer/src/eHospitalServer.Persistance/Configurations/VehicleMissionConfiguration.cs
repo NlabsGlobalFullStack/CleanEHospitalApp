@@ -11,5 +11,32 @@ public sealed class VehicleMissionConfiguration : IEntityTypeConfiguration<Vehic
         builder.Property(p => p.TraveledRouteInformation).HasColumnType("varchar(260)").HasMaxLength(260);
         builder.Property(p => p.Destination).HasColumnType("varchar(260)").HasMaxLength(260);
         builder.Property(p => p.Comments).HasColumnType("varchar(500)").HasMaxLength(500);
+
+
+
+        builder.HasOne(p => p.Vehicle)
+            .WithMany(p => p.VehicleMissions)
+            .HasForeignKey(p => p.VehicleId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        builder.HasOne(p => p.Employee)
+            .WithMany(p => p.VehicleMissions)
+            .HasForeignKey(p => p.EmployeeId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        builder.HasOne(p => p.Doctor)
+            .WithMany(p => p.VehicleMissions)
+            .HasForeignKey(p => p.DoctorId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        builder.HasOne(p => p.Nurse)
+            .WithMany(p => p.VehicleMissions)
+            .HasForeignKey(p => p.NurseId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        builder.HasOne(p => p.Patient)
+            .WithMany(p => p.VehicleMissions)
+            .HasForeignKey(p => p.PatientId)
+            .OnDelete(DeleteBehavior.Restrict);
     }
 }

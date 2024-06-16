@@ -24,6 +24,6 @@ internal sealed class ConfirmEmailCommandHandler(UserManager<AppUser> userManage
         user.EmailConfirmed = true;
         await userManager.UpdateAsync(user);
 
-        return Result<string>.Succeed("Email verification is succeed");
+        return "Email verification is succeed";
     }
 }

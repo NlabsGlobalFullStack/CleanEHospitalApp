@@ -1,22 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\",
+  "WorkspaceRootPath": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E5F41B47-05B9-4F5D-AB85-17F5CB2C3F25}|src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj|d:\\projects\\test\\cleanehospitalapp\\ehospitalserver\\src\\ehospitalserver.domain\\entities\\roomaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5F41B47-05B9-4F5D-AB85-17F5CB2C3F25}|src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj|solutionrelative:src\\ehospitalserver.domain\\entities\\roomaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5F41B47-05B9-4F5D-AB85-17F5CB2C3F25}|src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj|d:\\projects\\test\\cleanehospitalapp\\ehospitalserver\\src\\ehospitalserver.domain\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5F41B47-05B9-4F5D-AB85-17F5CB2C3F25}|src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj|solutionrelative:src\\ehospitalserver.domain\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5F41B47-05B9-4F5D-AB85-17F5CB2C3F25}|src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj|d:\\projects\\test\\cleanehospitalapp\\ehospitalserver\\src\\ehospitalserver.domain\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5F41B47-05B9-4F5D-AB85-17F5CB2C3F25}|src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj|solutionrelative:src\\ehospitalserver.domain\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5F41B47-05B9-4F5D-AB85-17F5CB2C3F25}|src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj|d:\\projects\\test\\cleanehospitalapp\\ehospitalserver\\src\\ehospitalserver.domain\\entities\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5F41B47-05B9-4F5D-AB85-17F5CB2C3F25}|src\\eHospitalServer.Domain\\eHospitalServer.Domain.csproj|solutionrelative:src\\ehospitalserver.domain\\entities\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5049EE50-4BF4-4C61-A56A-95A6F60E04F3}|src\\eHospitalServer.Presentation\\eHospitalServer.Presentation.csproj|d:\\projects\\fullstack\\cleanehospitalapp\\ehospitalserver\\src\\ehospitalserver.presentation\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5049EE50-4BF4-4C61-A56A-95A6F60E04F3}|src\\eHospitalServer.Presentation\\eHospitalServer.Presentation.csproj|solutionrelative:src\\ehospitalserver.presentation\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,8 +13,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 186,
-          "SelectedChildIndex": 11,
+          "DockedWidth": 209,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -73,61 +61,26 @@
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RoomAction.cs",
-              "DocumentMoniker": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\Entities\\RoomAction.cs",
-              "RelativeDocumentMoniker": "src\\eHospitalServer.Domain\\Entities\\RoomAction.cs",
-              "ToolTip": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\Entities\\RoomAction.cs",
-              "RelativeToolTip": "src\\eHospitalServer.Domain\\Entities\\RoomAction.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Presentation\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "src\\eHospitalServer.Presentation\\Controllers\\DashboardController.cs",
+              "ToolTip": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Presentation\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "src\\eHospitalServer.Presentation\\Controllers\\DashboardController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T19:01:24.647Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Room.cs",
-              "DocumentMoniker": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\Entities\\Room.cs",
-              "RelativeDocumentMoniker": "src\\eHospitalServer.Domain\\Entities\\Room.cs",
-              "ToolTip": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\Entities\\Room.cs",
-              "RelativeToolTip": "src\\eHospitalServer.Domain\\Entities\\Room.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T18:59:12.429Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Employee.cs",
-              "DocumentMoniker": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\Entities\\Employee.cs",
-              "RelativeDocumentMoniker": "src\\eHospitalServer.Domain\\Entities\\Employee.cs",
-              "ToolTip": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\Entities\\Employee.cs",
-              "RelativeToolTip": "src\\eHospitalServer.Domain\\Entities\\Employee.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T18:59:09.661Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Doctor.cs",
-              "DocumentMoniker": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\Entities\\Doctor.cs",
-              "RelativeDocumentMoniker": "src\\eHospitalServer.Domain\\Entities\\Doctor.cs",
-              "ToolTip": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Domain\\Entities\\Doctor.cs",
-              "RelativeToolTip": "src\\eHospitalServer.Domain\\Entities\\Doctor.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T18:59:01.042Z",
+              "WhenOpened": "2024-06-16T17:42:24.275Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 186,
+          "DockedWidth": 209,
           "SelectedChildIndex": -1,
           "Children": [
             {

@@ -1,0 +1,125 @@
+<header class="navbar navbar-expand-md d-print-none">
+    <div class="container-xl">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu"
+            aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3 myLogo">
+            <a routerLink="/dashboard">
+                <img src="/assets/img/logo.png" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+            </a>
+        </h1>
+        <div class="collapse navbar-collapse" id="navbar-menu">
+            <div class="navbar">
+                <div class="container-xl">
+                    <ul class="navbar-nav">
+                        @if (user.userType === 0) {
+                            <li class="nav-item dropdown active">
+                                <a class="nav-link myLink dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
+                                  <i class="fa-solid fa-cogs me-1"></i>
+                                  <span class="nav-link-title">
+                                    General Menu
+                                  </span>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <div class="dropdown-menu-columns">
+                                    <div class="dropdown-menu-column">
+
+                                      <a class="dropdown-item myLink" routerLink="/dashboard/appointments">
+                                        Appointments
+                                      </a>
+                                      <a class="dropdown-item myLink" routerLink="/dashboard/announcements">
+                                        Announcements
+                                      </a>
+                                      <a class="dropdown-item myLink" routerLink="/dashboard/departments">
+                                        Departments
+                                      </a>
+                                      <a class="dropdown-item myLink" routerLink="/dashboard/rooms">
+                                        Rooms
+                                      </a>
+                                      <a class="dropdown-item myLink" routerLink="/dashboard/vehicles">
+                                        Vehicles
+                                      </a>
+                                      <a class="dropdown-item myLink" routerLink="/dashboard/sss">
+                                        SSS
+                                      </a>                                      
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                            <li class="nav-item active">
+                                <a class="nav-link myLink" routerLink="/dashboard/doctors">
+                                    <i class="fa-solid fa-users me-1"></i>
+                                    <span class="nav-link-title">
+                                        Doctors
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link myLink" routerLink="/dashboard/nurses">
+                                    <i class="fa-solid fa-users me-1"></i>
+                                    <span class="nav-link-title">
+                                        Nurses
+                                    </span>
+                                </a>
+                            </li>
+    
+                            <li class="nav-item active">
+                                <a class="nav-link myLink" routerLink="/dashboard/employees">
+                                    <i class="fa-solid fa-users me-1"></i>
+                                    <span class="nav-link-title">
+                                        Employees
+                                    </span>
+                                </a>
+                            </li>
+    
+                            <li class="nav-item active">
+                                <a class="nav-link myLink" routerLink="/dashboard/patients">
+                                    <i class="fa-solid fa-users me-1"></i>
+                                    <span class="nav-link-title">
+                                        Patients
+                                    </span>
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-nav flex-row order-md-last">
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown"
+                    aria-label="Open user menu">
+                    <span class="avatar avatar-sm"
+                        style="background-image: url(/assets/static/avatars/000m.jpg)"></span>
+                    <div class="d-none d-xl-block ps-2">
+                        <div>{{ auth.user.fullName }}</div>
+                        <div class="mt-1 small text-muted">
+                            @if (user.userType === 0) {
+                                Admin
+                            }
+                            @if (user.userType === 1) {
+                                Doctor
+                            }
+                            @if (user.userType === 2) {
+                                Nurse
+                            }
+                            @if (user.userType === 3) {
+                                Employee
+                            }
+                            @if (user.userType === 4) {
+                                Patient
+                            }
+                        </div>
+                    </div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                    <a  class="dropdown-item">Account</a>
+                    <a  class="dropdown-item">Inbox</a>
+                    <a  class="dropdown-item">Settings</a>
+                    <a (click)="logout()" class="dropdown-item">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

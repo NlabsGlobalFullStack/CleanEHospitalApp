@@ -2,6 +2,7 @@
 using eHospitalServer.Domain.Repositories.DefaultRepositories;
 using eHospitalServer.Persistance.Authentication;
 using eHospitalServer.Persistance.Context;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -29,7 +30,8 @@ public static class DependencyInjection
             options.Password.RequireLowercase = true;
             options.Password.RequireDigit = true;
             options.Password.RequiredLength = 6;
-        }).AddEntityFrameworkStores<AppDbContext>();
+        }).AddEntityFrameworkStores<AppDbContext>()
+        .AddDefaultTokenProviders();
 
         services.Configure<JwtOptions>(configuration.GetSection("Jwt"));
 

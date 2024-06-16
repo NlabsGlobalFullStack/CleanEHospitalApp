@@ -6,5 +6,5 @@ using eHospitalServer.Persistance.Repositories.BaseRepository;
 namespace eHospitalServer.Persistance.Repositories;
 internal sealed class AnnouncementRepository : Repository<Announcement, AppDbContext>, IAnnouncementRepository
 {
-    public AnnouncementRepository(AppDbContext context) : base(context) {}
+    public AnnouncementRepository(AppDbContext context) : base(context) { }
 }

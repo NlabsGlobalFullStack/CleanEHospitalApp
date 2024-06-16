@@ -9,9 +9,9 @@ public sealed class RolesController : ApiController
     public RolesController(IMediator mediator) : base(mediator) {}
 
     [HttpPost]
-    public async Task<IActionResult> Sync(RoleSyncCommand request, CancellationToken cancellationToken)
+    public async Task<IActionResult> Sync(CancellationToken cancellationToken)
     {
-        var response = await _mediator.Send(request, cancellationToken);
+        var response = await _mediator.Send(new RoleSyncCommand(), cancellationToken);
         return StatusCode(response.StatusCode, response);
     }
 }

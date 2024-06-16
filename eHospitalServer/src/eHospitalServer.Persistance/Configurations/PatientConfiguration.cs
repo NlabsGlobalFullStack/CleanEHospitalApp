@@ -7,16 +7,21 @@ internal class PatientConfiguration : IEntityTypeConfiguration<Patient>
 {
     public void Configure(EntityTypeBuilder<Patient> builder)
     {
-        //builder.HasMany(p => p.Appointments)
-        //    .WithOne(p => p.Patient)
-        //    .HasForeignKey(p => p.PatientId);
+        builder
+            .HasOne(d => d.User)
+            .WithOne(n => n.Patient)
+            .HasForeignKey<Patient>(d => d.UserId);
 
-        //builder.HasMany(p => p.RoomActions)
-        //    .WithOne(p => p.Patient)
-        //    .HasForeignKey(p => p.PatientId);
+        builder.HasMany(p => p.Appointments)
+            .WithOne(p => p.Patient)
+            .HasForeignKey(p => p.PatientId);
 
-        //builder.HasMany(p => p.VehicleMissions)
-        //    .WithOne(p => p.Patient)
-        //    .HasForeignKey(p => p.PatientId);
+        builder.HasMany(p => p.RoomActions)
+            .WithOne(p => p.Patient)
+            .HasForeignKey(p => p.PatientId);
+
+        builder.HasMany(p => p.VehicleMissions)
+            .WithOne(p => p.Patient)
+            .HasForeignKey(p => p.PatientId);
     }
 }

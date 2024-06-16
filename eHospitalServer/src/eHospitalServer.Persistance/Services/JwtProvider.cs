@@ -32,11 +32,11 @@ public class JwtProvider(IUserRoleRepository userRoleRepository, RoleManager<App
 
         var claims = new List<Claim>()
         {
-            new Claim(ClaimTypes.NameIdentifier, user.Id),
-            new Claim(ClaimTypes.Name, user.FullName),
-            new Claim(ClaimTypes.Email, user.Email ?? string.Empty),
+            new Claim("Id", user.Id),
+            new Claim("Name", user.FullName),
+            new Claim("Email", user.Email ?? string.Empty),
             new Claim("UserName", user.UserName ?? string.Empty),
-            new Claim(ClaimTypes.Role, JsonSerializer.Serialize(stringRoles))
+            new Claim("Role", JsonSerializer.Serialize(stringRoles))
         };
 
         var expires = rememberMe ? DateTime.Now.AddDays(1) : DateTime.Now.AddHours(1);

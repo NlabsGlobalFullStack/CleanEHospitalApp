@@ -1,5 +1,4 @@
 ﻿using eHospitalServer.Domain.Entities;
-using eHospitalServer.Domain.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -8,6 +7,13 @@ internal class AppUserConfiguration : IEntityTypeConfiguration<AppUser>
 {
     public void Configure(EntityTypeBuilder<AppUser> builder)
     {
+        builder.HasIndex(p => p.IdentityNumber).IsUnique();
+        builder.HasIndex(p => p.UserName).IsUnique();
+        builder.HasIndex(p => p.Email).IsUnique();
+
+        builder.HasIndex(p => p.EmailConfirmCode).IsUnique();
+        builder.HasIndex(p => p.ForgotPasswordCode).IsUnique();
+
         builder.Property(p => p.IdentityNumber).HasColumnType("varchar(11)").HasMaxLength(11);
         builder.Property(p => p.FirstName).HasColumnType("varchar(50)").HasMaxLength(50);
         builder.Property(p => p.LastName).HasColumnType("varchar(50)").HasMaxLength(50);
@@ -22,17 +28,22 @@ internal class AppUserConfiguration : IEntityTypeConfiguration<AppUser>
         builder.Property(p => p.FullAddress).HasColumnType("varchar(180)").HasMaxLength(180);
         builder.Property(p => p.RefreshToken).HasColumnType("varchar(70)").HasMaxLength(70);
 
-        builder.HasIndex(p => p.IdentityNumber).IsUnique();
-        builder.HasIndex(p => p.UserName).IsUnique();
-        builder.HasIndex(p => p.Email).IsUnique();
+        builder
+            .HasOne(u => u.Doctor)
+            .WithOne(d => d.User)
+            .HasForeignKey<Doctor>(p => p.UserId);
 
-        builder.HasIndex(p => p.EmailConfirmCode).IsUnique();
-        builder.HasIndex(p => p.ForgotPasswordCode).IsUnique();
-
-        builder.HasQueryFilter(p => !p.IsDeleted);
-
-        builder.Property(p => p.UserType)
-            .HasConversion(t => t.Value, v => UserTypeEnum.FromValue(v))
-            .HasColumnName("UserType");
+        builder
+            .HasOne(u => u.Nurse)
+            .WithOne(n => n.User)
+            .HasForeignKey<Nurse>(p => p.UserId);
+        builder
+            .HasOne(u => u.Employee)
+            .WithOne(e => e.User)
+            .HasForeignKey<Employee>(p => p.UserId);
+        builder
+            .HasOne(u => u.Patient)
+            .WithOne(p => p.User)
+            .HasForeignKey<Patient>(p => p.UserId);
     }
 }

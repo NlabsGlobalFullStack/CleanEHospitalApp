@@ -11,3 +11,16 @@ D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Domain\ob
 D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Domain\obj\Debug\net8.0\refint\eHospitalServer.Domain.dll
 D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Domain\obj\Debug\net8.0\eHospitalServer.Domain.pdb
 D:\Projects\Test\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Domain\obj\Debug\net8.0\ref\eHospitalServer.Domain.dll
+D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Domain\bin\Debug\net8.0\eHospitalServer.Domain.deps.json
+D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Domain\bin\Debug\net8.0\eHospitalServer.Domain.dll
+D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Domain\bin\Debug\net8.0\eHospitalServer.Domain.pdb
+D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Domain\obj\Debug\net8.0\eHospitalServer.Domain.csproj.AssemblyReference.cache
+D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Domain\obj\Debug\net8.0\eHospitalServer.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Domain\obj\Debug\net8.0\eHospitalServer.Domain.AssemblyInfoInputs.cache
+D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Domain\obj\Debug\net8.0\eHospitalServer.Domain.AssemblyInfo.cs
+D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Domain\obj\Debug\net8.0\eHospitalServer.Domain.csproj.CoreCompileInputs.cache
+D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Domain\obj\Debug\net8.0\eHospitalServer.Domain.sourcelink.json
+D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Domain\obj\Debug\net8.0\eHospitalServer.Domain.dll
+D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Domain\obj\Debug\net8.0\refint\eHospitalServer.Domain.dll
+D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Domain\obj\Debug\net8.0\eHospitalServer.Domain.pdb
+D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.Domain\obj\Debug\net8.0\ref\eHospitalServer.Domain.dll

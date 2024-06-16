@@ -16,8 +16,7 @@ public static class DependencyInjection
             {
                 policy.AllowAnyHeader();
                 policy.AllowAnyMethod();
-                policy.AllowCredentials();
-                policy.SetIsOriginAllowed(policy => true);
+                policy.AllowAnyOrigin();
             });
         });
 

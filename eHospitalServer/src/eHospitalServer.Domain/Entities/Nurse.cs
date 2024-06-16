@@ -4,8 +4,7 @@ using eHospitalServer.Domain.Enums;
 namespace eHospitalServer.Domain.Entities;
 public class Nurse : Personal
 {
-    public DepartmentEnum Department { get; set; } = DepartmentEnum.Emergency;
+    public string DepartmentId { get; set; } = string.Empty;
+    public Department? Department { get; set; }
     public ShiftEnum Shift { get; set; } = ShiftEnum.Morning;
-
-    public ICollection<VehicleMission>? VehicleMissions { get; set; }
 }

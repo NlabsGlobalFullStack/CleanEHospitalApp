@@ -42,7 +42,7 @@ public static class DependencyInjection
 
         //if (anno bilmem ne işte  yayınlandı ise yada bilmem ne ise kontrol edip gönder.IsPublish)
         //{
-        //    await mediator.Publish(new BlogEvent(request.Id));
+        //    await mediator.Publish(new AnnouncementDomain(request.Id));
 
         //}
 

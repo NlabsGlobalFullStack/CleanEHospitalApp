@@ -7,12 +7,14 @@ internal sealed class AppointmentConfiguration : IEntityTypeConfiguration<Appoin
 {
     public void Configure(EntityTypeBuilder<Appointment> builder)
     {
-        //builder.HasOne(p => p.Doctor)
-        //    .WithMany()
-        //    .HasForeignKey(p => p.DoctorId);
+        builder.HasOne(p => p.Doctor)
+            .WithMany(p => p.Appointments)
+            .HasForeignKey(p => p.DoctorId)
+            .OnDelete(DeleteBehavior.Restrict);
 
-        //builder.HasOne(p => p.Patient)
-        //    .WithMany()
-        //    .HasForeignKey(p => p.PatientId);
+        builder.HasOne(p => p.Patient)
+            .WithMany(p => p.Appointments)
+            .HasForeignKey(p => p.PatientId)
+            .OnDelete(DeleteBehavior.Restrict);
     }
 }

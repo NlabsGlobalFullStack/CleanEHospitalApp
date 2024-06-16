@@ -1,0 +1,34 @@
+# GitHub Actions or other GitHub specific files
+.github
+
+# Angular specific files
+/eHospitalClient/.angular
+/eHospitalClient/.vscode
+/eHospitalClient/node_modules
+
+# Visual Studio specific files
+/eHospitalServer/.vs
+
+# Application build output directories
+/eHospitalServer/eHospitalServer.Application/bin
+/eHospitalServer/eHospitalServer.Application/obj
+
+# Domain build output directories
+/eHospitalServer/eHospitalServer.Domain/bin
+/eHospitalServer/eHospitalServer.Domain/obj
+
+# Infrastructure build output directories
+/eHospitalServer/eHospitalServer.Infrastructure/bin
+/eHospitalServer/eHospitalServer.Infrastructure/obj
+
+# Persistence build output directories
+/eHospitalServer/eHospitalServer.Persistance/bin
+/eHospitalServer/eHospitalServer.Persistance/obj
+
+# Presentation build output directories
+/eHospitalServer/eHospitalServer.Presentation/bin
+/eHospitalServer/eHospitalServer.Presentation/obj
+
+# WebAPI build output directories
+/eHospitalServer/eHospitalServer.WebAPI/bin
+/eHospitalServer/eHospitalServer.WebAPI/obj

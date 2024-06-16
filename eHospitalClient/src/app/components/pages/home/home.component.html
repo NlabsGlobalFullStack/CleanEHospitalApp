@@ -1,0 +1,383 @@
+<meta name="author" content="{{settings.author}}">
+<meta name="keywords" content="{{settings.keywords}}">
+<meta name="description" content="{{settings.descriptions}}">
+
+<body data-bs-theme="light">
+  <div class="page">
+    <header class="navbar sticky-top navbar-expand-md d-print-none" data-bs-theme="ligth">
+      <div class="container-xl">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu"
+          aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+          <a href="/">
+            <img src="/assets/img/{{settings.logoUrl}}" width="110" height="32" alt="{{settings.title}}"
+              class="navbar-brand-image">
+          </a>
+        </h1>
+        <div>
+          <div>
+            <strong class="btn btn-outline-warning me-1">
+              <i class="fa-solid fa-phone-volume"></i>
+              {{settings.phoneNumber}}
+            </strong>
+            <a class="btn btn-outline-primary me-1" target="_blank"
+              href="https://www.linkedin.com/in/{{settings.linkedin}}">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a class="btn btn-outline-primary me-1" target="_blank"
+              href="https://twitter.com/{{settings.linkedin}}">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a class="btn btn-outline-primary me-1" target="_blank"
+              href="https://facebook.com/{{settings.linkedin}}">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a class="btn btn-outline-primary me-1" target="_blank"
+              href="https://instagram.com/{{settings.linkedin}}">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a class="btn btn-outline-danger" target="_blank" routerLink="login">
+              <i class="fa-solid fas fa fa-power-off"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="page-wrapper">
+  
+      <section class="carrousel">
+        <div class="page-header d-print-none">
+          <div class="container-xl">
+            <div class="row g-2 align-items-center">
+              <div class="col">
+                <h2 class="page-title">
+                  Get Online Medical Care With Our Best Doctors
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-body">
+          <div class="container-xl">
+            <div class="row row-cards">
+              <div class="card sliderBackground">
+                <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    @for (slider of sliders; track slider) {
+                    <button type="button" [attr.data-bs-target]="'#myCarousel'" [attr.data-bs-slide-to]="$index"
+                      [class.active]="$index === 0" [attr.aria-current]="$index === 0 ? 'true' : null"
+                      [attr.aria-label]="'Slide ' + ($index + 1)"></button>
+                    }
+                  </div>
+                  <div class="carousel-inner">
+                    @for (slider of sliders; track $index) {
+                    <div class="carousel-item" [class.active]="$index === 0">
+                      <div class="row row-0">
+                        <div class="col-3 order-md-last">
+                          <img [src]="'/assets/img/banners/'+slider?.imageUrl"
+                            class="w-100 h-100 object-cover card-img-end" [alt]="slider?.description" />
+                        </div>
+                        <div class="col">
+                          <div class="card-body">
+                            <h1 class="card-title">{{ slider?.title }}</h1>
+                            <strong class="text-muted">{{ slider?.description }}</strong>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    }
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="departments">
+        <div class="page-header d-print-none">
+          <div class="container-xl">
+            <div class="row g-2 align-items-center">
+              <div class="col">
+                <h2 class="page-title">
+                  Our Departments
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-body">
+          <div class="container-xl">
+            <div class="row row-cards">
+              <!-- @for (department of departments; track department) {
+              <div class="col-md-6 col-lg-3 department">
+                <div class="card hc-depcardimg hc-depfirstcard">
+                  <div class="img-responsive img-responsive-21x9 card-img-top">
+                    <img src="/assets/img/departments/{{department.imageUrl}}" alt="depimg">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">{{department.title}}</h3>
+                    <p class="text-muted">{{department.description}}</p>
+                  </div>
+                </div>
+              </div>
+              } -->
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="doctors">
+        <div class="page-header d-print-none">
+          <div class="container-xl">
+            <div class="row g-2 align-items-center">
+              <div class="col">
+                <h2 class="page-title">
+                  Our Medical Specialist
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Page body -->
+        <div class="page-body">
+          <div class="container-xl">
+            <div class="row row-cards">
+              @for (doctor of doctors; track doctor) {
+                <div class="col-md-6 col-lg-3 doctor">
+                  <div class="card" style="border-radius:  15px;">
+                    <div class="img-responsive-22x9">
+                      <img src="/assets/img/teams/{{doctor.user.imageUrl}}" width="400px" height="350px" alt="depimg">
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title" style="float: left;">{{doctor.specialty.name}} {{doctor.user.fullName}}</h3>
+                      <h3 class="text-muted fw-bold" style="float: right; ">{{doctor.department.name}}</h3>
+                    </div>
+                  </div>
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="services">
+        <div class="page-header d-print-none">
+          <div class="container-xl">
+            <div class="row g-2 align-items-center">
+              <div class="col">
+                <h1 class="page-title justify-content-center">Services</h1>
+                <h2 class="page-title">
+                  Our Urgent Care Services
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Page body -->
+        <div class="page-body">
+          <div class="container-xl">
+            <div class="row row-cards cards-service">
+              @for (service of urgentCareServices; track service) {
+              <div class="col-md-6 col-lg-3 service">
+                <div class="card hc-service-card">
+                  <div class="img-responsive-22x9 hc-sercardimg hc-servone">
+                    <img src="/assets/img/services/{{service.imageUrl}}" class="hc-service_img" alt="service">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">{{service.name}}</h3>
+                  </div>
+                </div>
+              </div>
+              }
+  
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="sss">
+        <div class="page-header d-print-none">
+          <div class="container-xl">
+            <div class="row g-2 align-items-center">
+              <div class="col">
+                <h2 class="page-title">
+                  Frequently Asked Questions
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Page body -->
+        <div class="page-body">
+          <div class="container-xl">
+            <div class="card">
+              <div class="card-body">
+                <div class="accordion" id="accordion-example">
+                  @for (question of questions; track question) {
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" [attr.id]="'heading-' + question.ranking">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        [attr.data-bs-target]="'#collapse-' + question.ranking" [attr.aria-expanded]="false">
+                        {{ question.name }}
+                      </button>
+                    </h2>
+                    <div [attr.id]="'collapse-' + question.ranking" class="accordion-collapse collapse"
+                      [attr.data-bs-parent]="'#accordion-example'">
+                      <div class="accordion-body pt-0">
+                        <strong>{{question.name}}</strong> {{question.description}}
+                      </div>
+                    </div>
+                  </div>
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="carrousel">
+        <div class="page-header d-print-none">
+          <div class="container-xl">
+            <div class="row g-2 align-items-center">
+              <div class="col">
+                <h2 class="page-title">
+                  Our address information
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-body">
+          <div class="container-xl">
+            <div class="row row-cards">
+              <div class="card sliderBackground">
+                <div class="container">
+                  <div class="row d-flex align-items-stretch">
+                    <div class="col-md-6">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <div [innerHtml]="safeMapsCode"></div>  
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <h5 class="card-title">{{ settings.title }}</h5>
+                          <p>
+                            <strong>Author:</strong> {{ settings.author }}<br>
+                            <strong>Phone:</strong> {{ settings.phoneNumber }}<br>
+                            <strong>Email:</strong> {{ settings.email }}<br>
+                            <strong>Address:</strong> {{ settings.address }}<br>
+                          </p>
+                          <p>
+                            <strong>Social Links:</strong><br>
+                            <a href="https://facebook.com/{{ settings.facebook }}">Facebook</a><br>
+                            <a href="https://instagram.com/{{ settings.instagram }}">Instagram</a><br>
+                            <a href="https://twitter.com/{{ settings.twitter }}">Twitter</a><br>
+                            <a href="https://linkedin.com/in/{{ settings.linkedin }}">LinkedIn</a><br>
+                          </p>
+                          <p>
+                            <strong>About Our Hospital:</strong><br> {{ settings!.about }}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="announcement">
+        <div class="page-header d-print-none">
+          <div class="container-xl">
+            <div class="row g-2 align-items-center">
+              <div class="col">
+                <h2 class="page-title">
+                  Our Current Announcements
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-body">
+          <div class="container-xl">
+            <div class="row row-cards">
+              @for (announcement of announcements; track $index) {
+                @if (announcement.isPublish) {
+                  <div class="col-lg-12 col-md-12">
+                    <div class="card">
+                      <div class="row row-0">
+                        <div class="col-3">
+                          <!-- Photo -->
+                          <img src="/assets/static/photos/{{ announcement.image }}"
+                            class="w-100 h-100 object-cover card-img-start" alt="{{ announcement.summary }}">
+                        </div>
+                        <div class="col">
+                          <div class="card-body">
+                            <h3 class="card-title">{{ announcement.title }}</h3>
+                          </div>
+                          <div class="card-footer">
+                            <p class="text-muted">{{ announcement.summary }}</p>                      
+                            <div class="publishDate">
+                              <strong>{{announcement.publishDate | date:'dd MMMM yyyy' }}</strong>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                }            
+              }
+            </div>
+            <ul class="pagination">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                  <i class="fa-solid fa-chevron-left"></i>
+                </a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">4</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">5</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>  
+    </div>
+    <app-footer></app-footer>
+  </div>
+</body>

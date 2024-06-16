@@ -7,11 +7,14 @@ public class RoomAction : Entity
     public string Description { get; set; } = string.Empty;
 
     public string RoomId { get; set; } = string.Empty;
-    public virtual Room? Room { get; set; }
+    public Room? Room { get; set; }
+
+    public string DoctorId { get; set; } = string.Empty;
+    public Doctor? Doctor { get; set; }
 
     public string PatientId { get; set; } = string.Empty;
-    public virtual Patient? Patient { get; set; }
+    public Patient? Patient { get; set; }
 
     public string NurseId { get; set; } = string.Empty;
-    public virtual Nurse? Nurse { get; set; }
+    public Nurse? Nurse { get; set; }
 }

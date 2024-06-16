@@ -72,23 +72,23 @@
           }
         }
       },
-      "FluentValidation/11.9.0": {
+      "FluentValidation/11.9.1": {
         "runtime": {
           "lib/net8.0/FluentValidation.dll": {
             "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.9.0.0"
+            "fileVersion": "11.9.1.0"
           }
         }
       },
-      "FluentValidation.DependencyInjectionExtensions/11.9.0": {
+      "FluentValidation.DependencyInjectionExtensions/11.9.1": {
         "dependencies": {
-          "FluentValidation": "11.9.0",
+          "FluentValidation": "11.9.1",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
         },
         "runtime": {
           "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {
             "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.9.0.0"
+            "fileVersion": "11.9.1.0"
           }
         }
       },
@@ -652,6 +652,17 @@
         },
         "runtime": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.Design.dll": {
+            "assemblyVersion": "8.0.4.0",
+            "fileVersion": "8.0.424.16902"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.InMemory/8.0.4": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.4"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
             "assemblyVersion": "8.0.4.0",
             "fileVersion": "8.0.424.16902"
           }
@@ -1269,7 +1280,7 @@
       "eHospitalServer.Application/1.0.0": {
         "dependencies": {
           "AutoMapper": "13.0.1",
-          "FluentValidation.DependencyInjectionExtensions": "11.9.0",
+          "FluentValidation.DependencyInjectionExtensions": "11.9.1",
           "MediatR": "12.2.0",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
@@ -1305,6 +1316,7 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.4",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.4",
           "Microsoft.AspNetCore.Identity.UI": "8.0.4",
+          "Microsoft.EntityFrameworkCore.InMemory": "8.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.4",
           "Scrutor": "4.2.2",
           "eHospitalServer.Domain": "1.0.0"
@@ -1361,19 +1373,19 @@
       "path": "azure.identity/1.10.3",
       "hashPath": "azure.identity.1.10.3.nupkg.sha512"
     },
-    "FluentValidation/11.9.0": {
+    "FluentValidation/11.9.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-VneVlTvwYDkfHV5av3QrQ0amALgrLX6LV94wlYyEsh0B/klJBW7C8y2eAtj5tOZ3jH6CAVpr4s1ZGgew/QWyig==",
-      "path": "fluentvalidation/11.9.0",
-      "hashPath": "fluentvalidation.11.9.0.nupkg.sha512"
+      "sha512": "sha512-C+PqISSMdlOZZJx0Hx25atW32tv4vbpsaiQB+PLjK+ZGLzOFuHl1fUJ3Lny77mIZ31ZtYtNG0JgUjxa3wwLsWg==",
+      "path": "fluentvalidation/11.9.1",
+      "hashPath": "fluentvalidation.11.9.1.nupkg.sha512"
     },
-    "FluentValidation.DependencyInjectionExtensions/11.9.0": {
+    "FluentValidation.DependencyInjectionExtensions/11.9.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Ko++xvN7HUf4WlHJL6bhsybUj/uho8ApOYIdxGjpF8Ot7Fukz6LRfRJ06H0KXhWqmMHWEbu89hJbjKJHtg7b9g==",
-      "path": "fluentvalidation.dependencyinjectionextensions/11.9.0",
-      "hashPath": "fluentvalidation.dependencyinjectionextensions.11.9.0.nupkg.sha512"
+      "sha512": "sha512-3jJbFcCWhiXhrCKFPjKihzccmosv+CleYewd2zEYS4aaUHx9zQSgOvkYbWUGTbDwJ5j2nDWE0Pr1EQ2xY4pryg==",
+      "path": "fluentvalidation.dependencyinjectionextensions/11.9.1",
+      "hashPath": "fluentvalidation.dependencyinjectionextensions.11.9.1.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",
@@ -1661,6 +1673,13 @@
       "sha512": "sha512-QD5/h3+h4N7GlUaA4bzaYFW9CoeB7ne2KMiDIENIT0GPx+E6up/v9fDA36FAS3NIq9zeKUAQgN8aj6IwE7tMGw==",
       "path": "microsoft.entityframeworkcore.design/8.0.4",
       "hashPath": "microsoft.entityframeworkcore.design.8.0.4.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/8.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3fj0V/NKG66LLwUtoDofSyogku1ueF78uUIdGPEJJhS3MW7w3xLsizMaDYX+ooR74IM96YJI5N3tyOU5FZiiwg==",
+      "path": "microsoft.entityframeworkcore.inmemory/8.0.4",
+      "hashPath": "microsoft.entityframeworkcore.inmemory.8.0.4.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Relational/8.0.4": {
       "type": "package",

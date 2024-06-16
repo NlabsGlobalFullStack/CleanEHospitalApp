@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "bk+sOt88pMeLqfDpvsePwJUNkW2SL20VSbHXBXS7+tdWPhcOpS3+PkeRPf0PnalPATJXZygWv4uvP3TwfdH6rg==",
+  "dgSpecHash": "Q8F7Pkdecqw=",
   "success": true,
-  "projectFilePath": "D:\\Projects\\Test\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Application\\eHospitalServer.Application.csproj",
+  "projectFilePath": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Application\\eHospitalServer.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\root\\.nuget\\packages\\ardalis.smartenum\\8.0.0\\ardalis.smartenum.8.0.0.nupkg.sha512",
     "C:\\Users\\root\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
-    "C:\\Users\\root\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
-    "C:\\Users\\root\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.0\\fluentvalidation.dependencyinjectionextensions.11.9.0.nupkg.sha512",
+    "C:\\Users\\root\\.nuget\\packages\\fluentvalidation\\11.9.1\\fluentvalidation.11.9.1.nupkg.sha512",
+    "C:\\Users\\root\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.1\\fluentvalidation.dependencyinjectionextensions.11.9.1.nupkg.sha512",
     "C:\\Users\\root\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
     "C:\\Users\\root\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\root\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

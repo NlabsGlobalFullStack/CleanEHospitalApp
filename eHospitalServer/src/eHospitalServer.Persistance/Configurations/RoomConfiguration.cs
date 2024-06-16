@@ -12,16 +12,18 @@ public sealed class RoomConfiguration : IEntityTypeConfiguration<Room>
 
         builder.Property(p => p.Capacity).HasColumnType("tinyint");
 
-        builder.Property(p => p.Department)
-            .HasConversion(v => v.Value, v => DepartmentEnum.FromValue(v))
-            .HasColumnName("Department");
-
         builder.Property(p => p.RoomType)
             .HasConversion(v => v.Value, v => RoomTypeEnum.FromValue(v))
             .HasColumnName("RoomType");
 
-        //builder.HasMany(p => p.RoomActions)
-        //    .WithOne(p => p.Room)
-        //    .HasForeignKey(p => p.RoomId);
+
+        builder.HasOne(p => p.Department)
+            .WithMany(p => p.Rooms)
+            .HasForeignKey(p => p.DepartmentId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        builder.HasMany(p => p.RoomActions)
+            .WithOne(p => p.Room)
+            .HasForeignKey(p => p.RoomId);
     }
 }

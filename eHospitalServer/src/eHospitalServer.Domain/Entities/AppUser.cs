@@ -1,5 +1,4 @@
-﻿using eHospitalServer.Domain.Enums;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 
 namespace eHospitalServer.Domain.Entities;
 public class AppUser : IdentityUser<string>
@@ -18,12 +17,25 @@ public class AppUser : IdentityUser<string>
     public string Town { get; set; } = string.Empty;
     public string FullAddress { get; set; } = string.Empty;
     public int EmailConfirmCode { get; set; }
-    public DateTime EmailConfirmCodeSendDate { get; set; } = DateTime.Now;
+    public DateTime? EmailConfirmCodeSendDate { get; set; }
     public string? RefreshToken { get; set; }
     public DateTime? RefreshTokenExpires { get; set; }
     public int? ForgotPasswordCode { get; set; }
     public DateTime? ForgotPasswordCodeSendDate { get; set; }
-    public UserTypeEnum UserType { get; set; } = UserTypeEnum.Patient;
-    public bool IsActive { get; set; } = true;
+
+    public Doctor? Doctor { get; set; }
+    public Nurse? Nurse { get; set; }
+    public Employee? Employee { get; set; }
+    public Patient? Patient { get; set; }
+
+
+
+    public string CreatedUserId { get; set; } = string.Empty;
+    public DateTime CreatedDate { get; set; } = DateTime.Now;
+    public string UpdatedUserId { get; set; } = string.Empty;
+    public DateTime? UpdatedDate { get; set; }
+    public bool IsUpdated { get; set; }
+    public string DeletedUserId { get; set; } = string.Empty;
+    public DateTime? DeletedDate { get; set; }
     public bool IsDeleted { get; set; } = false;
 }

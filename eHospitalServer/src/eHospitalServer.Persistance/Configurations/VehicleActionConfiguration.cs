@@ -13,5 +13,16 @@ public sealed class VehicleActionConfiguration : IEntityTypeConfiguration<Vehicl
         builder.Property(p => p.VehicleOperation)
             .HasConversion(t => t.Value, v => VehicleOperationTypeEnum.FromValue(v))
             .HasColumnName("VehicleOperation");
+
+
+        builder.HasOne(p => p.Vehicle)
+            .WithMany(p => p.VehicleActions)
+            .HasForeignKey(p => p.VehicleId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        builder.HasOne(p => p.Vehicle)
+            .WithMany(p => p.VehicleActions)
+            .HasForeignKey(p => p.EmployeeId)
+            .OnDelete(DeleteBehavior.Restrict);
     }
 }

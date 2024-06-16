@@ -10,7 +10,8 @@ public static class RoleConstants
             "Admin",
             "Doctor",
             "Nurse",
-            "Patient"
+            "Patient",
+            "Employee"
         };
 
         return roles.Select(s => new AppRole() { Name = s }).ToList();

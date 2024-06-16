@@ -32,7 +32,7 @@ internal sealed class ChangePasswordWithForgotPasswordCodeCommandHandler(UserMan
 
         if (!result.Succeeded)
         {
-            return Result<string>.Failure(500, result.Errors.Select(s => s.Description).ToList());
+            return Result<string>.Failure(result.Errors.Select(s => s.Description).ToList());
         }
 
         user.ForgotPasswordCode = null;
@@ -42,9 +42,9 @@ internal sealed class ChangePasswordWithForgotPasswordCodeCommandHandler(UserMan
 
         if (!result.Succeeded)
         {
-            return Result<string>.Failure(500, result.Errors.Select(s => s.Description).ToList());
+            return Result<string>.Failure(result.Errors.Select(s => s.Description).ToList());
         }
 
-        return Result<string>.Succeed("Your password is changed. You can sign in using new password");
+        return "Your password is changed. You can sign in using new password";
     }
 }
