@@ -26,22 +26,22 @@ internal sealed class GetByUserIdQueryHandler
         }
 
         var _userType = 0;
-        if (doctor is not null || patient is not null)
+        if (doctor is not null)
         {
             _userType = 1;
             user.Doctor = doctor;
         }
-        else if (nurse is not null || patient is not null)
+        else if (nurse is not null)
         {
             _userType = 2;
             user.Nurse = nurse;
         }
-        else if (employee is not null || patient is not null)
+        else if (employee is not null)
         {
             _userType = 3;
             user.Employee = employee;
         }
-        else if (patient is not null || patient is not null)
+        else if (patient is not null)
         {
             _userType = 4;
             user.Patient = patient;

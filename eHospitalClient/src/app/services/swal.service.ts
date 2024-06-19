@@ -20,14 +20,14 @@ export class SwalService {
     });
   }
 
-  callSwal(title: string, text: string, callBack:()=> void ,confirmButtonText: string = "Sil", icon: SweetAlertIcon = "question"){
+  callSwal(title: string, text: string, callBack:()=> void ,confirmButtonText: string = "Delete", icon: SweetAlertIcon = "question"){
     Swal.fire({
       title: title,
       text: text,
       showConfirmButton: true,
       showCancelButton: true,
       confirmButtonText: confirmButtonText,
-      cancelButtonText: "Vazgeç",
+      cancelButtonText: "Cancel",
       icon: icon
     }).then(res=> {
       if(res.isConfirmed){

@@ -13,7 +13,7 @@
             <div class="navbar">
                 <div class="container-xl">
                     <ul class="navbar-nav">
-                        @if (user.userType === 0) {
+                        @if (user.userType === 1) {
                             <li class="nav-item dropdown active">
                                 <a class="nav-link myLink dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
                                   <i class="fa-solid fa-cogs me-1"></i>
@@ -25,30 +25,30 @@
                                   <div class="dropdown-menu-columns">
                                     <div class="dropdown-menu-column">
 
-                                      <a class="dropdown-item myLink" routerLink="/dashboard/appointments">
+                                      <a class="dropdown-item myLink" routerLink="appointments">
                                         Appointments
                                       </a>
-                                      <a class="dropdown-item myLink" routerLink="/dashboard/announcements">
+                                      <a class="dropdown-item myLink" routerLink="announcements">
                                         Announcements
                                       </a>
-                                      <a class="dropdown-item myLink" routerLink="/dashboard/departments">
+                                      <a class="dropdown-item myLink" routerLink="departments">
                                         Departments
                                       </a>
-                                      <a class="dropdown-item myLink" routerLink="/dashboard/rooms">
+                                      <a class="dropdown-item myLink" routerLink="rooms">
                                         Rooms
                                       </a>
-                                      <a class="dropdown-item myLink" routerLink="/dashboard/vehicles">
+                                      <a class="dropdown-item myLink" routerLink="vehicles">
                                         Vehicles
                                       </a>
-                                      <a class="dropdown-item myLink" routerLink="/dashboard/sss">
-                                        SSS
+                                      <a class="dropdown-item myLink" routerLink="faqs">
+                                        Faqs
                                       </a>                                      
                                     </div>
                                   </div>
                                 </div>
                               </li>
                             <li class="nav-item active">
-                                <a class="nav-link myLink" routerLink="/dashboard/doctors">
+                                <a class="nav-link myLink" routerLink="doctors">
                                     <i class="fa-solid fa-users me-1"></i>
                                     <span class="nav-link-title">
                                         Doctors
@@ -56,7 +56,7 @@
                                 </a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link myLink" routerLink="/dashboard/nurses">
+                                <a class="nav-link myLink" routerLink="nurses">
                                     <i class="fa-solid fa-users me-1"></i>
                                     <span class="nav-link-title">
                                         Nurses
@@ -65,7 +65,7 @@
                             </li>
     
                             <li class="nav-item active">
-                                <a class="nav-link myLink" routerLink="/dashboard/employees">
+                                <a class="nav-link myLink" routerLink="employees">
                                     <i class="fa-solid fa-users me-1"></i>
                                     <span class="nav-link-title">
                                         Employees
@@ -74,7 +74,7 @@
                             </li>
     
                             <li class="nav-item active">
-                                <a class="nav-link myLink" routerLink="/dashboard/patients">
+                                <a class="nav-link myLink" routerLink="patients">
                                     <i class="fa-solid fa-users me-1"></i>
                                     <span class="nav-link-title">
                                         Patients

@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { TitleService } from '../../../../services/title.service';
 import { DepartmentModel } from '../../../../models/department.model';
 import { UserModel } from '../../../../models/user.model';
-import { UrgentCareModel } from '../../../../models/urgent-care.model';
-import { QuestionModel } from '../../../../models/question.model';
+import { ServiceCareModel } from '../../../../models/service.model';
+import { FaqModel } from '../../../../models/faq.model';
 import { SliderModel } from '../../../../models/slider.model';
 import { AnnouncementModel } from '../../../../models/announcement.model';
 import { SettingsModel } from '../../../../models/settings.model';
@@ -18,16 +18,18 @@ import { BreadcrumpComponent } from '../../../layout/shared/breadcrump/breadcrum
   styleUrl: './admin-dashboard.component.css'
 })
 export class AdminDashboardComponent {
-  constructor(private titleService: TitleService) { }
   departments: DepartmentModel[] = [];
   users: UserModel[] = [];
-  urgentCareServices: UrgentCareModel[] = [];
-  questions: QuestionModel[] = [];
+  services: ServiceCareModel[] = [];
+  faqs: FaqModel[] = [];
   sliders: SliderModel[] = [];
   announcements: AnnouncementModel[] = [];
   settings: SettingsModel | undefined;
 
+  
+  constructor(private title: TitleService) { }
+
   ngOnInit(): void {
-    this.titleService.setPageTitle('Dashboard');
+    this.title.setPageTitle('Dashboard');
   }
 }

@@ -7,8 +7,13 @@ export class DoctorModel{
     specialtyValue: number = 0;
     userId: string = "";
     user: UserModel | any;
+    userImage: string = "";
     departmentId: string = "";
     department: DepartmentModel | any;
+
+    departmentName: string = "";
+
+    fullName: string = "";
 }
 
 export class SpecialtyModel{

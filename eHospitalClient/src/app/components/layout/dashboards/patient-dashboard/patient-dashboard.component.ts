@@ -11,9 +11,9 @@ import { BreadcrumpComponent } from '../../../layout/shared/breadcrump/breadcrum
   styleUrl: './patient-dashboard.component.css'
 })
 export class PatientDashboardComponent {
-  constructor(private titleService: TitleService){}
+  constructor(private title: TitleService){}
 
   ngOnInit(): void {
-    this.titleService.setPageTitle('Hasta Dashboard');
+    this.title.setPageTitle('Patient Dashboard');
   }
 }

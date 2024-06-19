@@ -11,9 +11,9 @@ import { TableComponent } from '../../../layout/shared/table/table.component';
   styleUrl: './nurse-dashboard.component.css'
 })
 export class NurseDashboardComponent {
-  constructor(private titleService: TitleService){}
+  constructor(private title: TitleService){}
 
   ngOnInit(): void {
-    this.titleService.setPageTitle('Hemşire Dashboard');
+    this.title.setPageTitle('Nurse Dashboard');
   }
 }

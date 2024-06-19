@@ -141,7 +141,6 @@ namespace eHospitalServer.Persistance.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("DeletedUserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
@@ -179,6 +178,9 @@ namespace eHospitalServer.Persistance.Migrations
                         .IsRequired()
                         .HasMaxLength(11)
                         .HasColumnType("varchar(11)");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -235,7 +237,6 @@ namespace eHospitalServer.Persistance.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UpdatedUserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserName")

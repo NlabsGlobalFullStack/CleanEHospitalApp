@@ -1,12 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BreadcrumpComponent } from "../../layout/shared/breadcrump/breadcrump.component";
+import { TableComponent } from "../../layout/shared/table/table.component";
+import { TitleService } from '../../../services/title.service';
 
 @Component({
-  selector: 'app-nurses',
-  standalone: true,
-  imports: [],
-  templateUrl: './nurses.component.html',
-  styleUrl: './nurses.component.css'
+    selector: 'app-nurses',
+    standalone: true,
+    templateUrl: './nurses.component.html',
+    styleUrl: './nurses.component.css',
+    imports: [BreadcrumpComponent, TableComponent]
 })
-export class NursesComponent {
+export class NursesComponent implements OnInit{
 
+    constructor(private title: TitleService) { }
+
+    ngOnInit(): void {
+      this.title.setPageTitle('Nurses');
+    }
 }

@@ -1,18 +1,24 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TitleService } from '../../../services/title.service';
+import { NavbarComponent } from "../navbar/navbar.component";
+import { DashboardFooterComponent } from "../dashboard-footer/dashboard-footer.component";
 
 @Component({
   selector: 'app-layout',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './layout.component.html',
-  styleUrl: './layout.component.css'
+  template: `
+    <body data-bs-theme="dark">
+      <div>
+          <div class="page">
+              <div class="page-wrapper">
+                  <app-navbar></app-navbar>
+                  <router-outlet></router-outlet>
+                  <app-dashboard-footer></app-dashboard-footer>
+              </div>
+          </div>
+      </div>
+    </body>
+  `,
+  imports: [RouterOutlet, NavbarComponent, DashboardFooterComponent]
 })
-export class LayoutComponent implements OnInit{
-  constructor(private titleService: TitleService){}
-
-  ngOnInit(): void {
-    this.titleService.setPageTitle('');
-  }
-}
+export class LayoutComponent { }

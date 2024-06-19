@@ -5,7 +5,7 @@ import { PatientModel } from "./patient.model";
 
 export class UserModel {
     id: string = "";
-    imageUrl: string = "";
+    image: string = "";
     identityNumber: string = "";
     firstName: string = "";
     lastName: string = "";

@@ -7,16 +7,17 @@ public class AppUser : IdentityUser<string>
     {
         Id = Guid.NewGuid().ToString();
     }
-    public string IdentityNumber { get; set; } = string.Empty;
-    public string FirstName { get; set; } = string.Empty;
-    public string LastName { get; set; } = string.Empty;
+    public string? Image { get; set; }
+    public string IdentityNumber { get; set; } = default!;
+    public string FirstName { get; set; } = default!;
+    public string LastName { get; set; } = default!;
     public string FullName => string.Join(" ", FirstName, LastName);
     public DateOnly DateOfBirth { get; set; }
-    public string BloodType { get; set; } = string.Empty;
-    public string City { get; set; } = string.Empty;
-    public string Town { get; set; } = string.Empty;
-    public string FullAddress { get; set; } = string.Empty;
-    public int EmailConfirmCode { get; set; }
+    public string BloodType { get; set; } = default!;
+    public string City { get; set; } = default!;
+    public string Town { get; set; } = default!;
+    public string FullAddress { get; set; } = default!;
+    public int EmailConfirmCode { get; set; } = default!;
     public DateTime? EmailConfirmCodeSendDate { get; set; }
     public string? RefreshToken { get; set; }
     public DateTime? RefreshTokenExpires { get; set; }
@@ -30,12 +31,12 @@ public class AppUser : IdentityUser<string>
 
 
 
-    public string CreatedUserId { get; set; } = string.Empty;
-    public DateTime CreatedDate { get; set; } = DateTime.Now;
-    public string UpdatedUserId { get; set; } = string.Empty;
+    public string CreatedUserId { get; set; } = default!;
+    public DateTime CreatedDate { get; set; } = default!;
+    public string? UpdatedUserId { get; set; } = default!;
     public DateTime? UpdatedDate { get; set; }
     public bool IsUpdated { get; set; }
-    public string DeletedUserId { get; set; } = string.Empty;
+    public string? DeletedUserId { get; set; } = default!;
     public DateTime? DeletedDate { get; set; }
     public bool IsDeleted { get; set; } = false;
 }

@@ -6,6 +6,8 @@ import { LoginResponseModel } from '../../../models/login-response.model';
 import { TitleService } from '../../../services/title.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { AuthService } from '../../../services/auth.service';
+import { SwalService } from '../../../services/swal.service';
 
 @Component({
   selector: 'app-login',
@@ -21,11 +23,19 @@ export class LoginComponent implements OnInit{
   constructor(
     private http: HttpService,
     private router: Router,
-    private title: TitleService
+    private title: TitleService,
+    private auth: AuthService,    
+    private swal: SwalService
   ) { }
 
 
   ngOnInit(): void {
+    if(this.auth.isAuthenticated()){
+      this.router.navigateByUrl("/dashboard");
+    }
+    else{
+      return
+    }
     this.title.setPageTitle("Login Page");
   }
 
@@ -40,7 +50,8 @@ export class LoginComponent implements OnInit{
 
   signIn() {
     this.http.post<LoginResponseModel>("Auth/Login", this.model, (res) => {
-      localStorage.setItem("token", res.token);
+      localStorage.setItem("token", res.token);      
+      this.swal.callToast("We wish you a successful login and a healthy day.", "success");
       this.router.navigateByUrl("/dashboard");
     });
   }

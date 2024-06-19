@@ -1,1 +1,33 @@
-<p>nurses works!</p>
+<div class="page-body">
+    <div class="container-xl">
+      <div class="row row-deck row-cards">
+        <app-breadcrump title="Nurse List"></app-breadcrump>
+        <app-table tabelTitle="Nurses" [heads]="['Invoice Subject', 'Client', 'VAT No.', 'Created', 'Status', 'Price']">        
+          <tr>
+            <td>
+              <span class="flag flag-country-us"></span>
+              Carlson Limited
+            </td>
+            <td>
+              87956621
+            </td>
+            <td>
+              15 Dec 2017
+            </td>
+            <td>
+              <span class="badge bg-success me-1"></span> Paid
+            </td>
+            <td>$887</td>
+            <td class="text-end">
+              <button class="btn btn-outline-warning me-1">
+                <i class="fa-solid fa-edit"></i>
+              </button>
+              <button class="btn btn-outline-danger">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+        </app-table>
+      </div>
+    </div>
+  </div>

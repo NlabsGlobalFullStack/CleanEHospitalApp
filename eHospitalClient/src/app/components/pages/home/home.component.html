@@ -65,24 +65,24 @@
               <div class="card sliderBackground">
                 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
                   <div class="carousel-indicators">
-                    @for (slider of sliders; track slider) {
+                    @for (item of sliders; track item) {
                     <button type="button" [attr.data-bs-target]="'#myCarousel'" [attr.data-bs-slide-to]="$index"
                       [class.active]="$index === 0" [attr.aria-current]="$index === 0 ? 'true' : null"
                       [attr.aria-label]="'Slide ' + ($index + 1)"></button>
                     }
                   </div>
                   <div class="carousel-inner">
-                    @for (slider of sliders; track $index) {
+                    @for (item of sliders; track item) {
                     <div class="carousel-item" [class.active]="$index === 0">
                       <div class="row row-0">
                         <div class="col-3 order-md-last">
-                          <img [src]="'/assets/img/banners/'+slider?.imageUrl"
-                            class="w-100 h-100 object-cover card-img-end" [alt]="slider?.description" />
+                          <img [src]="'/assets/img/banners/'+item!.image"
+                            class="w-100 h-100 object-cover card-img-end" [alt]="item!.description" />
                         </div>
                         <div class="col">
                           <div class="card-body">
-                            <h1 class="card-title">{{ slider?.title }}</h1>
-                            <strong class="text-muted">{{ slider?.description }}</strong>
+                            <h1 class="card-title">{{ item!.title }}</h1>
+                            <strong class="text-muted">{{ item!.description }}</strong>
                           </div>
                         </div>
                       </div>
@@ -120,19 +120,19 @@
         <div class="page-body">
           <div class="container-xl">
             <div class="row row-cards">
-              <!-- @for (department of departments; track department) {
+              @for (item of departments; track item) {
               <div class="col-md-6 col-lg-3 department">
                 <div class="card hc-depcardimg hc-depfirstcard">
                   <div class="img-responsive img-responsive-21x9 card-img-top">
-                    <img src="/assets/img/departments/{{department.imageUrl}}" alt="depimg">
+                    <img src="/assets/img/departments/{{item.icon}}" alt="depimg">
                   </div>
                   <div class="card-body">
-                    <h3 class="card-title">{{department.title}}</h3>
-                    <p class="text-muted">{{department.description}}</p>
+                    <h3 class="card-title">{{item.name}}</h3>
+                    <p class="text-muted">{{item.description}}</p>
                   </div>
                 </div>
               </div>
-              } -->
+              }
             </div>
           </div>
         </div>
@@ -154,15 +154,15 @@
         <div class="page-body">
           <div class="container-xl">
             <div class="row row-cards">
-              @for (doctor of doctors; track doctor) {
+              @for (item of doctors; track item) {
                 <div class="col-md-6 col-lg-3 doctor">
                   <div class="card" style="border-radius:  15px;">
                     <div class="img-responsive-22x9">
-                      <img src="/assets/img/teams/{{doctor.user.imageUrl}}" width="400px" height="350px" alt="depimg">
+                      <img src="/assets/img/teams/{{item.userImage}}" width="400px" height="350px" alt="depimg">
                     </div>
                     <div class="card-body">
-                      <h3 class="card-title" style="float: left;">{{doctor.specialty.name}} {{doctor.user.fullName}}</h3>
-                      <h3 class="text-muted fw-bold" style="float: right; ">{{doctor.department.name}}</h3>
+                      <h3 class="card-title" style="float: left;">{{item.specialty.name}} {{item.fullName}}</h3>
+                      <h3 class="text-muted fw-bold" style="float: right; ">{{item.departmentName}}</h3>
                     </div>
                   </div>
                 </div>
@@ -179,21 +179,20 @@
               <div class="col">
                 <h1 class="page-title justify-content-center">Services</h1>
                 <h2 class="page-title">
-                  Our Urgent Care Services
+                  Our Services
                 </h2>
               </div>
             </div>
           </div>
         </div>
-        <!-- Page body -->
         <div class="page-body">
           <div class="container-xl">
             <div class="row row-cards cards-service">
-              @for (service of urgentCareServices; track service) {
+              @for (service of services; track service) {
               <div class="col-md-6 col-lg-3 service">
                 <div class="card hc-service-card">
                   <div class="img-responsive-22x9 hc-sercardimg hc-servone">
-                    <img src="/assets/img/services/{{service.imageUrl}}" class="hc-service_img" alt="service">
+                    <img src="/assets/img/services/{{service.image}}" class="hc-service_img" alt="service">
                   </div>
                   <div class="card-body">
                     <h3 class="card-title">{{service.name}}</h3>
@@ -207,7 +206,7 @@
         </div>
       </section>
   
-      <section class="sss">
+      <section class="faqs">
         <div class="page-header d-print-none">
           <div class="container-xl">
             <div class="row g-2 align-items-center">
@@ -219,24 +218,23 @@
             </div>
           </div>
         </div>
-        <!-- Page body -->
         <div class="page-body">
           <div class="container-xl">
             <div class="card">
               <div class="card-body">
                 <div class="accordion" id="accordion-example">
-                  @for (question of questions; track question) {
+                  @for (item of faqs; track item) {
                   <div class="accordion-item">
-                    <h2 class="accordion-header" [attr.id]="'heading-' + question.ranking">
+                    <h2 class="accordion-header" [attr.id]="'heading-5'">
                       <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                        [attr.data-bs-target]="'#collapse-' + question.ranking" [attr.aria-expanded]="false">
-                        {{ question.name }}
+                        [attr.data-bs-target]="'#collapse-5'" [attr.aria-expanded]="false">
+                        {{ item.question }}
                       </button>
                     </h2>
-                    <div [attr.id]="'collapse-' + question.ranking" class="accordion-collapse collapse"
+                    <div [attr.id]="'collapse-5'" class="accordion-collapse collapse"
                       [attr.data-bs-parent]="'#accordion-example'">
                       <div class="accordion-body pt-0">
-                        <strong>{{question.name}}</strong> {{question.description}}
+                        <strong>{{item.question}}</strong> {{item.answer}}
                       </div>
                     </div>
                   </div>
@@ -320,24 +318,24 @@
         <div class="page-body">
           <div class="container-xl">
             <div class="row row-cards">
-              @for (announcement of announcements; track $index) {
-                @if (announcement.isPublish) {
+              @for (item of announcements; track item) {
+                @if (item.isPublish) {
                   <div class="col-lg-12 col-md-12">
                     <div class="card">
                       <div class="row row-0">
                         <div class="col-3">
                           <!-- Photo -->
-                          <img src="/assets/static/photos/{{ announcement.image }}"
-                            class="w-100 h-100 object-cover card-img-start" alt="{{ announcement.summary }}">
+                          <img src="/assets/img/newsletters/{{ item.imageUrl }}"
+                            class="w-100 h-100 object-cover card-img-start" alt="{{ item.summary }}">
                         </div>
                         <div class="col">
                           <div class="card-body">
-                            <h3 class="card-title">{{ announcement.title }}</h3>
+                            <h3 class="card-title">{{ item.title }}</h3>
                           </div>
                           <div class="card-footer">
-                            <p class="text-muted">{{ announcement.summary }}</p>                      
+                            <p class="text-muted">{{ item.summary }}</p>                      
                             <div class="publishDate">
-                              <strong>{{announcement.publishDate | date:'dd MMMM yyyy' }}</strong>
+                              <strong>{{item.publishDate | date:'dd MMMM yyyy' }}</strong>
                             </div>
                           </div>
                         </div>
