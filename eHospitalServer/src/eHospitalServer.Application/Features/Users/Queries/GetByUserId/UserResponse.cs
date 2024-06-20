@@ -14,6 +14,8 @@ public sealed record UserResponse
     public string FullAddress { get; set; } = default!;
     public int UserType { get; set; } = default!;
 
+    public string Image { get; set; } = default!;
+
     public Doctor? Doctor { get; set; }
     public Nurse? Nurse { get; set; }
     public Employee? Employee { get; set; }

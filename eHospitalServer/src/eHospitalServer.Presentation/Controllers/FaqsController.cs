@@ -41,9 +41,9 @@ public sealed class FaqsController : ApiController
     }
 
     [HttpPost]
-    public async Task<IActionResult> DeleteById(string id, CancellationToken cancellationToken)
+    public async Task<IActionResult> DeleteBy(DeleteByIdFaqCommand request, CancellationToken cancellationToken)
     {
-        var response = await _mediator.Send(new DeleteByIdFaqCommand(id), cancellationToken);
+        var response = await _mediator.Send(request, cancellationToken);
         return StatusCode(response.StatusCode, response);
     }
 }

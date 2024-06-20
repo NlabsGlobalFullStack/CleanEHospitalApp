@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
-using System.Security.Claims;
 using System.Text.Json;
 
 namespace eHospitalServer.Persistance.Context;
@@ -21,7 +20,7 @@ internal sealed class AppDbContext : IdentityDbContext<
     >, IUnitOfWork
 {
     private readonly IHttpContextAccessor _httpContextAccessor;
-    public AppDbContext(DbContextOptions options, IHttpContextAccessor httpContextAccessor) : base(options) 
+    public AppDbContext(DbContextOptions options, IHttpContextAccessor httpContextAccessor) : base(options)
     {
         _httpContextAccessor = httpContextAccessor;
     }
@@ -41,9 +40,9 @@ internal sealed class AppDbContext : IdentityDbContext<
     public DbSet<Setting>? Settings { get; set; }
     public DbSet<Slider>? Sliders { get; set; }
     public DbSet<Service>? Services { get; set; }
-    public DbSet<Department>? Departments{ get; set; }
-    public DbSet<UpdateLog>? UpdateLogs{ get; set; }
-    public DbSet<DeleteLog>? DeleteLogs{ get; set; }
+    public DbSet<Department>? Departments { get; set; }
+    public DbSet<UpdateLog>? UpdateLogs { get; set; }
+    public DbSet<DeleteLog>? DeleteLogs { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -55,7 +54,7 @@ internal sealed class AppDbContext : IdentityDbContext<
         builder.Ignore<IdentityUserRole<string>>();
         builder.Ignore<IdentityUserClaim<string>>();
 
-        
+
     }
 
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
@@ -86,7 +85,7 @@ internal sealed class AppDbContext : IdentityDbContext<
                 deletedObject = $"Error serializing: {ex.Message}";
             }
 
-            
+
 
             var IsDeleted = (bool)entry.Property("IsDeleted").CurrentValue!;
             var IsUpdated = (bool)entry.Property("IsUpdated").CurrentValue!;
@@ -98,7 +97,7 @@ internal sealed class AppDbContext : IdentityDbContext<
                 {
                     entry.Property("DeletedDate").CurrentValue = DateTime.Now;
                 }
-                if(IsUpdated)
+                if (IsUpdated)
                 {
                     var updateLog = new UpdateLog
                     {
@@ -133,7 +132,7 @@ internal sealed class AppDbContext : IdentityDbContext<
     {
         var httpContext = _httpContextAccessor.HttpContext;
         var userIdClaim = httpContext?.User?.Claims
-            .FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+            .FirstOrDefault(c => c.Type == "Id");
 
         return userIdClaim?.Value ?? "UnknownUser";
     }

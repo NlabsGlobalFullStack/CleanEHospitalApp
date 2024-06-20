@@ -3,25 +3,30 @@ using eHospitalServer.Domain.Repositories;
 using eHospitalServer.Domain.Repositories.DefaultRepositories;
 using eHospitalServer.Infrastructure.Results;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 
 namespace eHospitalServer.Application.Features.Faqs.UpdateFaq;
 
-internal sealed class UpdateFaqCommandHandler( IFaqRepository faqRepository, IMapper mapper, IUnitOfWork unitOfWork) : IRequestHandler<UpdateFaqCommand, Result<string>>
+internal sealed class UpdateFaqCommandHandler
+    (
+        IFaqRepository faqRepository,
+        IMapper mapper,
+        IUnitOfWork unitOfWork
+    ) : IRequestHandler<UpdateFaqCommand, Result<string>>
 {
     public async Task<Result<string>> Handle(UpdateFaqCommand request, CancellationToken cancellationToken)
     {
-        var faq = await faqRepository.Where(p => p.Id == request.Id).FirstOrDefaultAsync(cancellationToken);
-        if (faq is null)
+        var faqIsExists = await faqRepository.GetByExpressionAsync(p => p.Id == request.Id, cancellationToken);
+        if (faqIsExists is null)
         {
-            return Result<string>.Failure("Question not found!");
+            return Result<string>.Failure("Faq not found!");
         }
 
-        var result = mapper.Map(request, faq);
+        var faq = mapper.Map(request, faqIsExists);
+        faq.IsUpdated = true;
 
-        faqRepository.Update(result);
+        faqRepository.Update(faq);
         await unitOfWork.SaveChangesAsync(cancellationToken);
 
-        return "The question has been saved successfully.";
+        return "The faq has been saved successfully.";
     }
 }

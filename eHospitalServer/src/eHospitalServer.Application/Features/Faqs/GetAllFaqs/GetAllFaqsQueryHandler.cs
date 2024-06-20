@@ -19,7 +19,8 @@ internal sealed class GetAllFaqsQueryHandler(
             Question = f.Question,
             Answer = f.Answer,
             IsPublish = f.IsPublish,
-            PublishDate = f.PublishDate
+            PublishDate = f.PublishDate,
+            CreatedDate = f.CreatedDate
         }).ToList();
 
         return response;

@@ -13,7 +13,7 @@
             <div class="navbar">
                 <div class="container-xl">
                     <ul class="navbar-nav">
-                        @if (user.userType === 1) {
+                        @if (user.userType === 0) {
                             <li class="nav-item dropdown active">
                                 <a class="nav-link myLink dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
                                   <i class="fa-solid fa-cogs me-1"></i>
@@ -90,8 +90,7 @@
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown"
                     aria-label="Open user menu">
-                    <span class="avatar avatar-sm"
-                        style="background-image: url(/assets/static/avatars/000m.jpg)"></span>
+                        <img src="./assets/img/teams/{{user.image}}" width="32px" height="32px" alt="{{ user.fullName }}">
                     <div class="d-none d-xl-block ps-2">
                         <div>{{ auth.user.fullName }}</div>
                         <div class="mt-1 small text-muted">

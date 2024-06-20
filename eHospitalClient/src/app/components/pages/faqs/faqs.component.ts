@@ -7,17 +7,19 @@ import { TitleService } from '../../../services/title.service';
 import { HttpService } from '../../../services/http.service';
 import { SwalService } from '../../../services/swal.service';
 import { FormsModule, NgForm } from '@angular/forms';
+import { DatePipe } from '@angular/common';
+import { FormValidateDirective } from 'form-validate-angular';
 
 @Component({
     selector: 'app-faqs',
     standalone: true,
     templateUrl: './faqs.component.html',
     styleUrl: './faqs.component.css',
-    imports: [TableComponent, BreadcrumpComponent, RouterLink, FormsModule]
+    imports: [TableComponent, BreadcrumpComponent, RouterLink, FormsModule, DatePipe, FormValidateDirective]
 })
-export class FaqsComponent implements OnInit{
+export class FaqsComponent implements OnInit {
     faqs: FaqModel[] = [];
-    p: number = 1;
+
 
     @ViewChild("createModalCloseBtn") createModalCloseBtn: ElementRef<HTMLButtonElement> | undefined;
     @ViewChild("updateModalCloseBtn") updateModalCloseBtn: ElementRef<HTMLButtonElement> | undefined;
@@ -34,8 +36,21 @@ export class FaqsComponent implements OnInit{
     ngOnInit(): void {
         this.title.setPageTitle("Faqs");
         this.getAll();
+        this.setCurrentDate();
     }
 
+    setCurrentDate(): void {
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = (today.getMonth() + 1).toString().padStart(2, '0');
+        const day = today.getDate().toString().padStart(2, '0');
+        this.createModel.publishDate = `${year}-${month}-${day}`;
+      }
+
+    checkStatus() { 
+        this.createModel.isPublish = !this.createModel.isPublish;
+        this.updateModel.isPublish = !this.updateModel.isPublish;        
+    }
 
     getAll() {
         this.http.post<FaqModel[]>("Faqs/GetAll", {}, (res) => {
@@ -54,20 +69,12 @@ export class FaqsComponent implements OnInit{
         }
     }
 
-    deleteById(model: FaqModel) {
-        this.swal.callSwal("", `${model.question}`, () => {
-            this.http.post<string>("Faqs/MarkedAsDeleted", { id: model }, (res) => {
-                this.getAll();
-                this.swal.callToast(res, "info");
-            });
-        })
-    }
-
     get(model: FaqModel) {
         this.updateModel = { ...model };
     }
 
     update(form: NgForm) {
+        console.log(form);        
         if (form.valid) {
             this.http.post<string>("Faqs/Update", this.updateModel, (res) => {
                 this.swal.callToast(res, "info");
@@ -77,11 +84,20 @@ export class FaqsComponent implements OnInit{
         }
     }
 
-    undoDeletionById(model: FaqModel) {
-        this.swal.callSwal("", `${model.question}`, () => {
-            this.http.post<string>("Faqs/UndoDeletionById", { id: model }, (res) => {
+    deleteById1(model: FaqModel) {
+        this.swal.callSwal("Are you sure you want to mark the record as deleted?", `${model.question}`, () => {
+            this.http.post<string>("Faqs/DeleteById", { model }, (res) => {
                 this.getAll();
-                this.swal.callToast(res, "success");
+                this.swal.callToast(res, "warning");
+            });
+        })
+    }
+
+    deleteById(id: string) {
+        this.swal.callSwal("Are you sure you want to mark the record as deleted?", "", () => {
+            this.http.post<string>("Faqs/DeleteBy?Id=", { id }, (res) => {
+                this.getAll();
+                this.swal.callToast(res, "warning");
             });
         })
     }

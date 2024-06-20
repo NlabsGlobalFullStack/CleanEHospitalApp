@@ -65,7 +65,8 @@ internal sealed class GetByUserIdQueryHandler
             Doctor = doctor,
             Nurse = nurse,
             Employee = employee,
-            Patient = patient
+            Patient = patient,
+            Image = user.Image
         };
 
         return userResponse;

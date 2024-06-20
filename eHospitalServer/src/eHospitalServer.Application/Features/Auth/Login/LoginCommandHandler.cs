@@ -1,4 +1,5 @@
 ﻿using eHospitalServer.Domain.Entities;
+using eHospitalServer.Domain.Repositories;
 using eHospitalServer.Domain.Repositories.Jwt;
 using eHospitalServer.Infrastructure.Results;
 using MediatR;
@@ -10,6 +11,9 @@ namespace eHospitalServer.Application.Features.Auth.Login;
 internal sealed class LoginCommandHandler(
     UserManager<AppUser> userManager,
     SignInManager<AppUser> signInManager,
+    IDoctorRepository doctorRepository,
+    INurseRepository nurseRepository,
+    IEmployeeRepository employeeRepository,
     IJwtProvider jwtProvider
 ) : IRequestHandler<LoginCommand, Result<LoginCommandResponse>>
 {
@@ -23,6 +27,15 @@ internal sealed class LoginCommandHandler(
         {
             message = "User not found!";
             return Result<LoginCommandResponse>.Failure(message);
+        }
+
+        var doctorIsActive = await doctorRepository.AnyAsync(p => p.UserId == user.Id && p.IsDeleted == true, cancellationToken);
+        var nurseIsActive = await nurseRepository.AnyAsync(p => p.UserId == user.Id && p.IsDeleted == true, cancellationToken);
+        var employeeIsActive = await employeeRepository.AnyAsync(p => p.UserId == user.Id && p.IsDeleted == true, cancellationToken);
+
+        if (doctorIsActive || nurseIsActive || employeeIsActive)
+        {
+            return Result<LoginCommandResponse>.Failure("Your entry permit has been revoked!");
         }
 
         var signinResult = await signInManager.CheckPasswordSignInAsync(user, request.Password, true);

@@ -12,7 +12,7 @@ internal sealed class GetAllDoctorsQueryHandler(IDoctorRepository doctorReposito
         var doctors = await doctorRepository.GetAll()
                 .Include(p => p.Department)
                 .Include(p => p.User)
-                .Where(p => p.User!.IsDeleted == false)
+                .Where(p => p.User!.Doctor!.IsDeleted == false)
                 .ToListAsync(cancellationToken);
 
         var response = doctors.Select(d => new GetAllDoctorsQueryResponse

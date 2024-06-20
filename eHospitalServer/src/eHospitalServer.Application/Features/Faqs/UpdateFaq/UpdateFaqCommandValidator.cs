@@ -15,9 +15,7 @@ public class UpdateFaqCommandValidator : AbstractValidator<UpdateFaqCommand>
         RuleFor(c => c.Answer)
             .NotEmpty().NotNull().WithMessage("Answer cannot be empty.");
 
-        RuleFor(c => c.PublishDate)
-            .GreaterThanOrEqualTo(DateOnly.FromDateTime(DateTime.Today))
-            .When(c => c.PublishDate.HasValue)
-            .WithMessage("Publish date must be today or in the future.");
+        RuleFor(p => p.IsPublish)
+            .Must(p => p == true || p == false).WithMessage("IsPublish must be either true or false.");
     }
 }
