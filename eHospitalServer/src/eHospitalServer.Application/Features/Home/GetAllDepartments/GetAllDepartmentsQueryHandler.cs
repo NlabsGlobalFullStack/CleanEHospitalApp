@@ -14,7 +14,8 @@ internal sealed class GetAllDepartmentsQueryHandler(IDepartmentRepository depart
         var response = departments.Select(p => new DepartmentResponse
         {
             Name = p.Name,
-            Icon = p.Icon
+            Image = p.Image,
+            CreatedDate = p.CreatedDate
         }).ToList();
 
         return response;

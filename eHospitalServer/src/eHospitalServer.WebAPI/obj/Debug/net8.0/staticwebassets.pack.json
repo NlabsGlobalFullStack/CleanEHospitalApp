@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.WebAPI\\wwwroot\\departments\\1a3c7049-f06e-404c-83b8-2970022a62a8.png",
+      "PackagePath": "staticwebassets\\departments\\1a3c7049-f06e-404c-83b8-2970022a62a8.png"
+    },
+    {
+      "Id": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.WebAPI\\wwwroot\\departments\\b6d6c336-d536-41ad-b6f6-148f975fff20.png",
+      "PackagePath": "staticwebassets\\departments\\b6d6c336-d536-41ad-b6f6-148f975fff20.png"
+    },
+    {
+      "Id": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.WebAPI\\wwwroot\\departments\\e2c9b2d6-5475-4c03-9300-adb2e9c85651.png",
+      "PackagePath": "staticwebassets\\departments\\e2c9b2d6-5475-4c03-9300-adb2e9c85651.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.eHospitalServer.WebAPI.props",
+      "PackagePath": "build\\eHospitalServer.WebAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.eHospitalServer.WebAPI.props",
+      "PackagePath": "buildMultiTargeting\\eHospitalServer.WebAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.eHospitalServer.WebAPI.props",
+      "PackagePath": "buildTransitive\\eHospitalServer.WebAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.eHospitalServer.WebAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

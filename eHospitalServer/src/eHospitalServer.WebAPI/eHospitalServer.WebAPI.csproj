@@ -19,4 +19,10 @@
     <ProjectReference Include="..\eHospitalServer.Presentation\eHospitalServer.Presentation.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\departments\" />
+    <Folder Include="wwwroot\users\" />
+    <Folder Include="wwwroot\sliders\" />
+  </ItemGroup>
+
 </Project>

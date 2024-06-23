@@ -15,19 +15,22 @@ internal class NurseConfiguration : IEntityTypeConfiguration<Nurse>
         builder.HasOne(p => p.Department)
             .WithMany(p => p.Nurses)
             .HasForeignKey(p => p.DepartmentId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.NoAction);
 
         builder
             .HasOne(d => d.User)
             .WithOne(u => u.Nurse)
-            .HasForeignKey<Nurse>(d => d.UserId);
+            .HasForeignKey<Nurse>(d => d.UserId)
+            .OnDelete(DeleteBehavior.NoAction);
 
         builder.HasMany(p => p.VehicleMissions)
             .WithOne(p => p.Nurse)
-            .HasForeignKey(p => p.NurseId);
+            .HasForeignKey(p => p.NurseId)
+            .OnDelete(DeleteBehavior.NoAction);
 
         builder.HasMany(p => p.RoomActions)
             .WithOne(p => p.Nurse)
-            .HasForeignKey(p => p.NurseId);
+            .HasForeignKey(p => p.NurseId)
+            .OnDelete(DeleteBehavior.NoAction);
     }
 }

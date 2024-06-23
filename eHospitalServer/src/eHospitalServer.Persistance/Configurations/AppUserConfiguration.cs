@@ -31,19 +31,25 @@ internal class AppUserConfiguration : IEntityTypeConfiguration<AppUser>
         builder
             .HasOne(u => u.Doctor)
             .WithOne(d => d.User)
-            .HasForeignKey<Doctor>(p => p.UserId);
+            .HasForeignKey<Doctor>(p => p.UserId)
+            .OnDelete(DeleteBehavior.NoAction);
 
         builder
             .HasOne(u => u.Nurse)
             .WithOne(n => n.User)
-            .HasForeignKey<Nurse>(p => p.UserId);
+            .HasForeignKey<Nurse>(p => p.UserId)
+            .OnDelete(DeleteBehavior.NoAction);
+
         builder
             .HasOne(u => u.Employee)
             .WithOne(e => e.User)
-            .HasForeignKey<Employee>(p => p.UserId);
+            .HasForeignKey<Employee>(p => p.UserId)
+            .OnDelete(DeleteBehavior.NoAction);
+
         builder
             .HasOne(u => u.Patient)
             .WithOne(p => p.User)
-            .HasForeignKey<Patient>(p => p.UserId);
+            .HasForeignKey<Patient>(p => p.UserId)
+            .OnDelete(DeleteBehavior.NoAction);
     }
 }

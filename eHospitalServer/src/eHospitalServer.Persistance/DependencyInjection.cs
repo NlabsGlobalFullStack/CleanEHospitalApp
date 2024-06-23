@@ -1,11 +1,15 @@
 ﻿using eHospitalServer.Domain.Entities;
+using eHospitalServer.Domain.Repositories.CustomRepositories;
 using eHospitalServer.Domain.Repositories.DefaultRepositories;
 using eHospitalServer.Persistance.Authentication;
 using eHospitalServer.Persistance.Context;
+using eHospitalServer.Persistance.Repositories.CustomRepositories;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Scrutor;
@@ -14,7 +18,10 @@ using System.Text;
 namespace eHospitalServer.Persistance;
 public static class DependencyInjection
 {
-    public static IServiceCollection AddPersistance(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddPersistance(
+        this IServiceCollection services,
+        IConfiguration configuration,
+        IWebHostEnvironment webHostEnvironment)
     {
         var connectionString = configuration.GetConnectionString("SqlServer");
         services.AddDbContext<AppDbContext>(options =>
@@ -64,6 +71,19 @@ public static class DependencyInjection
                 IssuerSigningKey = securityKey
             };
         });
+
+        var myHostEnvironment = new MyHostEnvironment
+        {
+            WebRootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot"),
+            WebRootFileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot")),
+            EnvironmentName = webHostEnvironment.EnvironmentName,
+            ApplicationName = webHostEnvironment.ApplicationName,
+            ContentRootPath = webHostEnvironment.ContentRootPath,
+            ContentRootFileProvider = webHostEnvironment.ContentRootFileProvider
+        };
+
+        services.AddSingleton<IMyHostEnvironment>(myHostEnvironment);
+
 
         return services;
     }

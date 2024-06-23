@@ -2,6 +2,7 @@
 
 public sealed record DepartmentResponse
 {
-    public string Name { get; set; } = string.Empty;
-    public string Icon { get; set; } = string.Empty;
+    public string Name { get; set; } = default!;
+    public string Image { get; set; } = default!;
+    public DateTime CreatedDate { get; set; } = default!;
 }

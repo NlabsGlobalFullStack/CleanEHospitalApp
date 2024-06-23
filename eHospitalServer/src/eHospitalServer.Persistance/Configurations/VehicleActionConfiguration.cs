@@ -18,11 +18,11 @@ public sealed class VehicleActionConfiguration : IEntityTypeConfiguration<Vehicl
         builder.HasOne(p => p.Vehicle)
             .WithMany(p => p.VehicleActions)
             .HasForeignKey(p => p.VehicleId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.NoAction);
 
         builder.HasOne(p => p.Vehicle)
             .WithMany(p => p.VehicleActions)
             .HasForeignKey(p => p.EmployeeId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.NoAction);
     }
 }

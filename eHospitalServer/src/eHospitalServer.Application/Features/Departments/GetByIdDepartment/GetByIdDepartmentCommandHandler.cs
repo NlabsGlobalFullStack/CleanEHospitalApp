@@ -18,8 +18,9 @@ internal sealed class GetByIdDepartmentCommandHandler(IDepartmentRepository depa
         {
             Id = department.Id,
             Name = department.Name,
-            Icon = department.Icon,
-            Description = department.Description!
+            Image = department.Image,
+            Description = department.Description,
+            CreatedDate = department.CreatedDate
         };
 
         return response;

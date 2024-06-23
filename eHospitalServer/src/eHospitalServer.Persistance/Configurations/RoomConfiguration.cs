@@ -20,10 +20,11 @@ public sealed class RoomConfiguration : IEntityTypeConfiguration<Room>
         builder.HasOne(p => p.Department)
             .WithMany(p => p.Rooms)
             .HasForeignKey(p => p.DepartmentId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.NoAction);
 
         builder.HasMany(p => p.RoomActions)
             .WithOne(p => p.Room)
-            .HasForeignKey(p => p.RoomId);
+            .HasForeignKey(p => p.RoomId)
+            .OnDelete(DeleteBehavior.NoAction);
     }
 }

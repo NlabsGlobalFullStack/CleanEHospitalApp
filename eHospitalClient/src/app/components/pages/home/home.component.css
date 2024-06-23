@@ -33,6 +33,33 @@
 section.departments {
     background-color: rgb(207, 247, 245);
 }
+section.departments .myHeader{
+    position: absolute;
+    margin-top: -150px;
+    margin-left: -25px;
+    box-shadow: #05d46d;
+}
+.myDepartmentTitle{
+    color: rgba(7, 85, 46, 0.671);
+    font-weight: bold;
+}
+.myTextMuted{
+    position: absolute;
+    margin-bottom: 5px;
+    margin-left: -25px;
+    color: rgb(31, 110, 55) !important;
+    font-weight: bold;
+}
+.myTextMuted .myMuted{
+    float: left;
+    color: rgba(19, 211, 19, 0.637) !important;
+}
+.myTextMuted .myMutedDate{
+ position: relative;
+ margin-left: 115px;
+ float: left;
+ color: rgba(99, 230, 121, 0.863) !important;
+}
 
 .department {
     border-radius: 15px !important;
@@ -64,7 +91,7 @@ section.services {
 
 
 .hc-sercardimg {
-    background-color: #EBF4FF;
+    background-color: rgb(4, 66, 22);
     width: 70px;
     height: 70px;
     border-radius: 100%;
@@ -72,9 +99,13 @@ section.services {
 }
 
 .hc-depfirstcard {
+    width: auto;
+    height: auto;
     text-align: center;
+    font-weight: bold;
     padding: 5px 5px 5px 5px;
-    color: #bdd5ec;
+    color: rgba(5, 52, 97, 0.774);
+    box-shadow: rgb(1, 27, 27);
     margin: 0 auto;
     border-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(42, 167, 255, 0.6)) 1;
 }

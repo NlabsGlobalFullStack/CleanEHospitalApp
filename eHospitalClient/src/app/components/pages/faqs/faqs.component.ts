@@ -84,15 +84,6 @@ export class FaqsComponent implements OnInit {
         }
     }
 
-    deleteById1(model: FaqModel) {
-        this.swal.callSwal("Are you sure you want to mark the record as deleted?", `${model.question}`, () => {
-            this.http.post<string>("Faqs/DeleteById", { model }, (res) => {
-                this.getAll();
-                this.swal.callToast(res, "warning");
-            });
-        })
-    }
-
     deleteById(id: string) {
         this.swal.callSwal("Are you sure you want to mark the record as deleted?", "", () => {
             this.http.post<string>("Faqs/DeleteBy?Id=", { id }, (res) => {

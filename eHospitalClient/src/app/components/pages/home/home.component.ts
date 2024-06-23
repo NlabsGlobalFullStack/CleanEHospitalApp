@@ -7,11 +7,12 @@ import { SliderModel } from '../../../models/slider.model';
 import { SettingsModel } from '../../../models/settings.model';
 import { RouterLink } from '@angular/router';
 import { AnnouncementModel } from '../../../models/announcement.model';
-import { DatePipe } from '@angular/common';
+import { DatePipe, NgStyle } from '@angular/common';
 import { DoctorModel } from '../../../models/doctor.model';
 import { HttpService } from '../../../services/http.service';
 import { TitleService } from '../../../services/title.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { api } from '../../../constants';
 
 
 @Component({
@@ -19,9 +20,10 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
     standalone: true,
     templateUrl: './home.component.html',
     styleUrl: './home.component.css',
-    imports: [FooterComponent, RouterLink, DatePipe]
+    imports: [FooterComponent, RouterLink, DatePipe, NgStyle]
 })
 export class HomeComponent implements OnInit{
+    apiUrl: string = api;
     departments: DepartmentModel[] = [];
     doctors: DoctorModel[] = [];
     services: ServiceCareModel[] = [];
@@ -55,6 +57,17 @@ export class HomeComponent implements OnInit{
             this.departments = res;
         });
     }
+
+    getBackgroundImageUrl(image: string): string {
+        if (!image) {
+          return 'url("path_to_default_image")'; // Default bir resim yolu dönebilirsiniz
+        }
+        // Eğer image yolu tam bir URL değilse
+        if (!image.startsWith('http')) {
+          return `url("${this.apiUrl}/departments/${image.replace('/departments/', '')}")`;
+        }
+        return `url("${image}")`;
+      }
 
     getDoctors() {
         this.http.get<DoctorModel[]>("Home/GetDoctors", (res) => {

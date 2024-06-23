@@ -74,6 +74,66 @@ public static class EmailBodies
         return body;
     }
 
+    public static string CreateDepartmentEmailBody(string subject)
+    {
+        var body = $@"
+                            <!DOCTYPE html>
+                            <html lang=""en"">
+                            <head>
+                                <meta charset=""UTF-8"">
+                                <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+                                <title>Our New Section Has Been Opened.</title>
+                                <style>
+                                    /* Stil özellikleri */
+                                    body {{
+                                        font-family: Arial, sans-serif;
+                                        background-color: #f4f4f4;
+                                        padding: 20px;
+                                    }}
+                                    .container {{
+                                        max-width: 600px;
+                                        margin: 0 auto;
+                                        background-color: #fff;
+                                        border-radius: 10px;
+                                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                                        padding: 20px;
+                                        text-align: center;
+                                    }}
+                                    .confirmation-code {{
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                    }}
+                                    .digit-container {{
+                                        display: flex;
+                                        width: auto; /* Kutu genişliğini artır */
+                                        height: auto;
+                                        border: 2px solid #007bff;
+                                        border-radius: 10px;
+                                        margin-right: 10px;
+                                        font-size: 18px;
+                                        font-weight: bold;
+                                        color: #007bff;
+                                        text-align: center;
+                                        padding: 10px; /* İçeriğin kutu içinde ortalanması için padding ekledik */
+                                    }}
+                                </style>
+                            </head>
+                            <body>
+                                <div class=""container"">
+                                    <h2 style=""color: #007bff;"">Our New Section Has Been Opened.</h2>
+                                    <div class=""confirmation-code"">
+                                        <div class=""digit-container"">
+                                            <div>{subject} Our Department Has Been Opened. If You Are Interested, Please Contact Us!</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </body>
+                            </html>";
+
+        return body;
+    }
+
     public static string MaskEmail(string email)
     {
         var atIndex = email.IndexOf('@');

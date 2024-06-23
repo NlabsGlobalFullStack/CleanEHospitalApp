@@ -7,7 +7,7 @@ internal sealed class SettingConfiguration : IEntityTypeConfiguration<Setting>
 {
     public void Configure(EntityTypeBuilder<Setting> builder)
     {
-        builder.Property(p => p.LogoUrl).HasColumnType("varchar(100)");
+        builder.Property(p => p.Logo).HasColumnType("varchar(100)");
         builder.Property(p => p.Title).HasColumnType("varchar(100)");
         builder.Property(p => p.Author).HasColumnType("varchar(50)");
         builder.Property(p => p.PhoneNumber).HasColumnType("nvarchar(20)");

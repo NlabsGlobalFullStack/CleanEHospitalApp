@@ -16,19 +16,22 @@ internal class EmployeeConfiguration : IEntityTypeConfiguration<Employee>
         builder.HasOne(p => p.Department)
             .WithMany(p => p.Employees)
             .HasForeignKey(p => p.DepartmentId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.NoAction);
 
         builder
             .HasOne(e => e.User)
             .WithOne(u => u.Employee)
-            .HasForeignKey<Employee>(p => p.UserId);
+            .HasForeignKey<Employee>(p => p.UserId)
+            .OnDelete(DeleteBehavior.NoAction);
 
         builder.HasMany(p => p.VehicleActions)
             .WithOne(p => p.Employee)
-            .HasForeignKey(p => p.EmployeeId);
+            .HasForeignKey(p => p.EmployeeId)
+            .OnDelete(DeleteBehavior.NoAction);
 
         builder.HasMany(p => p.VehicleMissions)
             .WithOne(p => p.Employee)
-            .HasForeignKey(p => p.EmployeeId);
+            .HasForeignKey(p => p.EmployeeId)
+            .OnDelete(DeleteBehavior.NoAction);
     }
 }

@@ -14,7 +14,7 @@ internal sealed class GetAllAnnountcementsQueryHandler(
 
         List<GetAllAnnouncementsQueryResponse> response = announcements.Select(s => new GetAllAnnouncementsQueryResponse()
         {
-            ImageUrl = s.ImageUrl,
+            Image = s.Image,
             Title = s.Title,
             Summary = s.Summary,
             Content = s.Content,

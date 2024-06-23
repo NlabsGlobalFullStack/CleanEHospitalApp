@@ -122,13 +122,20 @@
             <div class="row row-cards">
               @for (item of departments; track item) {
               <div class="col-md-6 col-lg-3 department">
-                <div class="card hc-depcardimg hc-depfirstcard">
+                <div class="card hc-depcardimg hc-depfirstcard"
+                  [style.backgroundImage]="getBackgroundImageUrl(item.image!)"
+                  [ngStyle]="{'background-size': 'cover', 'background-position': 'center'}">
                   <div class="img-responsive img-responsive-21x9 card-img-top">
-                    <img src="/assets/img/departments/{{item.icon}}" alt="depimg">
+                    <!-- <img src="{{ apiUrl }}{{item.image}}" style="width: 146px; height: 139px;"  alt="{{ item.name }}"> -->
                   </div>
                   <div class="card-body">
-                    <h3 class="card-title">{{item.name}}</h3>
-                    <p class="text-muted">{{item.description}}</p>
+                    <div class="myHeader">
+                      <h3 class="myDepartmentTitle card-title">{{item.name}}</h3>
+                    </div>
+                    <div class="myTextMuted">
+                      <p class="text-muted myMuted">Created Date:</p>
+                      <p class="text-muted myMutedDate">{{item.createdDate | date: 'dd MMMM yyyy' }}</p>
+                    </div>
                   </div>
                 </div>
               </div>

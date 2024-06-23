@@ -16,7 +16,7 @@ namespace eHospitalServer.Persistance.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    ImageUrl = table.Column<string>(type: "varchar(100)", nullable: false),
+                    Image = table.Column<string>(type: "varchar(100)", nullable: false),
                     Title = table.Column<string>(type: "varchar(100)", nullable: false),
                     Summary = table.Column<string>(type: "varchar(400)", nullable: false),
                     Content = table.Column<string>(type: "nvarchar(MAX)", nullable: false),
@@ -55,8 +55,8 @@ namespace eHospitalServer.Persistance.Migrations
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Name = table.Column<string>(type: "varchar(60)", nullable: false),
-                    Icon = table.Column<string>(type: "varchar(100)", nullable: false),
-                    Description = table.Column<string>(type: "varchar(300)", nullable: true),
+                    Image = table.Column<string>(type: "varchar(100)", nullable: false),
+                    Description = table.Column<string>(type: "varchar(300)", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     IsUpdated = table.Column<bool>(type: "bit", nullable: false),
@@ -93,6 +93,11 @@ namespace eHospitalServer.Persistance.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    IsUpdated = table.Column<bool>(type: "bit", nullable: false),
+                    DeletedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     NormalizedName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ConcurrencyStamp = table.Column<string>(type: "nvarchar(max)", nullable: true)
@@ -125,7 +130,7 @@ namespace eHospitalServer.Persistance.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    LogoUrl = table.Column<string>(type: "varchar(100)", nullable: false),
+                    Logo = table.Column<string>(type: "varchar(100)", nullable: false),
                     Title = table.Column<string>(type: "varchar(100)", nullable: false),
                     Author = table.Column<string>(type: "varchar(50)", nullable: false),
                     PhoneNumber = table.Column<string>(type: "nvarchar(20)", nullable: false),
@@ -199,6 +204,7 @@ namespace eHospitalServer.Persistance.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Image = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     IdentityNumber = table.Column<string>(type: "varchar(11)", maxLength: 11, nullable: false),
                     FirstName = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
                     LastName = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
@@ -215,10 +221,10 @@ namespace eHospitalServer.Persistance.Migrations
                     ForgotPasswordCodeSendDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     CreatedUserId = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UpdatedUserId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UpdatedUserId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     IsUpdated = table.Column<bool>(type: "bit", nullable: false),
-                    DeletedUserId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DeletedUserId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DeletedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(450)", nullable: true),
@@ -284,8 +290,7 @@ namespace eHospitalServer.Persistance.Migrations
                         name: "FK_Rooms_Departments_DepartmentId",
                         column: x => x.DepartmentId,
                         principalTable: "Departments",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -310,14 +315,12 @@ namespace eHospitalServer.Persistance.Migrations
                         name: "FK_Doctors_Departments_DepartmentId",
                         column: x => x.DepartmentId,
                         principalTable: "Departments",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Doctors_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -341,14 +344,12 @@ namespace eHospitalServer.Persistance.Migrations
                         name: "FK_Employees_Departments_DepartmentId",
                         column: x => x.DepartmentId,
                         principalTable: "Departments",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Employees_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -372,14 +373,12 @@ namespace eHospitalServer.Persistance.Migrations
                         name: "FK_Nurses_Departments_DepartmentId",
                         column: x => x.DepartmentId,
                         principalTable: "Departments",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Nurses_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -401,8 +400,7 @@ namespace eHospitalServer.Persistance.Migrations
                         name: "FK_Patients_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -427,8 +425,7 @@ namespace eHospitalServer.Persistance.Migrations
                         name: "FK_Appointments_Doctors_DoctorId",
                         column: x => x.DoctorId,
                         principalTable: "Doctors",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Appointments_Employees_EmployeeId",
                         column: x => x.EmployeeId,
@@ -443,8 +440,7 @@ namespace eHospitalServer.Persistance.Migrations
                         name: "FK_Appointments_Patients_PatientId",
                         column: x => x.PatientId,
                         principalTable: "Patients",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -472,8 +468,7 @@ namespace eHospitalServer.Persistance.Migrations
                         name: "FK_RoomActions_Doctors_DoctorId",
                         column: x => x.DoctorId,
                         principalTable: "Doctors",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_RoomActions_Employees_EmployeeId",
                         column: x => x.EmployeeId,
@@ -483,20 +478,17 @@ namespace eHospitalServer.Persistance.Migrations
                         name: "FK_RoomActions_Nurses_NurseId",
                         column: x => x.NurseId,
                         principalTable: "Nurses",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_RoomActions_Patients_PatientId",
                         column: x => x.PatientId,
                         principalTable: "Patients",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_RoomActions_Rooms_RoomId",
                         column: x => x.RoomId,
                         principalTable: "Rooms",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -529,8 +521,7 @@ namespace eHospitalServer.Persistance.Migrations
                         name: "FK_VehicleActions_Employees_EmployeeId",
                         column: x => x.EmployeeId,
                         principalTable: "Employees",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_VehicleActions_Nurses_NurseId",
                         column: x => x.NurseId,
@@ -545,8 +536,7 @@ namespace eHospitalServer.Persistance.Migrations
                         name: "FK_VehicleActions_Vehicles_EmployeeId",
                         column: x => x.EmployeeId,
                         principalTable: "Vehicles",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -577,32 +567,27 @@ namespace eHospitalServer.Persistance.Migrations
                         name: "FK_VehicleMissions_Doctors_DoctorId",
                         column: x => x.DoctorId,
                         principalTable: "Doctors",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_VehicleMissions_Employees_EmployeeId",
                         column: x => x.EmployeeId,
                         principalTable: "Employees",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_VehicleMissions_Nurses_NurseId",
                         column: x => x.NurseId,
                         principalTable: "Nurses",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_VehicleMissions_Patients_PatientId",
                         column: x => x.PatientId,
                         principalTable: "Patients",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_VehicleMissions_Vehicles_VehicleId",
                         column: x => x.VehicleId,
                         principalTable: "Vehicles",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(

@@ -472,7 +472,8 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Ardalis.SmartEnum": "8.0.0",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.4"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.4",
+          "Microsoft.Extensions.Hosting.Abstractions": "8.0.0"
         },
         "compile": {
           "bin/placeholder/eHospitalServer.Domain.dll": {}
@@ -1362,7 +1363,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

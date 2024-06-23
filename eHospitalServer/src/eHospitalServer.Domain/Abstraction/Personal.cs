@@ -10,9 +10,12 @@ public abstract class Personal
     public List<RoomAction>? RoomActions { get; set; }
     public List<VehicleAction>? VehicleActions { get; set; }
     public List<VehicleMission>? VehicleMissions { get; set; }
+    public string? CreatedUser { get; set; } = default;
     public DateTime CreatedDate { get; set; } = DateTime.Now;
-    public DateTime? UpdatedDate { get; set; }
-    public bool IsUpdated { get; set; }
-    public DateTime? DeletedDate { get; set; }
+    public string? UpdatedUser { get; set; } = default;
+    public DateTime? UpdatedDate { get; set; } = default;
+    public bool IsUpdated { get; set; } = false;
+    public string? DeletedUser { get; set; } = default;
+    public DateTime? DeletedDate { get; set; } = default;
     public bool IsDeleted { get; set; } = false;
 }

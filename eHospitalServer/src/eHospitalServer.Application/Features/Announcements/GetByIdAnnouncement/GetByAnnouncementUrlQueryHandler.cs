@@ -20,7 +20,7 @@ internal sealed class GetByAnnouncementUrlQueryHandler(
         var response = new GetByIdAnnouncementResponse
         {
             Id = announcement.Id,
-            ImageUrl = announcement.ImageUrl,
+            Image = announcement.Image,
             Title = announcement.Title,
             Summary = announcement.Summary,
             Content = announcement.Content,

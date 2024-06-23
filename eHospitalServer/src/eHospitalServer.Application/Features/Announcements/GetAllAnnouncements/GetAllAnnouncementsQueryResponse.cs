@@ -3,7 +3,7 @@
 public sealed record GetAllAnnouncementsQueryResponse
 {
     public string Id { get; set; } = string.Empty;
-    public string ImageUrl { get; set; } = string.Empty;
+    public string Image { get; set; } = string.Empty;
     public string Title { get; set; } = string.Empty;
     public string Url { get; set; } = string.Empty;
     public string Summary { get; set; } = string.Empty;

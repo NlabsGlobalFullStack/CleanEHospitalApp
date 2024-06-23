@@ -17,26 +17,26 @@ public sealed class VehicleMissionConfiguration : IEntityTypeConfiguration<Vehic
         builder.HasOne(p => p.Vehicle)
             .WithMany(p => p.VehicleMissions)
             .HasForeignKey(p => p.VehicleId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.NoAction);
 
         builder.HasOne(p => p.Employee)
             .WithMany(p => p.VehicleMissions)
             .HasForeignKey(p => p.EmployeeId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.NoAction);
 
         builder.HasOne(p => p.Doctor)
             .WithMany(p => p.VehicleMissions)
             .HasForeignKey(p => p.DoctorId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.NoAction);
 
         builder.HasOne(p => p.Nurse)
             .WithMany(p => p.VehicleMissions)
             .HasForeignKey(p => p.NurseId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.NoAction);
 
         builder.HasOne(p => p.Patient)
             .WithMany(p => p.VehicleMissions)
             .HasForeignKey(p => p.PatientId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.NoAction);
     }
 }

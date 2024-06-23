@@ -3,7 +3,6 @@ import { Router, RouterLink } from '@angular/router';
 import { UserModel } from '../../../models/user.model';
 import { AuthService } from '../../../services/auth.service';
 import { HttpService } from '../../../services/http.service';
-import { SwalService } from '../../../services/swal.service';
 
 @Component({
   selector: 'app-navbar',

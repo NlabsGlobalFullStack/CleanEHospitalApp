@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit{
 
 
   ngOnInit(): void {
+    this.title.setPageTitle("Login Page");
     if(this.auth.isAuthenticated()){
       this.router.navigateByUrl("/dashboard");
     }

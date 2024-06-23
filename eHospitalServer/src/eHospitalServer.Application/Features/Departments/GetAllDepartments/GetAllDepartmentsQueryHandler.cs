@@ -1,4 +1,5 @@
-﻿using eHospitalServer.Domain.Repositories;
+﻿using eHospitalServer.Application.Constants;
+using eHospitalServer.Domain.Repositories;
 using eHospitalServer.Infrastructure.Results;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -15,7 +16,9 @@ internal sealed class GetAllDepartmentsQueryHandler(IDepartmentRepository depart
         {
             Id = p.Id,
             Name = p.Name,
-            Icon = p.Icon
+            Image = ApplicationConstants.ApiUrl + "/departments/" + p.Image,
+            Description = p.Description,
+            CreatedDate = p.CreatedDate
         }).ToList();
 
         return response;

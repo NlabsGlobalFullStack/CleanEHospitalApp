@@ -34,10 +34,16 @@ namespace eHospitalServer.Persistance.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("CreatedUser")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("ImageUrl")
+                    b.Property<string>("DeletedUser")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
                         .IsRequired()
                         .HasColumnType("varchar(100)");
 
@@ -63,6 +69,9 @@ namespace eHospitalServer.Persistance.Migrations
 
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedUser")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -130,8 +139,7 @@ namespace eHospitalServer.Persistance.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("CreatedUserId")
-                        .IsRequired()
+                    b.Property<string>("CreatedUser")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateOnly>("DateOfBirth")
@@ -140,7 +148,7 @@ namespace eHospitalServer.Persistance.Migrations
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("DeletedUserId")
+                    b.Property<string>("DeletedUser")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
@@ -236,7 +244,7 @@ namespace eHospitalServer.Persistance.Migrations
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("UpdatedUserId")
+                    b.Property<string>("UpdatedUser")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserName")
@@ -362,13 +370,20 @@ namespace eHospitalServer.Persistance.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("CreatedUser")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("DeletedUser")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("varchar(300)");
 
-                    b.Property<string>("Icon")
+                    b.Property<string>("Image")
                         .IsRequired()
                         .HasColumnType("varchar(100)");
 
@@ -384,6 +399,9 @@ namespace eHospitalServer.Persistance.Migrations
 
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedUser")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -401,8 +419,14 @@ namespace eHospitalServer.Persistance.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("CreatedUser")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedUser")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DepartmentId")
                         .IsRequired()
@@ -420,6 +444,9 @@ namespace eHospitalServer.Persistance.Migrations
 
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedUser")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -443,8 +470,14 @@ namespace eHospitalServer.Persistance.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("CreatedUser")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedUser")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DepartmentId")
                         .IsRequired()
@@ -462,6 +495,9 @@ namespace eHospitalServer.Persistance.Migrations
 
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedUser")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -489,8 +525,14 @@ namespace eHospitalServer.Persistance.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("CreatedUser")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedUser")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -511,6 +553,9 @@ namespace eHospitalServer.Persistance.Migrations
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("UpdatedUser")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("Question")
@@ -527,8 +572,14 @@ namespace eHospitalServer.Persistance.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("CreatedUser")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedUser")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DepartmentId")
                         .IsRequired()
@@ -546,6 +597,9 @@ namespace eHospitalServer.Persistance.Migrations
 
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedUser")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -569,8 +623,14 @@ namespace eHospitalServer.Persistance.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("CreatedUser")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedUser")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -580,6 +640,9 @@ namespace eHospitalServer.Persistance.Migrations
 
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedUser")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -604,8 +667,14 @@ namespace eHospitalServer.Persistance.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("CreatedUser")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedUser")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DepartmentId")
                         .IsRequired()
@@ -634,6 +703,9 @@ namespace eHospitalServer.Persistance.Migrations
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("UpdatedUser")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("DepartmentId");
@@ -649,8 +721,14 @@ namespace eHospitalServer.Persistance.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("CreatedUser")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedUser")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -690,6 +768,9 @@ namespace eHospitalServer.Persistance.Migrations
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("UpdatedUser")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("DoctorId");
@@ -713,8 +794,14 @@ namespace eHospitalServer.Persistance.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("CreatedUser")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedUser")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Image")
                         .IsRequired()
@@ -732,6 +819,9 @@ namespace eHospitalServer.Persistance.Migrations
 
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedUser")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -779,7 +869,7 @@ namespace eHospitalServer.Persistance.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(50)");
 
-                    b.Property<string>("LogoUrl")
+                    b.Property<string>("Logo")
                         .IsRequired()
                         .HasColumnType("varchar(100)");
 
@@ -816,8 +906,14 @@ namespace eHospitalServer.Persistance.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("CreatedUser")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedUser")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -839,6 +935,9 @@ namespace eHospitalServer.Persistance.Migrations
 
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedUser")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -889,8 +988,14 @@ namespace eHospitalServer.Persistance.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("CreatedUser")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedUser")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -904,6 +1009,9 @@ namespace eHospitalServer.Persistance.Migrations
 
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedUser")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("VehicleType")
                         .HasColumnType("int")
@@ -922,8 +1030,14 @@ namespace eHospitalServer.Persistance.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("CreatedUser")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedUser")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -951,6 +1065,9 @@ namespace eHospitalServer.Persistance.Migrations
 
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedUser")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("VehicleId")
                         .IsRequired()
@@ -986,8 +1103,14 @@ namespace eHospitalServer.Persistance.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("CreatedUser")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedUser")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Destination")
                         .IsRequired()
@@ -1032,6 +1155,9 @@ namespace eHospitalServer.Persistance.Migrations
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("UpdatedUser")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("VehicleId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -1056,7 +1182,7 @@ namespace eHospitalServer.Persistance.Migrations
                     b.HasOne("eHospitalServer.Domain.Entities.Doctor", "Doctor")
                         .WithMany("Appointments")
                         .HasForeignKey("DoctorId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("eHospitalServer.Domain.Entities.Employee", null)
@@ -1070,7 +1196,7 @@ namespace eHospitalServer.Persistance.Migrations
                     b.HasOne("eHospitalServer.Domain.Entities.Patient", "Patient")
                         .WithMany("Appointments")
                         .HasForeignKey("PatientId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Doctor");
@@ -1083,13 +1209,13 @@ namespace eHospitalServer.Persistance.Migrations
                     b.HasOne("eHospitalServer.Domain.Entities.Department", "Department")
                         .WithMany("Doctors")
                         .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("eHospitalServer.Domain.Entities.AppUser", "User")
                         .WithOne("Doctor")
                         .HasForeignKey("eHospitalServer.Domain.Entities.Doctor", "UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Department");
@@ -1102,13 +1228,13 @@ namespace eHospitalServer.Persistance.Migrations
                     b.HasOne("eHospitalServer.Domain.Entities.Department", "Department")
                         .WithMany("Employees")
                         .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("eHospitalServer.Domain.Entities.AppUser", "User")
                         .WithOne("Employee")
                         .HasForeignKey("eHospitalServer.Domain.Entities.Employee", "UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Department");
@@ -1121,13 +1247,13 @@ namespace eHospitalServer.Persistance.Migrations
                     b.HasOne("eHospitalServer.Domain.Entities.Department", "Department")
                         .WithMany("Nurses")
                         .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("eHospitalServer.Domain.Entities.AppUser", "User")
                         .WithOne("Nurse")
                         .HasForeignKey("eHospitalServer.Domain.Entities.Nurse", "UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Department");
@@ -1140,7 +1266,7 @@ namespace eHospitalServer.Persistance.Migrations
                     b.HasOne("eHospitalServer.Domain.Entities.AppUser", "User")
                         .WithOne("Patient")
                         .HasForeignKey("eHospitalServer.Domain.Entities.Patient", "UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("User");
@@ -1151,7 +1277,7 @@ namespace eHospitalServer.Persistance.Migrations
                     b.HasOne("eHospitalServer.Domain.Entities.Department", "Department")
                         .WithMany("Rooms")
                         .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Department");
@@ -1162,7 +1288,7 @@ namespace eHospitalServer.Persistance.Migrations
                     b.HasOne("eHospitalServer.Domain.Entities.Doctor", "Doctor")
                         .WithMany("RoomActions")
                         .HasForeignKey("DoctorId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("eHospitalServer.Domain.Entities.Employee", null)
@@ -1172,19 +1298,19 @@ namespace eHospitalServer.Persistance.Migrations
                     b.HasOne("eHospitalServer.Domain.Entities.Nurse", "Nurse")
                         .WithMany("RoomActions")
                         .HasForeignKey("NurseId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("eHospitalServer.Domain.Entities.Patient", "Patient")
                         .WithMany("RoomActions")
                         .HasForeignKey("PatientId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("eHospitalServer.Domain.Entities.Room", "Room")
                         .WithMany("RoomActions")
                         .HasForeignKey("RoomId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Doctor");
@@ -1205,13 +1331,13 @@ namespace eHospitalServer.Persistance.Migrations
                     b.HasOne("eHospitalServer.Domain.Entities.Employee", "Employee")
                         .WithMany("VehicleActions")
                         .HasForeignKey("EmployeeId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("eHospitalServer.Domain.Entities.Vehicle", "Vehicle")
                         .WithMany("VehicleActions")
                         .HasForeignKey("EmployeeId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("eHospitalServer.Domain.Entities.Nurse", null)
@@ -1232,31 +1358,31 @@ namespace eHospitalServer.Persistance.Migrations
                     b.HasOne("eHospitalServer.Domain.Entities.Doctor", "Doctor")
                         .WithMany("VehicleMissions")
                         .HasForeignKey("DoctorId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("eHospitalServer.Domain.Entities.Employee", "Employee")
                         .WithMany("VehicleMissions")
                         .HasForeignKey("EmployeeId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("eHospitalServer.Domain.Entities.Nurse", "Nurse")
                         .WithMany("VehicleMissions")
                         .HasForeignKey("NurseId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("eHospitalServer.Domain.Entities.Patient", "Patient")
                         .WithMany("VehicleMissions")
                         .HasForeignKey("PatientId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("eHospitalServer.Domain.Entities.Vehicle", "Vehicle")
                         .WithMany("VehicleMissions")
                         .HasForeignKey("VehicleId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Doctor");

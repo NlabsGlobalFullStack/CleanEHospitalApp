@@ -3,8 +3,10 @@ using eHospitalServer.Application.Events.Departments;
 using eHospitalServer.Domain.Entities;
 using eHospitalServer.Domain.Repositories;
 using eHospitalServer.Domain.Repositories.DefaultRepositories;
+using eHospitalServer.Infrastructure.Extensions;
 using eHospitalServer.Infrastructure.Results;
 using MediatR;
+using Nlabs.GenericFileSrevice;
 
 namespace eHospitalServer.Application.Features.Departments.CreateDepartment;
 
@@ -17,30 +19,28 @@ internal sealed class CreateDepartmentCommandHandler(
 {
     public async Task<Result<string>> Handle(CreateDepartmentCommand request, CancellationToken cancellationToken)
     {
-        var department = await departmentRepository.GetByExpressionAsync(p => p.Name == request.Name, cancellationToken);
-        if (department is not null)
+        var departmentIsExists = await departmentRepository.GetByExpressionAsync(p => p.Name == request.Name, cancellationToken);
+        if (departmentIsExists is not null)
         {
             return Result<string>.Failure("This department has been recorded before!");
         }
 
-        var result = mapper.Map<Department>(request);
+        var department = mapper.Map<Department>(request);
+
+        var fileName = FileService.FileSaveToServer(request.File, "wwwroot/departments/");
+        department.Image = fileName;
 
 
-        await departmentRepository.AddAsync(result, cancellationToken);
+        await departmentRepository.AddAsync(department, cancellationToken);
         var saveChangesResult = await unitOfWork.SaveChangesAsync(cancellationToken);
 
         if (saveChangesResult > 0)
         {
-            try
-            {
-                //await mediator.Publish(new DepartmentDomain(department!.Id), cancellationToken);
-            }
-            catch (Exception ex)
-            {
-                return Result<string>.Failure($"Error while publishing announcement: {ex.Message}");
-            }
+            var subject = department.Name;
+            var body = EmailBodies.CreateDepartmentEmailBody(subject);
+            await mediator.Publish(new DepartmentDomain(department, subject, body), cancellationToken);
         }
-        
+
 
         return "The department record has been created successfully.";
     }

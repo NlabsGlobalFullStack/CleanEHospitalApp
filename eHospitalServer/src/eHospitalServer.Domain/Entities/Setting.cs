@@ -2,7 +2,7 @@
 public sealed class Setting
 {
     public string Id { get; set; } = Guid.NewGuid().ToString();
-    public string LogoUrl { get; set; } = string.Empty;
+    public string Logo { get; set; } = string.Empty;
     public string Title { get; set; } = string.Empty;
     public string Author { get; set; } = string.Empty;
     public string PhoneNumber { get; set; } = string.Empty;

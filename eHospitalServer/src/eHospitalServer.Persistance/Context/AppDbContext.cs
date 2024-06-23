@@ -90,13 +90,13 @@ internal sealed class AppDbContext : IdentityDbContext<
             var IsDeleted = (bool)entry.Property("IsDeleted").CurrentValue!;
             var IsUpdated = (bool)entry.Property("IsUpdated").CurrentValue!;
 
+            if (entry.State == EntityState.Added)
+            {
+                entry.Property("CreatedUser").CurrentValue = userId;
+            }
+
             if (entry.State == EntityState.Modified)
             {
-
-                if (IsDeleted)
-                {
-                    entry.Property("DeletedDate").CurrentValue = DateTime.Now;
-                }
                 if (IsUpdated)
                 {
                     var updateLog = new UpdateLog
@@ -110,6 +110,8 @@ internal sealed class AppDbContext : IdentityDbContext<
                     UpdateLogs!.Add(updateLog);
 
                     entry.Property("UpdatedDate").CurrentValue = DateTime.Now;
+
+                    entry.Property("UpdatedUser").CurrentValue = userId;
                 }
             }
             if (entry.State == EntityState.Deleted)

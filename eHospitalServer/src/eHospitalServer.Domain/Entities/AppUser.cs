@@ -29,14 +29,12 @@ public class AppUser : IdentityUser<string>
     public Employee? Employee { get; set; }
     public Patient? Patient { get; set; }
 
-
-
-    public string CreatedUserId { get; set; } = default!;
+    public string? CreatedUser { get; set; } = default;
     public DateTime CreatedDate { get; set; } = default!;
-    public string? UpdatedUserId { get; set; } = default!;
+    public string? UpdatedUser { get; set; } = default;
     public DateTime? UpdatedDate { get; set; }
     public bool IsUpdated { get; set; }
-    public string? DeletedUserId { get; set; } = default!;
+    public string? DeletedUser { get; set; } = default;
     public DateTime? DeletedDate { get; set; }
     public bool IsDeleted { get; set; } = false;
 }

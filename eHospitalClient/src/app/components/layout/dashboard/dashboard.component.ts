@@ -57,7 +57,6 @@ export class DashboardComponent implements OnInit {
   getByUser(id: string): void {
     this.http.post<UserModel>(`Dashboard/GetByUser?Id=${id}`, {}, (res) => {
       this.user = res;
-
     })
   }
 }

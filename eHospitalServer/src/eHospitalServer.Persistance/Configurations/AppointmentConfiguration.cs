@@ -10,11 +10,11 @@ internal sealed class AppointmentConfiguration : IEntityTypeConfiguration<Appoin
         builder.HasOne(p => p.Doctor)
             .WithMany(p => p.Appointments)
             .HasForeignKey(p => p.DoctorId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.NoAction);
 
         builder.HasOne(p => p.Patient)
             .WithMany(p => p.Appointments)
             .HasForeignKey(p => p.PatientId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.NoAction);
     }
 }
