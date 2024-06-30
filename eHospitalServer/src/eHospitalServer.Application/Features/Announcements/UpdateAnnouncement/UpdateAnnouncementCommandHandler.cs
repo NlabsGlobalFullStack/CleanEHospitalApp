@@ -5,6 +5,7 @@ using eHospitalServer.Domain.Repositories.DefaultRepositories;
 using eHospitalServer.Infrastructure.Results;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Nlabs.FileService;
 
 namespace eHospitalServer.Application.Features.Announcements.UpdateAnnouncement;
 
@@ -12,34 +13,46 @@ internal sealed class UpdateAnnouncementCommandHandler(
     IAnnouncementRepository announcementRepository,
     IUnitOfWork unitOfWork,
     IMapper mapper,
-    IMediator mediator
+    IMediator mediator,
+    IFileHostEnvironment hostEnvironment
 ) : IRequestHandler<UpdateAnnouncementCommand, Result<string>>
 {
     public async Task<Result<string>> Handle(UpdateAnnouncementCommand request, CancellationToken cancellationToken)
     {
-        var announcement = await announcementRepository.Where(p => p.Id == request.Id).FirstOrDefaultAsync(cancellationToken);
-        if (announcement is null)
+        var announcmentIsExists = await announcementRepository.Where(p => p.Id == request.Id).FirstOrDefaultAsync(cancellationToken);
+        if (announcmentIsExists is null)
         {
             return Result<string>.Failure("Announcement not found!");
         }
 
-        var result = mapper.Map(request, announcement);
+        var announcement = mapper.Map(request, announcmentIsExists);
 
-        result.IsUpdated = true;
+        if (request.File is null)
+        {
+            var ImageName = announcmentIsExists.Image;
+            announcement.Image = ImageName;
+        }
 
-        announcementRepository.Update(result);
+        if (request.File is not null)
+        {
+            var fullPath = Path.Combine(hostEnvironment.WebRootPath, "announcements", announcmentIsExists.Image);
+
+            if (File.Exists(fullPath))
+            {
+                FileService.FileDeleteToServer(fullPath);
+            }
+            var fileName = FileService.FileSaveToServer(request.File, "wwwroot/announcements/");
+            announcement.Image = fileName;
+        }
+
+        announcement.IsUpdated = true;
+
+        announcementRepository.Update(announcement);
         await unitOfWork.SaveChangesAsync(cancellationToken);
 
         if (announcement.IsPublish)
         {
-            try
-            {
-                //await mediator.Publish(new AnnouncementDomain(announcement.Id), cancellationToken);
-            }
-            catch (Exception ex)
-            {
-                return Result<string>.Failure($"Error while publishing announcement: {ex.Message}");
-            }
+            await mediator.Publish(new AnnouncementDomain(announcement.Id), cancellationToken);
         }
 
         return "The announcement update process is successful";

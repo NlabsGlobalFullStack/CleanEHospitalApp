@@ -1,5 +1,4 @@
-﻿using eHospitalServer.Domain.Enums;
-using eHospitalServer.Infrastructure.Results;
+﻿using eHospitalServer.Infrastructure.Results;
 using MediatR;
 
 namespace eHospitalServer.Application.Features.Rooms.UpdateRoom;
@@ -7,7 +6,7 @@ public sealed record UpdateRoomCommand(
     string Id,
     string Number,
     string DepartmentId,
-    RoomTypeEnum RoomType,
+    string RoomTypeValue,
     byte Capacity,
     bool IsOccupied,
     bool IsOutOfService

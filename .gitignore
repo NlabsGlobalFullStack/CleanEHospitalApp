@@ -8,6 +8,7 @@
 
 # Visual Studio specific files
 /eHospitalServer/.vs
+/eHospitalServer/src/.vs
 
 # Application build output directories
 /eHospitalServer/eHospitalServer.Application/bin

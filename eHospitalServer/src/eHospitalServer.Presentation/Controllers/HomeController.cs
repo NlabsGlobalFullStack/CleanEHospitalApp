@@ -19,56 +19,56 @@ public sealed class HomeController : ApiController
     public HomeController(IMediator mediator) : base(mediator) { }
 
 
-    [HttpGet]
+    [HttpPost]
     public async Task<IActionResult> GetSettings(CancellationToken cancellationToken)
     {
         var response = await _mediator.Send(new GetSettingsQuery(), cancellationToken);
         return StatusCode(response.StatusCode, response);
     }
 
-    [HttpGet]
+    [HttpPost]
     public async Task<IActionResult> GetSliders(CancellationToken cancellationToken)
     {
         var response = await _mediator.Send(new GetAllSlidersQuery(), cancellationToken);
         return StatusCode(response.StatusCode, response);
     }
 
-    [HttpGet]
+    [HttpPost]
     public async Task<IActionResult> GetDoctors(CancellationToken cancellationToken)
     {
         var response = await _mediator.Send(new GetAllDoctorsQuery(), cancellationToken);
         return StatusCode(response.StatusCode, response);
     }
 
-    [HttpGet]
+    [HttpPost]
     public async Task<IActionResult> GetDepartments(CancellationToken cancellationToken)
     {
         var response = await _mediator.Send(new GetAllDepartmentsQuery(), cancellationToken);
         return StatusCode(response.StatusCode, response);
     }
 
-    [HttpGet]
+    [HttpPost]
     public async Task<IActionResult> GetServices(CancellationToken cancellationToken)
     {
         var response = await _mediator.Send(new GetAllServicesQuery(), cancellationToken);
         return StatusCode(response.StatusCode, response);
     }
 
-    [HttpGet]
+    [HttpPost]
     public async Task<IActionResult> GetFaqs(CancellationToken cancellationToken)
     {
         var response = await _mediator.Send(new GetAllFaqsQuery(), cancellationToken);
         return StatusCode(response.StatusCode, response);
     }
 
-    [HttpGet]
+    [HttpPost]
     public async Task<IActionResult> GetAnnouncmenets(CancellationToken cancellationToken)
     {
         var response = await _mediator.Send(new GetAllAnnountcementsQuery(), cancellationToken);
         return StatusCode(response.StatusCode, response);
     }
 
-    [HttpGet]
+    [HttpPost]
     public async Task<IActionResult> GetByAnnouncement(string id, CancellationToken cancellationToken)
     {
         var response = await _mediator.Send(new GetByIdAnnouncementQuery(id), cancellationToken);

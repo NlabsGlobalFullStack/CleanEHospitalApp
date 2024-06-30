@@ -1,15 +1,15 @@
 ﻿using eHospitalServer.Domain.Repositories;
-using eHospitalServer.Domain.Repositories.CustomRepositories;
 using eHospitalServer.Domain.Repositories.DefaultRepositories;
 using eHospitalServer.Infrastructure.Results;
 using MediatR;
+using Nlabs.FileService;
 
 namespace eHospitalServer.Application.Features.Departments.DeleteById;
 
 internal sealed class DeleteByIdDepartmentCommandHandler(
     IDepartmentRepository departmentRepository,
     IUnitOfWork unitOfWork,
-    IMyHostEnvironment hostEnvironment
+    IFileHostEnvironment fileHostEnvironment
 ) : IRequestHandler<DeleteByIdDepartmentCommand, Result<string>>
 {
     public async Task<Result<string>> Handle(DeleteByIdDepartmentCommand request, CancellationToken cancellationToken)
@@ -19,18 +19,12 @@ internal sealed class DeleteByIdDepartmentCommandHandler(
         {
             return Result<string>.Failure("Department not found!");
         }
-
-        //kendime ait bir Dosya silme işlemi yazdım
-        //kendi kütüphaneme daha sonra entegre edecegim.
-        var fullPath = Path.Combine(hostEnvironment.WebRootPath, "departments", department.Image);
+        var fullPath = Path.Combine(fileHostEnvironment.WebRootPath, "departments", department.Image);
 
         if (File.Exists(fullPath))
         {
-            File.Delete(fullPath);
+            FileService.FileDeleteToServer(fullPath);
         }
-
-        //Sanırım izinler ile alakalı bir sıkıntı var dosya silemedim.
-        //FileService.FileDeleteToServer(fullPath);
 
 
         department.IsDeleted = true;

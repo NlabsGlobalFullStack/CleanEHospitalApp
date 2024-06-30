@@ -5,7 +5,7 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddPresentation(builder.Configuration, builder.Environment);
+builder.Services.AddPresentation(builder.Configuration, builder.Environment.WebRootPath);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

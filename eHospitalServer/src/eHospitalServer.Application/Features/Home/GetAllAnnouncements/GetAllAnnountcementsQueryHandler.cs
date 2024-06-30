@@ -1,4 +1,5 @@
-﻿using eHospitalServer.Domain.Repositories;
+﻿using eHospitalServer.Application.Constants;
+using eHospitalServer.Domain.Repositories;
 using eHospitalServer.Infrastructure.Results;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -14,7 +15,7 @@ internal sealed class GetAllAnnountcementsQueryHandler(
 
         List<GetAllAnnouncementsQueryResponse> response = announcements.Select(s => new GetAllAnnouncementsQueryResponse()
         {
-            Image = s.Image,
+            Image = ApplicationConstants.ApiUrl + "/announcements/" + s.Image,
             Title = s.Title,
             Summary = s.Summary,
             Content = s.Content,

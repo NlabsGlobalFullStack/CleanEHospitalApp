@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3QEH4EBqKIJy+Zgv4yW23g04tVLKyyHiUcyOlj/GtiI=",
+  "Hash": "kPHWZU2wpdtlsmg57evXUKX2QMOb5u6uJMOgmJoy/34=",
   "Source": "eHospitalServer.WebAPI",
   "BasePath": "_content/eHospitalServer.WebAPI",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.WebAPI\\wwwroot\\departments\\1a3c7049-f06e-404c-83b8-2970022a62a8.png",
+      "Identity": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.WebAPI\\wwwroot\\announcements\\25559e1c-9612-413f-b93d-453fa1eca13f.jpeg",
       "SourceId": "eHospitalServer.WebAPI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.WebAPI\\wwwroot\\",
       "BasePath": "_content/eHospitalServer.WebAPI",
-      "RelativePath": "departments/1a3c7049-f06e-404c-83b8-2970022a62a8.png",
+      "RelativePath": "announcements/25559e1c-9612-413f-b93d-453fa1eca13f.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -33,15 +33,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\departments\\1a3c7049-f06e-404c-83b8-2970022a62a8.png"
+      "OriginalItemSpec": "wwwroot\\announcements\\25559e1c-9612-413f-b93d-453fa1eca13f.jpeg"
     },
     {
-      "Identity": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.WebAPI\\wwwroot\\departments\\b6d6c336-d536-41ad-b6f6-148f975fff20.png",
+      "Identity": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.WebAPI\\wwwroot\\announcements\\5f264051-3c55-424e-8e73-0ca828ceb913.jpeg",
       "SourceId": "eHospitalServer.WebAPI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.WebAPI\\wwwroot\\",
       "BasePath": "_content/eHospitalServer.WebAPI",
-      "RelativePath": "departments/b6d6c336-d536-41ad-b6f6-148f975fff20.png",
+      "RelativePath": "announcements/5f264051-3c55-424e-8e73-0ca828ceb913.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -52,15 +52,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\departments\\b6d6c336-d536-41ad-b6f6-148f975fff20.png"
+      "OriginalItemSpec": "wwwroot\\announcements\\5f264051-3c55-424e-8e73-0ca828ceb913.jpeg"
     },
     {
-      "Identity": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.WebAPI\\wwwroot\\departments\\e2c9b2d6-5475-4c03-9300-adb2e9c85651.png",
+      "Identity": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.WebAPI\\wwwroot\\announcements\\8b6d5e66-dd11-4e59-80c1-b24497213630.jpeg",
       "SourceId": "eHospitalServer.WebAPI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.WebAPI\\wwwroot\\",
       "BasePath": "_content/eHospitalServer.WebAPI",
-      "RelativePath": "departments/e2c9b2d6-5475-4c03-9300-adb2e9c85651.png",
+      "RelativePath": "announcements/8b6d5e66-dd11-4e59-80c1-b24497213630.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -71,7 +71,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\departments\\e2c9b2d6-5475-4c03-9300-adb2e9c85651.png"
+      "OriginalItemSpec": "wwwroot\\announcements\\8b6d5e66-dd11-4e59-80c1-b24497213630.jpeg"
+    },
+    {
+      "Identity": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.WebAPI\\wwwroot\\departments\\1358708c-2297-4ccd-b6e6-6f2f8d4e776d.jpeg",
+      "SourceId": "eHospitalServer.WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.WebAPI\\wwwroot\\",
+      "BasePath": "_content/eHospitalServer.WebAPI",
+      "RelativePath": "departments/1358708c-2297-4ccd-b6e6-6f2f8d4e776d.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\departments\\1358708c-2297-4ccd-b6e6-6f2f8d4e776d.jpeg"
     }
   ]
 }

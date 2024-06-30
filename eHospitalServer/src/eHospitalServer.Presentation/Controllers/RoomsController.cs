@@ -38,4 +38,11 @@ public sealed class RoomsController : ApiController
         var response = await _mediator.Send(request, cancellationToken);
         return StatusCode(response.StatusCode, response);
     }
+
+    [HttpPost]
+    public async Task<IActionResult> DeleteBy(GetByIdRoomCommand request, CancellationToken cancellationToken)
+    {
+        var response = await _mediator.Send(request, cancellationToken);
+        return StatusCode(response.StatusCode, response);
+    }
 }

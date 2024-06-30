@@ -24,25 +24,25 @@ internal sealed class SendQuequePatients() : INotificationHandler<AnnouncementDo
         using var channel = connection.CreateModel();
 
         channel.QueueDeclare(
-                    queue: "users",
+                    queue: "announcements",
                     exclusive: false,
                     autoDelete: false,
                     arguments: null
                 );
 
-        var emails = await userManager.Users.Where(p => p.EmailConfirmed == true).ToListAsync(cancellationToken);
-        foreach (var email in emails)
+        var users = await userManager.Users.Where(p => p.EmailConfirmed == true).ToListAsync(cancellationToken);
+        foreach (var user in users)
         {
             var data = new
             {
-                Email = email,
+                Email = user.Email,
                 AnnouncementId = notification.announcementId
             };
 
             var message = JsonSerializer.Serialize(data);
             var body = Encoding.UTF8.GetBytes(message);
-            channel.BasicPublish(exchange: string.Empty, routingKey: "users", basicProperties: null, body: body);
-            await Console.Out.WriteLineAsync($" [x] {email} sended queue");
+            channel.BasicPublish(exchange: string.Empty, routingKey: "announcements", basicProperties: null, body: body);
+            await Console.Out.WriteLineAsync($" [x] {user.Email} sended queue");
         }
         await Task.CompletedTask;
     }

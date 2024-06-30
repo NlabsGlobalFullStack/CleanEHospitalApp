@@ -8,11 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.4">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.6">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,9 +20,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\announcements\" />
     <Folder Include="wwwroot\departments\" />
-    <Folder Include="wwwroot\users\" />
     <Folder Include="wwwroot\sliders\" />
+    <Folder Include="wwwroot\users\" />
   </ItemGroup>
 
 </Project>

@@ -22,6 +22,13 @@ internal sealed class GetAllRoomsQueryHandler(
             Capacity = r.Capacity,
             IsOccupied = r.IsOccupied,
             IsOutOfService = r.IsOutOfService,
+            CreatedUser = r.CreatedUser!,
+            CreatedDate = r.CreatedDate,
+            UpdatedUser = r.UpdatedUser,
+            UpdatedDate = r.UpdatedDate,
+            IsUpdated = r.IsUpdated,
+            DeletedUser = r.DeletedUser,
+            DeletedDate = r.DeletedDate,
             IsDeleted = r.IsDeleted
         }).ToList();
 

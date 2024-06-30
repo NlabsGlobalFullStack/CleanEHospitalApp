@@ -2,7 +2,6 @@
 public abstract class Entity
 {
     public string Id { get; set; } = Guid.NewGuid().ToString();
-
     public string? CreatedUser { get; set; } = default;
     public DateTime CreatedDate { get; set; } = DateTime.Now;
     public string? UpdatedUser { get; set; } = default;

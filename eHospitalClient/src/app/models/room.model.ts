@@ -2,11 +2,34 @@ import { DepartmentModel } from "./department.model";
 
 export class RoomModel{
     id: string = "";
+
     number: string = "";
-    department: DepartmentModel = new DepartmentModel();
+
+    departmentId: string = "";
+    department?: DepartmentModel = new DepartmentModel();
+    
+    roomTypeValue: number = 0;
+    roomType?: RoomTypeEnum = new RoomTypeEnum();
+
     capacity: number = 1;
-    isOccupied: boolean = true;
-    isOutOfService: boolean = true;
+    
+    isOccupied: boolean = false;
+    
+    isOutOfService: boolean = false;
+
+    createdUser?: string = "";
+    createdDate?: string = "";
+
+    updatedUser?: string = "";
+    updatedDate?: string = "";
+    isUpdated: boolean = false;
+    
+    deletedUser?: string = "";
+    deletedDate?: string = "";
     isDeleted: boolean = false;
-    roomType: string = "";
+}
+
+export class RoomTypeEnum{
+    name: string = "";
+    value: number = 0;
 }

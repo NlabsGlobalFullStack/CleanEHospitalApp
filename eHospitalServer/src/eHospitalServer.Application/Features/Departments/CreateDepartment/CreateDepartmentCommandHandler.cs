@@ -1,20 +1,17 @@
 ﻿using AutoMapper;
-using eHospitalServer.Application.Events.Departments;
 using eHospitalServer.Domain.Entities;
 using eHospitalServer.Domain.Repositories;
 using eHospitalServer.Domain.Repositories.DefaultRepositories;
-using eHospitalServer.Infrastructure.Extensions;
 using eHospitalServer.Infrastructure.Results;
 using MediatR;
-using Nlabs.GenericFileSrevice;
+using Nlabs.FileService;
 
 namespace eHospitalServer.Application.Features.Departments.CreateDepartment;
 
 internal sealed class CreateDepartmentCommandHandler(
     IDepartmentRepository departmentRepository,
     IMapper mapper,
-    IUnitOfWork unitOfWork,
-    IMediator mediator
+    IUnitOfWork unitOfWork
 ) : IRequestHandler<CreateDepartmentCommand, Result<string>>
 {
     public async Task<Result<string>> Handle(CreateDepartmentCommand request, CancellationToken cancellationToken)
@@ -32,14 +29,16 @@ internal sealed class CreateDepartmentCommandHandler(
 
 
         await departmentRepository.AddAsync(department, cancellationToken);
-        var saveChangesResult = await unitOfWork.SaveChangesAsync(cancellationToken);
+        await unitOfWork.SaveChangesAsync(cancellationToken);
 
-        if (saveChangesResult > 0)
-        {
-            var subject = department.Name;
-            var body = EmailBodies.CreateDepartmentEmailBody(subject);
-            await mediator.Publish(new DepartmentDomain(department, subject, body), cancellationToken);
-        }
+        //var saveChangesResult = await unitOfWork.SaveChangesAsync(cancellationToken);
+
+        //if (saveChangesResult > 0)
+        //{
+        //    var subject = department.Name;
+        //    var body = EmailBodies.CreateDepartmentEmailBody(subject);
+        //    await mediator.Publish(new DepartmentDomain(department, subject, body), cancellationToken);
+        //}
 
 
         return "The department record has been created successfully.";

@@ -1,11 +1,10 @@
 ﻿using AutoMapper;
 using eHospitalServer.Domain.Entities;
 using eHospitalServer.Domain.Repositories;
-using eHospitalServer.Domain.Repositories.CustomRepositories;
 using eHospitalServer.Domain.Repositories.DefaultRepositories;
 using eHospitalServer.Infrastructure.Results;
 using MediatR;
-using Nlabs.GenericFileSrevice;
+using Nlabs.FileService;
 
 namespace eHospitalServer.Application.Features.Departments.UpdateDepartment;
 
@@ -13,7 +12,7 @@ internal sealed class UpdateDepartmentCommandHandler(
     IDepartmentRepository departmentRepository,
     IMapper mapper,
     IUnitOfWork unitOfWork,
-    IMyHostEnvironment hostEnvironment
+    IFileHostEnvironment fileHostEnvironment
 ) : IRequestHandler<UpdateDepartmentCommand, Result<string>>
 {
     public async Task<Result<string>> Handle(UpdateDepartmentCommand request, CancellationToken cancellationToken)
@@ -35,11 +34,11 @@ internal sealed class UpdateDepartmentCommandHandler(
 
         if (request.File is not null)
         {
-            var fullPath = Path.Combine(hostEnvironment.WebRootPath, "departments", departmentIsExists.Image);
+            var fullPath = Path.Combine(fileHostEnvironment.WebRootPath, "departments", departmentIsExists.Image);
 
             if (File.Exists(fullPath))
             {
-                File.Delete(fullPath);
+                FileService.FileDeleteToServer(fullPath);
             }
             var fileName = FileService.FileSaveToServer(request.File, "wwwroot/departments/");
             department.Image = fileName;

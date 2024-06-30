@@ -53,7 +53,7 @@ export class HomeComponent implements OnInit{
 
 
     getDepartments(): void {
-        this.http.get<DepartmentModel[]>("Home/GetDepartments", (res) => {
+        this.http.post<DepartmentModel[]>("Home/GetDepartments", {}, (res) => {
             this.departments = res;
         });
     }
@@ -70,37 +70,37 @@ export class HomeComponent implements OnInit{
       }
 
     getDoctors() {
-        this.http.get<DoctorModel[]>("Home/GetDoctors", (res) => {
+        this.http.post<DoctorModel[]>("Home/GetDoctors", {}, (res) => {
             this.doctors = res;
         });
     }
 
     getServices() {
-        this.http.get<ServiceCareModel[]>("Home/GetServices", (res) => {
+        this.http.post<ServiceCareModel[]>("Home/GetServices", {}, (res) => {
             this.services = res;
         });
     }
 
     getFaqs() {
-        this.http.get<FaqModel[]>("Home/GetFaqs", (res) => {
+        this.http.post<FaqModel[]>("Home/GetFaqs", {}, (res) => {
             this.faqs = res;
         });
     }
 
     getSliders() {
-        this.http.get<SliderModel[]>("Home/GetSliders", (res) => {
+        this.http.post<SliderModel[]>("Home/GetSliders", {}, (res) => {
             this.sliders = res;
         });
     }
 
     getAnnouncements() {
-        this.http.get<AnnouncementModel[]>("Home/GetAnnouncmenets", (res) => {
+        this.http.post<AnnouncementModel[]>("Home/GetAnnouncmenets", {}, (res) => {
             this.announcements = res;
         });
     }
 
     getSettings() {
-        this.http.get<SettingsModel>("Home/GetSettings", (res) => {
+        this.http.post<SettingsModel>("Home/GetSettings", {}, (res) => {
             this.settings = res;
             this.safeMapsCode = this.sanitizer.bypassSecurityTrustHtml(this.settings.mapsCode);
             // <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.208239912099!2d29.00630807574685!3d41.04257501731289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab1115a3c0d87%3A0x96bde3e1e896cda2!2s%C4%B0stanbul%20E%C4%9Fitim%20Akademi!5e0!3m2!1str!2str!4v1714239014344!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

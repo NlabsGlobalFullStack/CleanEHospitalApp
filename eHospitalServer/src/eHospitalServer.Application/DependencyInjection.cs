@@ -5,13 +5,17 @@ using FluentValidation;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using Nlabs.FileService;
 
 namespace eHospitalServer.Application;
 public static class DependencyInjection
 {
-    public static IServiceCollection AddApplication(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddApplication(
+        this IServiceCollection services,
+        IConfiguration configuration,
+        string path)
     {
-        services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly);        
+        services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly);
 
         services.AddMediatR(configuration =>
         {
@@ -27,7 +31,6 @@ public static class DependencyInjection
 
         services.Configure<EmailOptions>(options =>
         {
-
             options.Smtp = Convert.ToString(emailSection["Smtp"]!);
             options.Port = Convert.ToInt16(emailSection["Port"]!);
             options.Email = Convert.ToString(emailSection["Email"]!);
@@ -38,13 +41,7 @@ public static class DependencyInjection
 
         services.AddInfrastructure(configuration);
 
-        //daha sonra bunu Duyuru kısmında kullanacaksın
-
-        //if (anno bilmem ne işte  yayınlandı ise yada bilmem ne ise kontrol edip gönder.IsPublish)
-        //{
-        //    await mediator.Publish(new AnnouncementDomain(request.Id));
-
-        //}
+        services.AddFileService(path);
 
         return services;
     }

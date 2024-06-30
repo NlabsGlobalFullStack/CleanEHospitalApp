@@ -7,8 +7,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
-using System.Net.Mail;
 using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Text.Json;
 
@@ -42,6 +42,7 @@ public sealed class AnnouncementBackgroundService : BackgroundService
         Console.WriteLine(" [*] Waiting for messages...");
 
         var consumer = new EventingBasicConsumer(channel);
+
         consumer.Received += async (model, ea) =>
         {
             var emailOptions = _options.Value;

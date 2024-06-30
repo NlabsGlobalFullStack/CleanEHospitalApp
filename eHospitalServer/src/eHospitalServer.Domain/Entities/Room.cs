@@ -4,8 +4,8 @@ using eHospitalServer.Domain.Enums;
 namespace eHospitalServer.Domain.Entities;
 public class Room : Entity
 {
-    public string Number { get; set; } = string.Empty;
-    public string DepartmentId { get; set; } = string.Empty;
+    public string Number { get; set; } = default!;
+    public string DepartmentId { get; set; } = default!;
     public Department? Department { get; set; }
     public RoomTypeEnum RoomType { get; set; } = RoomTypeEnum.PatientRoom;
     public byte Capacity { get; set; } = 1;

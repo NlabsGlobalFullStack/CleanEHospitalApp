@@ -26,14 +26,7 @@ internal sealed class ChangeStatusCommandHandler(
 
         if (announcement.IsPublish)
         {
-            try
-            {
-                await mediator.Publish(new AnnouncementDomain(announcement.Id), cancellationToken);
-            }
-            catch (Exception ex)
-            {
-                return Result<string>.Failure($"Error while publishing announcement: {ex.Message}");
-            }
+            await mediator.Publish(new AnnouncementDomain(announcement.Id), cancellationToken);
         }
 
         return Result<string>.Succeed("Change status is successful");

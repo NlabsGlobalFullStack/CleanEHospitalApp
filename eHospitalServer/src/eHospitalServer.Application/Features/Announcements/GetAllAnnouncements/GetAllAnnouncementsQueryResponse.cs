@@ -2,12 +2,12 @@
 
 public sealed record GetAllAnnouncementsQueryResponse
 {
-    public string Id { get; set; } = string.Empty;
-    public string Image { get; set; } = string.Empty;
-    public string Title { get; set; } = string.Empty;
-    public string Url { get; set; } = string.Empty;
-    public string Summary { get; set; } = string.Empty;
-    public string Content { get; set; } = string.Empty;
+    public string Id { get; set; } = default!;
+    public string Image { get; set; } = default!;
+    public string Title { get; set; } = default!;
+    public string Url { get; set; } = default!;
+    public string Summary { get; set; } = default!;
+    public string Content { get; set; } = default!;
     public DateOnly PublishDate { get; set; }
     public bool IsPublish { get; set; } = false;
 

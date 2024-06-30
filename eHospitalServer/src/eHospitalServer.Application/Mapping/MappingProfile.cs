@@ -5,6 +5,8 @@ using eHospitalServer.Application.Features.Departments.CreateDepartment;
 using eHospitalServer.Application.Features.Departments.UpdateDepartment;
 using eHospitalServer.Application.Features.Faqs.CreateFaq;
 using eHospitalServer.Application.Features.Faqs.UpdateFaq;
+using eHospitalServer.Application.Features.Rooms.CreateRoom;
+using eHospitalServer.Application.Features.Rooms.UpdateRoom;
 using eHospitalServer.Application.Features.Users.Queries.Users.GetAllUsers;
 using eHospitalServer.Domain.Entities;
 
@@ -24,5 +26,8 @@ public sealed class MappingProfile : Profile
 
         CreateMap<CreateFaqCommand, Faq>().ReverseMap();
         CreateMap<UpdateFaqCommand, Faq>().ReverseMap();
+
+        CreateMap<CreateRoomCommand, Room>().ReverseMap();
+        CreateMap<UpdateRoomCommand, Room>().ReverseMap();
     }
 }

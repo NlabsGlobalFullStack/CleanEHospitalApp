@@ -6,7 +6,6 @@ public sealed class UpdateAnnouncementCommandValidator : AbstractValidator<Updat
 {
     public UpdateAnnouncementCommandValidator()
     {
-        RuleFor(p => p.ImageUrl).NotEmpty().NotNull().WithMessage("Image cannot be empty!");
         RuleFor(p => p.Title).NotEmpty().NotNull().WithMessage("Title cannot be empty");
         RuleFor(p => p.Summary).NotEmpty().NotNull().WithMessage("Summary cannot be empty");
         RuleFor(p => p.Content).NotEmpty().NotNull().WithMessage("Content cannot be empty");

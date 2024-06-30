@@ -2,7 +2,6 @@
 using eHospitalServer.Infrastructure.Utilities;
 using eHospitalServer.Persistance;
 using eHospitalServer.Presentation.Middlewares;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -12,8 +11,7 @@ public static class DependencyInjection
     public static IServiceCollection AddPresentation(
         this IServiceCollection services,
         IConfiguration configuration,
-        IWebHostEnvironment webHostEnvironment
-        )
+        string path)
     {
         services.AddCors(cfr =>
         {
@@ -28,9 +26,9 @@ public static class DependencyInjection
         services.AddExceptionHandler<ExceptionMiddleware>();
         services.AddProblemDetails();
 
-        services.AddApplication(configuration);
+        services.AddApplication(configuration, path);
 
-        services.AddPersistance(configuration, webHostEnvironment);
+        services.AddPersistance(configuration);
 
         //ServiceTool
         services.CreateServiceTool();

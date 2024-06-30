@@ -6,7 +6,6 @@ import { SwalService } from '../../../services/swal.service';
 import { FormsModule, NgForm } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { FormValidateDirective } from 'form-validate-angular';
-import { api } from '../../../constants';
 
 @Component({
   selector: 'app-departments',
@@ -16,7 +15,6 @@ import { api } from '../../../constants';
   imports: [DatePipe, FormsModule, FormValidateDirective]
 })
 export class DepartmentsComponent implements OnInit {
-  apiUrl: string = api;
   departments: DepartmentModel[] = [];
 
   @ViewChild("createModalCloseBtn") createModalCloseBtn: ElementRef<HTMLButtonElement> | undefined;
