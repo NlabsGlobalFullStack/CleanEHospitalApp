@@ -1,4 +1,4 @@
-export class RoomAction{
+export class RoomActionModel{
     id: string = "";
     title: string = "";
     description: string ="";

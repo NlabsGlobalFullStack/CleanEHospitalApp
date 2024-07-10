@@ -5,7 +5,7 @@ namespace eHospitalServer.Application.Features.Rooms.CreateRoom;
 public sealed record CreateRoomCommand(
     string Number,
     string DepartmentId,
-    string RoomTypeValue,
+    int RoomTypeValue,
     byte Capacity,
     bool IsOccupied,
     bool IsOutOfService

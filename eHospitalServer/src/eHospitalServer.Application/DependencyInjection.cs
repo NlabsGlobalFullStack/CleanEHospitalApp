@@ -1,5 +1,4 @@
 ﻿using eHospitalServer.Application.Behaviors;
-using eHospitalServer.Infrastructure;
 using eHospitalServer.Infrastructure.Options;
 using FluentValidation;
 using Microsoft.Extensions.Configuration;
@@ -38,8 +37,6 @@ public static class DependencyInjection
         });
 
         services.AddSingleton<EmailOptions>();
-
-        services.AddInfrastructure(configuration);
 
         services.AddFileService(path);
 

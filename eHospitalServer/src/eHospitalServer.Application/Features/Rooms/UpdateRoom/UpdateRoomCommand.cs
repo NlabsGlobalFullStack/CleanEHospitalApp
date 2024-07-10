@@ -6,7 +6,7 @@ public sealed record UpdateRoomCommand(
     string Id,
     string Number,
     string DepartmentId,
-    string RoomTypeValue,
+    int RoomTypeValue,
     byte Capacity,
     bool IsOccupied,
     bool IsOutOfService

@@ -17,8 +17,10 @@ internal sealed class GetAllRoomsQueryHandler(
         {
             Id = r.Id,
             Number = r.Number,
+            DepartmentId = r.DepartmentId,
             Department = r.Department!.Name,
             RoomType = r.RoomType,
+            RoomTypeValue = r.RoomType.Value,
             Capacity = r.Capacity,
             IsOccupied = r.IsOccupied,
             IsOutOfService = r.IsOutOfService,

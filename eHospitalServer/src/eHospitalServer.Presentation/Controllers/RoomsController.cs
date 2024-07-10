@@ -1,4 +1,5 @@
 ﻿using eHospitalServer.Application.Features.Rooms.CreateRoom;
+using eHospitalServer.Application.Features.Rooms.DeleteByIdRoom;
 using eHospitalServer.Application.Features.Rooms.GetAllRooms;
 using eHospitalServer.Application.Features.Rooms.GetByIdRoom;
 using eHospitalServer.Application.Features.Rooms.UpdateRoom;
@@ -40,7 +41,7 @@ public sealed class RoomsController : ApiController
     }
 
     [HttpPost]
-    public async Task<IActionResult> DeleteBy(GetByIdRoomCommand request, CancellationToken cancellationToken)
+    public async Task<IActionResult> DeleteBy(DeleteByIdRoomCommand request, CancellationToken cancellationToken)
     {
         var response = await _mediator.Send(request, cancellationToken);
         return StatusCode(response.StatusCode, response);

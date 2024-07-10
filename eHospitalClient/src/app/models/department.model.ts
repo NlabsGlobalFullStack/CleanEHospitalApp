@@ -1,9 +1,8 @@
-export class DepartmentModel{
-    id: string = "";
+import { EntityModel } from "./abstractions/entity.model";
+
+export class DepartmentModel extends EntityModel{
     name: string = "";
     image: string = "";
     file?: any;
-    createdDate: string = "";
-    isDeleted: boolean = false;
     description?: string = "";
 }

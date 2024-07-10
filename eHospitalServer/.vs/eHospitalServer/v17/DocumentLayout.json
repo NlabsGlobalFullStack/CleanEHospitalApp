@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7364FBAF-3FDA-4BE7-84B9-CDC388D4426E}|src\\eHospitalServer.Application\\eHospitalServer.Application.csproj|d:\\projects\\fullstack\\cleanehospitalapp\\ehospitalserver\\src\\ehospitalserver.application\\features\\departments\\createdepartment\\createdepartmentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7364FBAF-3FDA-4BE7-84B9-CDC388D4426E}|src\\eHospitalServer.Application\\eHospitalServer.Application.csproj|solutionrelative:src\\ehospitalserver.application\\features\\departments\\createdepartment\\createdepartmentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DEA25EDA-EE1C-4CBC-AD44-A7BA9D95E342}|src\\eHospitalServer.WebAPI\\eHospitalServer.WebAPI.csproj|d:\\projects\\fullstack\\cleanehospitalapp\\ehospitalserver\\src\\ehospitalserver.webapi\\helpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEA25EDA-EE1C-4CBC-AD44-A7BA9D95E342}|src\\eHospitalServer.WebAPI\\eHospitalServer.WebAPI.csproj|solutionrelative:src\\ehospitalserver.webapi\\helpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7364FBAF-3FDA-4BE7-84B9-CDC388D4426E}|src\\eHospitalServer.Application\\eHospitalServer.Application.csproj|d:\\projects\\fullstack\\cleanehospitalapp\\ehospitalserver\\src\\ehospitalserver.application\\events\\departments\\sendallusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7364FBAF-3FDA-4BE7-84B9-CDC388D4426E}|src\\eHospitalServer.Application\\eHospitalServer.Application.csproj|solutionrelative:src\\ehospitalserver.application\\events\\departments\\sendallusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{409528A1-F1C0-47CC-82FA-B27966F904E6}|src\\eHospitalServer.Infrastructure\\eHospitalServer.Infrastructure.csproj|d:\\projects\\fullstack\\cleanehospitalapp\\ehospitalserver\\src\\ehospitalserver.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{409528A1-F1C0-47CC-82FA-B27966F904E6}|src\\eHospitalServer.Infrastructure\\eHospitalServer.Infrastructure.csproj|solutionrelative:src\\ehospitalserver.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7364FBAF-3FDA-4BE7-84B9-CDC388D4426E}|src\\eHospitalServer.Application\\eHospitalServer.Application.csproj|d:\\projects\\fullstack\\cleanehospitalapp\\ehospitalserver\\src\\ehospitalserver.application\\features\\vehicles\\getallvehicles\\getallvehiclesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7364FBAF-3FDA-4BE7-84B9-CDC388D4426E}|src\\eHospitalServer.Application\\eHospitalServer.Application.csproj|solutionrelative:src\\ehospitalserver.application\\features\\vehicles\\getallvehicles\\getallvehiclesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 209,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,41 +70,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Infrastructure\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "src\\eHospitalServer.Infrastructure\\DependencyInjection.cs",
-              "ToolTip": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Infrastructure\\DependencyInjection.cs",
-              "RelativeToolTip": "src\\eHospitalServer.Infrastructure\\DependencyInjection.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "Helpers.cs",
+              "DocumentMoniker": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.WebAPI\\Helpers.cs",
+              "RelativeDocumentMoniker": "src\\eHospitalServer.WebAPI\\Helpers.cs",
+              "ToolTip": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.WebAPI\\Helpers.cs",
+              "RelativeToolTip": "src\\eHospitalServer.WebAPI\\Helpers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T12:01:57.837Z",
+              "WhenOpened": "2024-07-10T18:17:39.154Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SendAllUsers.cs",
-              "DocumentMoniker": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Application\\Events\\Departments\\SendAllUsers.cs",
-              "RelativeDocumentMoniker": "src\\eHospitalServer.Application\\Events\\Departments\\SendAllUsers.cs",
-              "ToolTip": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Application\\Events\\Departments\\SendAllUsers.cs",
-              "RelativeToolTip": "src\\eHospitalServer.Application\\Events\\Departments\\SendAllUsers.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "GetAllVehiclesQueryHandler.cs",
+              "DocumentMoniker": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Application\\Features\\Vehicles\\GetAllVehicles\\GetAllVehiclesQueryHandler.cs",
+              "RelativeDocumentMoniker": "src\\eHospitalServer.Application\\Features\\Vehicles\\GetAllVehicles\\GetAllVehiclesQueryHandler.cs",
+              "ToolTip": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Application\\Features\\Vehicles\\GetAllVehicles\\GetAllVehiclesQueryHandler.cs",
+              "RelativeToolTip": "src\\eHospitalServer.Application\\Features\\Vehicles\\GetAllVehicles\\GetAllVehiclesQueryHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T11:58:38.905Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CreateDepartmentCommandHandler.cs",
-              "DocumentMoniker": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Application\\Features\\Departments\\CreateDepartment\\CreateDepartmentCommandHandler.cs",
-              "RelativeDocumentMoniker": "src\\eHospitalServer.Application\\Features\\Departments\\CreateDepartment\\CreateDepartmentCommandHandler.cs",
-              "ToolTip": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Application\\Features\\Departments\\CreateDepartment\\CreateDepartmentCommandHandler.cs",
-              "RelativeToolTip": "src\\eHospitalServer.Application\\Features\\Departments\\CreateDepartment\\CreateDepartmentCommandHandler.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAgwCEAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T11:52:39.869Z",
+              "WhenOpened": "2024-07-10T17:15:22.854Z",
               "EditorCaption": ""
             }
           ]

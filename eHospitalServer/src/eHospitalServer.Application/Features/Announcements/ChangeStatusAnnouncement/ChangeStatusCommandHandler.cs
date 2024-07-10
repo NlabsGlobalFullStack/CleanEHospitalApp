@@ -1,6 +1,7 @@
 ﻿using eHospitalServer.Application.Events.Announcements;
 using eHospitalServer.Domain.Repositories;
 using eHospitalServer.Domain.Repositories.DefaultRepositories;
+using eHospitalServer.Infrastructure.Extensions;
 using eHospitalServer.Infrastructure.Results;
 using MediatR;
 
@@ -26,7 +27,9 @@ internal sealed class ChangeStatusCommandHandler(
 
         if (announcement.IsPublish)
         {
-            await mediator.Publish(new AnnouncementDomain(announcement.Id), cancellationToken);
+            var subject = announcement.Title;
+            var body = EmailBodies.CreateAnnouncementEmailBody(subject);
+            await mediator.Publish(new AnnouncementDomain(announcement, subject, body), cancellationToken);
         }
 
         return Result<string>.Succeed("Change status is successful");

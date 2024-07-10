@@ -7,6 +7,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { FormValidateDirective } from 'form-validate-angular';
 import { DepartmentModel } from '../../../models/department.model';
+import { roomTypes } from '../../../constants';
 
 @Component({
   selector: 'app-rooms',
@@ -29,6 +30,8 @@ export class RoomsComponent implements OnInit {
   }
 
   rooms: RoomModel[] = [];
+  roomTypes = roomTypes;
+
 
   departments: DepartmentModel[] = [];
 
@@ -82,8 +85,9 @@ export class RoomsComponent implements OnInit {
     this.updateModel = { ...model };
   }
 
-  update(form: NgForm) {
+  update(form: NgForm) {    
     if (form.valid) {
+      this.updateModel.roomTypeValue = this.updateModel.roomTypeValue;
       this.http.post<string>("Rooms/Update", this.updateModel, (res) => {
         this.swal.callToast(res, "info");
         this.updateModalCloseBtn?.nativeElement.click();

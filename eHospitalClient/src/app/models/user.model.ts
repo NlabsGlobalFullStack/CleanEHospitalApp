@@ -3,7 +3,7 @@ import { EmployeeModel } from "./employee.model";
 import { NurseModel } from "./nurse.model";
 import { PatientModel } from "./patient.model";
 
-export class UserModel {
+export class UserModel{
     id: string = "";
     image: string = "";
     identityNumber: string = "";
@@ -26,14 +26,16 @@ export class UserModel {
 
     doctorId?: string = "";
     doctor?: DoctorModel = new DoctorModel();
+
     nurseId?: string = "";
     nurse?: NurseModel = new NurseModel();
+
     employeeId?: string = "";
     employee?: EmployeeModel = new EmployeeModel();
+    
     patientId?: string = "";
     patient?: PatientModel = new PatientModel();
 
     isActive: boolean = true;
-    isDeleted: boolean = false;
-    
+    isDeleted: boolean = false;    
 }

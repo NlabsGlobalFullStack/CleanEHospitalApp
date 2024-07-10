@@ -13,15 +13,15 @@ internal sealed class UpdateRoomCommandHandler(
 {
     public async Task<Result<string>> Handle(UpdateRoomCommand request, CancellationToken cancellationToken)
     {
-        var room = await roomRepository.GetByExpressionAsync(p => p.Id == request.Id, cancellationToken);
-        if (room is null)
+        var roomIsExists = await roomRepository.GetByExpressionAsync(p => p.Id == request.Id, cancellationToken);
+        if (roomIsExists is null)
         {
             return Result<string>.Failure("Room not found!");
         }
 
-        var result = mapper.Map(request, room);
+        var room = mapper.Map(request, roomIsExists);
 
-        roomRepository.Update(result);
+        roomRepository.Update(room);
         await unitOfWork.SaveChangesAsync(cancellationToken);
 
         return "The room record has been updated successfully.";

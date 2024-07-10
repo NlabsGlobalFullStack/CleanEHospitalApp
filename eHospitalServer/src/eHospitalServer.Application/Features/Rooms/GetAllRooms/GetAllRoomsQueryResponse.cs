@@ -4,11 +4,13 @@ namespace eHospitalServer.Application.Features.Rooms.GetAllRooms;
 
 public sealed record GetAllRoomsQueryResponse
 {
-    public string Id { get; set; } = string.Empty;
-    public string Number { get; set; } = string.Empty;
-    public string Department { get; set; } = string.Empty;
-    public RoomTypeEnum RoomType { get; set; } = RoomTypeEnum.PatientRoom;
-    public byte Capacity { get; set; } = 1;
+    public string Id { get; set; } = default!;
+    public string Number { get; set; } = default!;
+    public string DepartmentId { get; set; } = default!;
+    public string Department { get; set; } = default!;
+    public RoomTypeEnum RoomType { get; set; } = default!;
+    public int RoomTypeValue { get; set; } = default!;
+    public byte Capacity { get; set; } = default!;
     public bool IsOccupied { get; set; } = false;
     public bool IsOutOfService { get; set; } = true;
 

@@ -1,19 +1,19 @@
 import { DepartmentModel } from "./department.model";
-import { UserModel } from "./user.model";
+import { PersonalModel } from "./abstractions/personal.model";
 
-export class DoctorModel{
-    id: string = "";
+export class DoctorModel extends PersonalModel{
+    userImage: string = "";
+    
     specialty: SpecialtyModel = new SpecialtyModel();
     specialtyValue: number = 0;
-    userId: string = "";
-    user: UserModel | any;
-    userImage: string = "";
+    
     departmentId: string = "";
-    department: DepartmentModel | any;
-
+    department: DepartmentModel = new DepartmentModel();
     departmentName: string = "";
 
     fullName: string = "";
+
+    appointmentPrice: number = 0;
 }
 
 export class SpecialtyModel{

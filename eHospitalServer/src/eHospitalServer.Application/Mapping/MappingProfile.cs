@@ -9,12 +9,23 @@ using eHospitalServer.Application.Features.Rooms.CreateRoom;
 using eHospitalServer.Application.Features.Rooms.UpdateRoom;
 using eHospitalServer.Application.Features.Users.Queries.Users.GetAllUsers;
 using eHospitalServer.Domain.Entities;
+using eHospitalServer.Domain.Enums;
 
 namespace eHospitalServer.Application.Mapping;
 public sealed class MappingProfile : Profile
 {
     public MappingProfile()
     {
+        CreateMap<CreateRoomCommand, Room>().ForMember(m => m.RoomType, options =>
+        {
+            options.MapFrom(map => RoomTypeEnum.FromValue(map.RoomTypeValue));
+        });
+
+        CreateMap<UpdateRoomCommand, Room>().ForMember(member => member.RoomType, options =>
+        {
+            options.MapFrom(map => RoomTypeEnum.FromValue(map.RoomTypeValue));
+        });
+
         CreateMap<GetAllUsersQuery, AppUser>().ReverseMap();
 
         CreateMap<CreateDepartmentCommand, Department>().ReverseMap();
@@ -26,8 +37,5 @@ public sealed class MappingProfile : Profile
 
         CreateMap<CreateFaqCommand, Faq>().ReverseMap();
         CreateMap<UpdateFaqCommand, Faq>().ReverseMap();
-
-        CreateMap<CreateRoomCommand, Room>().ReverseMap();
-        CreateMap<UpdateRoomCommand, Room>().ReverseMap();
     }
 }

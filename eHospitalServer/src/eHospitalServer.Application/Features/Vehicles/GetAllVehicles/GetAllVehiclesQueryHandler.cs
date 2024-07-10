@@ -17,6 +17,7 @@ internal sealed class GetAllVehiclesQueryHandler(
             Id = v.Id,
             Plate = v.Plate,
             VehicleType = v.VehicleType,
+            VehicleTypeValue = v.VehicleType.Value,
             Capacity = v.Capacity,
             IsDeleted = v.IsDeleted
         }).ToList();

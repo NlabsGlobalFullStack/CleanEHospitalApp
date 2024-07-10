@@ -2,6 +2,7 @@
 using eHospitalServer.Application.Events.Announcements;
 using eHospitalServer.Domain.Repositories;
 using eHospitalServer.Domain.Repositories.DefaultRepositories;
+using eHospitalServer.Infrastructure.Extensions;
 using eHospitalServer.Infrastructure.Results;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -52,7 +53,9 @@ internal sealed class UpdateAnnouncementCommandHandler(
 
         if (announcement.IsPublish)
         {
-            await mediator.Publish(new AnnouncementDomain(announcement.Id), cancellationToken);
+            var subject = announcement.Title;
+            var body = EmailBodies.CreateAnnouncementEmailBody(subject);
+            await mediator.Publish(new AnnouncementDomain(announcement, subject, body), cancellationToken);
         }
 
         return "The announcement update process is successful";
