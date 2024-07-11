@@ -7,9 +7,9 @@ using Microsoft.EntityFrameworkCore;
 namespace eHospitalServer.Application.Features.Home.GetAllAnnouncements;
 internal sealed class GetAllAnnountcementsQueryHandler(
     IAnnouncementRepository announcementRepository
-) : IRequestHandler<GetAllAnnountcementsQuery, Result<List<GetAllAnnouncementsQueryResponse>>>
+) : IRequestHandler<GetAllAnnouncementsQuery, Result<List<GetAllAnnouncementsQueryResponse>>>
 {
-    public async Task<Result<List<GetAllAnnouncementsQueryResponse>>> Handle(GetAllAnnountcementsQuery request, CancellationToken cancellationToken)
+    public async Task<Result<List<GetAllAnnouncementsQueryResponse>>> Handle(GetAllAnnouncementsQuery request, CancellationToken cancellationToken)
     {
         var announcements = await announcementRepository.GetAll().Where(p => p.IsPublish == true).OrderByDescending(p => p.PublishDate).ToListAsync(cancellationToken);
 

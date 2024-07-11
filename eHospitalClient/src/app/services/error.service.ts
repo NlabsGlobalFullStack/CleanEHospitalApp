@@ -16,7 +16,7 @@ export class ErrorService {
 
     switch (err.status) {
       case 0:
-        this.swal.callToast("API adresine ulaşılamıyor","error");
+        this.swal.callToast("API address access denied!","error");
         break;        
       
       case 403:
@@ -29,7 +29,7 @@ export class ErrorService {
         break;
     
       case 404:
-        this.swal.callToast("API adresi bulunamadı","error")
+        this.swal.callToast("API address not found!","error")
         break;
         
       case 500:

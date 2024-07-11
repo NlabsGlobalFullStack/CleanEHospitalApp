@@ -19,6 +19,13 @@ internal sealed class GetAllVehiclesQueryHandler(
             VehicleType = v.VehicleType,
             VehicleTypeValue = v.VehicleType.Value,
             Capacity = v.Capacity,
+            CreatedUser = v.CreatedUser,
+            CreatedDate = v.CreatedDate,
+            IsUpdated = v.IsUpdated,
+            UpdatedUser = v.UpdatedUser,
+            UpdatedDate = v.UpdatedDate,
+            DeletedUser = v.DeletedUser,
+            DeletedDate = v.DeletedDate,
             IsDeleted = v.IsDeleted
         }).ToList();
 

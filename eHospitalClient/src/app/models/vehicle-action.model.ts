@@ -1,4 +1,5 @@
 import { EmployeeModel } from "./employee.model";
+import { VehicleOperationTypeEnum } from "./enums/vehicle-operation-type-enum.model";
 import { VehicleModel } from "./vehicle.model";
 
 export class VehicleActionModel{
@@ -10,7 +11,7 @@ export class VehicleActionModel{
     vehicleId: string = "";
     vehicle: VehicleModel = new VehicleModel();
 
-    vehicleOperation: VehicleOperationModel = new VehicleOperationModel();
+    vehicleOperation: VehicleOperationTypeEnum = new VehicleOperationTypeEnum();
     vehicleOperationValue: number = 0;
 
     description: string = "";
@@ -21,9 +22,4 @@ export class VehicleActionModel{
     updatedUser: string = "";
     updatedDate: string = "";
     isUpdated: boolean = false;
-}
-
-export class VehicleOperationModel{
-    value: number = 0;
-    name: string = "";
 }

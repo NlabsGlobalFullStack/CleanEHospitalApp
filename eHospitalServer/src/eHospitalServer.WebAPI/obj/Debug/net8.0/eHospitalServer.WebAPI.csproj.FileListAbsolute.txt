@@ -311,7 +311,6 @@ D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.WebA
 D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.WebAPI\obj\Debug\net8.0\eHospitalServer.WebAPI.AssemblyInfoInputs.cache
 D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.WebAPI\obj\Debug\net8.0\eHospitalServer.WebAPI.AssemblyInfo.cs
 D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.WebAPI\obj\Debug\net8.0\eHospitalServer.WebAPI.csproj.CoreCompileInputs.cache
-D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.WebAPI\obj\Debug\net8.0\eHospitalServer.WebAPI.MvcApplicationPartsAssemblyInfo.cs
 D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.WebAPI\obj\Debug\net8.0\eHospitalServer.WebAPI.MvcApplicationPartsAssemblyInfo.cache
 D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.WebAPI\obj\Debug\net8.0\eHospitalServer.WebAPI.sourcelink.json
 D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.WebAPI\obj\Debug\net8.0\staticwebassets.build.json
@@ -331,3 +330,4 @@ D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.WebA
 D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.WebAPI\bin\Debug\net8.0\eHospitalServer.WebAPI.staticwebassets.runtime.json
 D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.WebAPI\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.WebAPI\bin\Debug\net8.0\Nlabs.FileService.dll
+D:\Projects\FullStack\CleanEHospitalApp\eHospitalServer\src\eHospitalServer.WebAPI\obj\Debug\net8.0\eHospitalServer.WebAPI.MvcApplicationPartsAssemblyInfo.cs

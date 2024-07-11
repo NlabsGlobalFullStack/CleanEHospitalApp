@@ -25,6 +25,22 @@
       "PackagePath": "staticwebassets\\departments\\c1542876-17e1-4f4d-aba5-30030f719204.png"
     },
     {
+      "Id": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.WebAPI\\wwwroot\\sliders\\6c62f7e5-38fe-4ecc-b486-9ac917e56079.png",
+      "PackagePath": "staticwebassets\\sliders\\6c62f7e5-38fe-4ecc-b486-9ac917e56079.png"
+    },
+    {
+      "Id": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.WebAPI\\wwwroot\\sliders\\7acc6796-ea18-4bc6-8ceb-c2f7d8554f36.png",
+      "PackagePath": "staticwebassets\\sliders\\7acc6796-ea18-4bc6-8ceb-c2f7d8554f36.png"
+    },
+    {
+      "Id": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.WebAPI\\wwwroot\\sliders\\b4527a2f-d82b-4f28-b9a4-81289105e4f9.png",
+      "PackagePath": "staticwebassets\\sliders\\b4527a2f-d82b-4f28-b9a4-81289105e4f9.png"
+    },
+    {
+      "Id": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.WebAPI\\wwwroot\\sliders\\d04b6a79-1778-4176-845c-58a5e839cb20.png",
+      "PackagePath": "staticwebassets\\sliders\\d04b6a79-1778-4176-845c-58a5e839cb20.png"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.eHospitalServer.WebAPI.props",
       "PackagePath": "build\\eHospitalServer.WebAPI.props"
     },

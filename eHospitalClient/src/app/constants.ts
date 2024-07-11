@@ -1,10 +1,10 @@
-import { RoomTypeModel } from "./models/room.model";
-import { VehicleOperationModel } from "./models/vehicle-action.model";
-import { VehicleTypeModel } from "./models/vehicle.model";
+import { RoomTypeEnum } from "./models/enums/room-type-enum.model";
+import { VehicleOperationTypeEnum } from "./models/enums/vehicle-operation-type-enum.model";
+import { VehicleTypeEnum } from "./models/enums/vehicle.type.model";
 
 export const api: string = "https://localhost:7058";
 
-export const roomTypes: RoomTypeModel[] = [
+export const roomTypes: RoomTypeEnum[] = [
     {
         value: 1,
         name: "Patient Room"
@@ -27,7 +27,7 @@ export const roomTypes: RoomTypeModel[] = [
     }
 ];
 
-export const vehicleTypes: VehicleTypeModel[] = [
+export const vehicleTypes: VehicleTypeEnum[] = [
     {
         value: 1,
         name: "Ambulance"
@@ -42,7 +42,7 @@ export const vehicleTypes: VehicleTypeModel[] = [
     },
 ];
 
-export const vehicleOperations: VehicleOperationModel[] = [
+export const vehicleOperations: VehicleOperationTypeEnum[] = [
     {
         value: 1,
         name: "Satın Alındı"

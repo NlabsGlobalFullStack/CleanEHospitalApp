@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { TitleService } from '../../../../services/title.service';
 import { DepartmentModel } from '../../../../models/department.model';
 import { UserModel } from '../../../../models/user.model';
-import { ServiceCareModel } from '../../../../models/service.model';
+import { ServiceModel } from '../../../../models/service.model';
 import { FaqModel } from '../../../../models/faq.model';
 import { SliderModel } from '../../../../models/slider.model';
 import { AnnouncementModel } from '../../../../models/announcement.model';
@@ -20,7 +20,7 @@ import { BreadcrumpComponent } from '../../../layout/shared/breadcrump/breadcrum
 export class AdminDashboardComponent {
   departments: DepartmentModel[] = [];
   users: UserModel[] = [];
-  services: ServiceCareModel[] = [];
+  services: ServiceModel[] = [];
   faqs: FaqModel[] = [];
   sliders: SliderModel[] = [];
   announcements: AnnouncementModel[] = [];

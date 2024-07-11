@@ -47,10 +47,6 @@ export class RoomsComponent implements OnInit {
   getAll() {
     this.http.post<RoomModel[]>("Rooms/GetAll", {}, (res) => {
       this.rooms = res;
-      if (this.rooms.length > 0) {
-        this.updateModel.roomTypeValue = this.rooms[0].roomType!.value;
-        this.updateModel.departmentId = this.rooms[0].departmentId;
-      }
     })
   }
 

@@ -20,7 +20,7 @@ internal sealed class CreateVehicleCommandHandler
 
         if (vehicleIsExists is not null)
         {
-            return Result<string>.Failure("vehicle is already taken");
+            return Result<string>.Failure("A record for this title already exists!");
         }
 
         var vehicle = mapper.Map<Vehicle>(request);

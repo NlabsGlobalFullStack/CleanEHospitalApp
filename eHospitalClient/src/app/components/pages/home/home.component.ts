@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FooterComponent } from "../../layout/footer/footer.component";
 import { DepartmentModel } from '../../../models/department.model';
-import { ServiceCareModel } from '../../../models/service.model';
+import { ServiceModel } from '../../../models/service.model';
 import { FaqModel } from '../../../models/faq.model';
 import { SliderModel } from '../../../models/slider.model';
 import { SettingsModel } from '../../../models/settings.model';
@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit{
     apiUrl: string = api;
     departments: DepartmentModel[] = [];
     doctors: DoctorModel[] = [];
-    services: ServiceCareModel[] = [];
+    services: ServiceModel[] = [];
     faqs: FaqModel[] = [];
     sliders: SliderModel[] = [];
     announcements: AnnouncementModel[] = [];
@@ -76,7 +76,7 @@ export class HomeComponent implements OnInit{
     }
 
     getServices() {
-        this.http.post<ServiceCareModel[]>("Home/GetServices", {}, (res) => {
+        this.http.post<ServiceModel[]>("Home/GetServices", {}, (res) => {
             this.services = res;
         });
     }

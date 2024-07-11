@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace eHospitalServer.Application.Features.Announcements.GetByIdAnnouncement;
 
-internal sealed class GetByAnnouncementUrlQueryHandler(
+internal sealed class GetByAnnouncementQueryHandler(
     IAnnouncementRepository announcementRepository
 ) : IRequestHandler<GetByIdAnnouncementQuery, Result<GetByIdAnnouncementResponse>>
 {

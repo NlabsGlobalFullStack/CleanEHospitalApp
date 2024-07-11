@@ -8,19 +8,19 @@ export class VehicleMissionModel{
     id: string = "";
     
     vehicleId: string = "";
-    vehicle: VehicleModel = new VehicleModel();
+    vehicle: VehicleModel | any;
 
     employeeId: string = "";
-    employee: EmployeeModel = new EmployeeModel();
+    employee: EmployeeModel | any;
     
     doctorId: string = "";
-    doctor: DoctorModel = new DoctorModel();
+    doctor: DoctorModel | any;
 
     nurseId: string = "";
-    nurse: NurseModel = new NurseModel();
+    nurse: NurseModel | any;
 
     patientId: string = "";
-    patient: PatientModel = new PatientModel();
+    patient: PatientModel | any;
 
     patientRelative: string = "";
     

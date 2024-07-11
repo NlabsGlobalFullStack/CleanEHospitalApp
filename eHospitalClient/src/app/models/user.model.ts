@@ -25,16 +25,16 @@ export class UserModel{
     role: string = "";
 
     doctorId?: string = "";
-    doctor?: DoctorModel = new DoctorModel();
+    doctor?: DoctorModel | any;
 
     nurseId?: string = "";
-    nurse?: NurseModel = new NurseModel();
+    nurse?: NurseModel | any;
 
     employeeId?: string = "";
-    employee?: EmployeeModel = new EmployeeModel();
+    employee?: EmployeeModel | any;
     
     patientId?: string = "";
-    patient?: PatientModel = new PatientModel();
+    patient?: PatientModel | any;
 
     isActive: boolean = true;
     isDeleted: boolean = false;    

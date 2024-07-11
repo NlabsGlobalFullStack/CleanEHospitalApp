@@ -7,7 +7,7 @@ public class AppUser : IdentityUser<string>
     {
         Id = Guid.NewGuid().ToString();
     }
-    public string Image { get; set; }
+    public string Image { get; set; } = default!;
     public string IdentityNumber { get; set; } = default!;
     public string FirstName { get; set; } = default!;
     public string LastName { get; set; } = default!;

@@ -16,6 +16,8 @@ import { AnnouncementsComponent } from './components/pages/announcements/announc
 import { DepartmentsComponent } from './components/pages/departments/departments.component';
 import { RoomsComponent } from './components/pages/rooms/rooms.component';
 import { VehiclesComponent } from './components/pages/vehicles/vehicles.component';
+import { SlidersComponent } from './components/pages/sliders/sliders.component';
+import { VehicleDetailComponent } from './components/pages/vehicle-detail/vehicle-detail.component';
 
 export const routes: Routes = [
     {
@@ -72,8 +74,16 @@ export const routes: Routes = [
                 component: VehiclesComponent
             },
             {
+                path: "vehicle-detail/:id",
+                component: VehicleDetailComponent
+            },
+            {
                 path: "faqs",
                 component: FaqsComponent
+            },
+            {
+                path: "sliders",
+                component: SlidersComponent
             }
         ]
     },

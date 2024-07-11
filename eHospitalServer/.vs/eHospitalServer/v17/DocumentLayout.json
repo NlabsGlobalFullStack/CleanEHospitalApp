@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DEA25EDA-EE1C-4CBC-AD44-A7BA9D95E342}|src\\eHospitalServer.WebAPI\\eHospitalServer.WebAPI.csproj|d:\\projects\\fullstack\\cleanehospitalapp\\ehospitalserver\\src\\ehospitalserver.webapi\\helpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DEA25EDA-EE1C-4CBC-AD44-A7BA9D95E342}|src\\eHospitalServer.WebAPI\\eHospitalServer.WebAPI.csproj|solutionrelative:src\\ehospitalserver.webapi\\helpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7364FBAF-3FDA-4BE7-84B9-CDC388D4426E}|src\\eHospitalServer.Application\\eHospitalServer.Application.csproj|d:\\projects\\fullstack\\cleanehospitalapp\\ehospitalserver\\src\\ehospitalserver.application\\features\\announcements\\createannouncement\\createannouncementcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7364FBAF-3FDA-4BE7-84B9-CDC388D4426E}|src\\eHospitalServer.Application\\eHospitalServer.Application.csproj|solutionrelative:src\\ehospitalserver.application\\features\\announcements\\createannouncement\\createannouncementcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7364FBAF-3FDA-4BE7-84B9-CDC388D4426E}|src\\eHospitalServer.Application\\eHospitalServer.Application.csproj|d:\\projects\\fullstack\\cleanehospitalapp\\ehospitalserver\\src\\ehospitalserver.application\\features\\vehicles\\getallvehicles\\getallvehiclesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7364FBAF-3FDA-4BE7-84B9-CDC388D4426E}|src\\eHospitalServer.Application\\eHospitalServer.Application.csproj|solutionrelative:src\\ehospitalserver.application\\features\\vehicles\\getallvehicles\\getallvehiclesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7364FBAF-3FDA-4BE7-84B9-CDC388D4426E}|src\\eHospitalServer.Application\\eHospitalServer.Application.csproj|d:\\projects\\fullstack\\cleanehospitalapp\\ehospitalserver\\src\\ehospitalserver.application\\features\\vehicles\\getbyidvehicle\\getbyidvehiclequery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7364FBAF-3FDA-4BE7-84B9-CDC388D4426E}|src\\eHospitalServer.Application\\eHospitalServer.Application.csproj|solutionrelative:src\\ehospitalserver.application\\features\\vehicles\\getbyidvehicle\\getbyidvehiclequery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -71,27 +71,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Helpers.cs",
-              "DocumentMoniker": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.WebAPI\\Helpers.cs",
-              "RelativeDocumentMoniker": "src\\eHospitalServer.WebAPI\\Helpers.cs",
-              "ToolTip": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.WebAPI\\Helpers.cs",
-              "RelativeToolTip": "src\\eHospitalServer.WebAPI\\Helpers.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "CreateAnnouncementCommandHandler.cs",
+              "DocumentMoniker": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Application\\Features\\Announcements\\CreateAnnouncement\\CreateAnnouncementCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\eHospitalServer.Application\\Features\\Announcements\\CreateAnnouncement\\CreateAnnouncementCommandHandler.cs",
+              "ToolTip": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Application\\Features\\Announcements\\CreateAnnouncement\\CreateAnnouncementCommandHandler.cs",
+              "RelativeToolTip": "src\\eHospitalServer.Application\\Features\\Announcements\\CreateAnnouncement\\CreateAnnouncementCommandHandler.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAwBQAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T18:17:39.154Z",
+              "WhenOpened": "2024-07-11T12:45:19.857Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GetAllVehiclesQueryHandler.cs",
-              "DocumentMoniker": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Application\\Features\\Vehicles\\GetAllVehicles\\GetAllVehiclesQueryHandler.cs",
-              "RelativeDocumentMoniker": "src\\eHospitalServer.Application\\Features\\Vehicles\\GetAllVehicles\\GetAllVehiclesQueryHandler.cs",
-              "ToolTip": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Application\\Features\\Vehicles\\GetAllVehicles\\GetAllVehiclesQueryHandler.cs",
-              "RelativeToolTip": "src\\eHospitalServer.Application\\Features\\Vehicles\\GetAllVehicles\\GetAllVehiclesQueryHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAoAAAA",
+              "Title": "GetByIdVehicleQuery.cs",
+              "DocumentMoniker": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Application\\Features\\Vehicles\\GetByIdVehicle\\GetByIdVehicleQuery.cs",
+              "RelativeDocumentMoniker": "src\\eHospitalServer.Application\\Features\\Vehicles\\GetByIdVehicle\\GetByIdVehicleQuery.cs",
+              "ToolTip": "D:\\Projects\\FullStack\\CleanEHospitalApp\\eHospitalServer\\src\\eHospitalServer.Application\\Features\\Vehicles\\GetByIdVehicle\\GetByIdVehicleQuery.cs",
+              "RelativeToolTip": "src\\eHospitalServer.Application\\Features\\Vehicles\\GetByIdVehicle\\GetByIdVehicleQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T17:15:22.854Z",
+              "WhenOpened": "2024-07-11T18:00:30.313Z",
               "EditorCaption": ""
             }
           ]

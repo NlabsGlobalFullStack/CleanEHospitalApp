@@ -1,33 +1,201 @@
 <div class="page-body">
-    <div class="container-xl">
-      <div class="row row-deck row-cards">
-        <app-breadcrump title="Vehicle List"></app-breadcrump>
-        <app-table tabelTitle="Vehicles" [heads]="['Invoice Subject', 'Client', 'VAT No.', 'Created', 'Status', 'Price']">        
-          <tr>
-            <td>
-              <span class="flag flag-country-us"></span>
-              Carlson Limited
-            </td>
-            <td>
-              87956621
-            </td>
-            <td>
-              15 Dec 2017
-            </td>
-            <td>
-              <span class="badge bg-success me-1"></span> Paid
-            </td>
-            <td>$887</td>
-            <td class="text-end">
-              <button class="btn btn-outline-warning me-1">
-                <i class="fa-solid fa-edit"></i>
-              </button>
-              <button class="btn btn-outline-danger">
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </td>
-          </tr>
-        </app-table>
+  <div class="container-xl">
+    <div class="row row-deck row-cards">
+      <div class="page-header d-print-none">
+        <div class="container-xl">
+          <div class="row g-2 align-items-center">
+            <div class="col">
+              <!-- Page pre-title -->
+          <div class="page-pretitle" style="color: white;">
+            Overview
+              </div>
+              <h2 class="page-title">
+                Vehicle List
+              </h2>
+            </div>
+            <!-- Page title actions -->
+            <div class="col-auto ms-auto d-print-none">
+              <div class="btn-list">          
+                <a href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#createForm">
+                  <i class="fa-solid fa-plus"></i>
+                  Create Vehicle
+                </a>
+                <a href="#" class="btn btn-primary d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#createForm" aria-label="Create new Faq">
+                  <i class="fa-solid fa-plus"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Vehicle</h3>
+            </div>
+            <div class="table-responsive">
+              <table class="table card-table table-vcenter text-nowrap datatable">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Plate</th>
+                    <th>Vehicle Type</th>
+                    <th>Capacity</th>
+                    <th>Created Date</th>
+                    <th>Is Deleted</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @if (vehicles.length === 0) {
+                    <tr>
+                      <td colspan="6">vehicles not found</td>
+                    </tr>
+                  }
+                  @if(vehicles.length > 0) {
+                    @for (item of vehicles; track item) {
+                      <tr>
+                        <td>{{ $index + 1}}</td>
+                        <td>{{ item.plate }}</td>
+                        <td>{{ item.vehicleType!.name }}</td>
+                        <td>{{ item.capacity }}</td>
+                        
+                        <td>{{ item.createdDate | date: 'dd MMMM yyyy HH:mm' }}</td>
+                        <td>
+                          @if(item.isDeleted) {                            
+                          <span class="badge bg-danger me-1">Yes</span>
+                          }
+                          @else {                                
+                            <span class="badge bg-success me-1">No</span>
+                          }
+                        </td>
+                        <td class="text-end">
+                          <button class="btn btn-outline-info me-1" (click)="getById(item.id)">
+                            <i class="fa-solid fa-eye"></i>
+                          </button>
+                          <button class="btn btn-outline-warning me-1" data-bs-toggle="modal" data-bs-target="#updateForm" (click)="get(item)">
+                            <i class="fa-solid fa-edit"></i>
+                          </button>
+                          <button class="btn btn-outline-danger" (click)="deleteById(item.id)">
+                            <i class="fa-solid fa-trash"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    }
+                  }
+                </tbody>
+              </table>
+            </div>
+            <div class="card-footer d-flex align-items-center">
+              <p class="m-0 text-muted">Showing <span>1</span> to <span>8</span> of <span>16</span> entries</p>
+              <ul class="pagination m-0 ms-auto">
+                <li class="page-item disabled">
+                  <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
       </div>
     </div>
   </div>
+</div>
+
+<!-- Add Form -->
+<div class="modal modal-blur fade" id="createForm" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">New Vehicle Form</h5>
+        <button type="button" #createModalCloseBtn class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form formValidate #createForm="ngForm" autocomplete="off" (ngSubmit)="create(createForm)">
+        <div class="modal-body">
+          <div class="row">
+            <div class="mb-3">
+              <label class="form-label">Plate</label>
+              <input type="text" required minlength="3" placeholder="Plate" class="form-control" name="plate" [(ngModel)]="createModel.plate">
+            </div>   
+          </div>
+          <div class="row">
+            <div>
+              <label class="form-label">Vehicle Type</label>
+              <select [(ngModel)]="createModel.vehicleTypeValue" name="vehicleTypeValue" class="form-control">
+                <option [value]=0>Please make your choice!</option>
+                @for (vehicleType of vehicleTypes; track vehicleType) {
+                  <option [value]="vehicleType.value">{{ vehicleType.name }}</option>
+                }                    
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="md-3">
+              <label class="form-label">Capacity</label>
+              <input type="number" required minlength="1" [step]="1" placeholder="Capacity" class="form-control" name="capacity" [(ngModel)]="createModel.capacity">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary ms-auto" data-bs-dismiss="modal">
+            <i class="fa-solid fa-plus me-1"></i>
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Add Form -->
+
+<!-- Update Form -->
+<div class="modal modal-blur fade" id="updateForm" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Update Vehicle Form</h5>
+        <button type="button" #updateModalCloseBtn class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form formValidate #updateForm="ngForm" autocomplete="off" (ngSubmit)="update(updateForm)">
+        <div class="modal-body">
+          <div class="row">
+            <div class="mb-3">
+              <label class="form-label">Plate</label>
+              <input type="text" required minlength="3"  placeholder="Plate" class="form-control" [(ngModel)]="updateModel.plate" name="updatePlate">
+            </div>   
+          </div>
+          <div class="row">
+            <div>
+              <label class="form-label">Vehicle Type</label>
+              <select [(ngModel)]="updateModel.vehicleTypeValue" name="updateRoomType" class="form-control">
+                @for (vehicleType of vehicleTypes; track vehicleType) {
+                  <option [value]="vehicleType.value" [selected]="updateModel.vehicleTypeValue === vehicleType.value">{{ vehicleType.name }}</option>
+                }
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="md-3">
+              <label class="form-label">Capacity</label>
+              <input type="number" required minlength="1" placeholder="Capacity" class="form-control" name="capacity" [(ngModel)]="updateModel.capacity">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary ms-auto" data-bs-dismiss="modal">
+            <i class="fa-solid fa-plus me-1"></i>
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Update Form -->

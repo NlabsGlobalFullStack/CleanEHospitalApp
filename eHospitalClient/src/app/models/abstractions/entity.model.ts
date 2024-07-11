@@ -1,4 +1,4 @@
-export class EntityModel{
+export abstract class EntityModel{
     id: string = "";
     createdUser: string = "";
     createdDate: string = "";

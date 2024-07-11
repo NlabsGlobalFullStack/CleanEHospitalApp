@@ -2,4 +2,4 @@
 using MediatR;
 
 namespace eHospitalServer.Application.Features.Home.GetAllAnnouncements;
-public sealed record GetAllAnnountcementsQuery : IRequest<Result<List<GetAllAnnouncementsQueryResponse>>>;
+public sealed record GetAllAnnouncementsQuery : IRequest<Result<List<GetAllAnnouncementsQueryResponse>>>;

@@ -6,9 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace eHospitalServer.Presentation.Controllers;
 public sealed class DashboardController : ApiController
 {
-    public DashboardController(IMediator mediator) : base(mediator)
-    {
-    }
+    public DashboardController(IMediator mediator) : base(mediator) { }
 
     [HttpPost]
     public async Task<IActionResult> GetByUser(string Id, CancellationToken cancellationToken)

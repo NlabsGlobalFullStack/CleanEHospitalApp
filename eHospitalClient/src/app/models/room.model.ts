@@ -1,13 +1,25 @@
 import { DepartmentModel } from "./department.model";
-import { EntityModel } from "./abstractions/entity.model";
+import { RoomTypeEnum } from "./enums/room-type-enum.model";
 
-export class RoomModel extends EntityModel{
+export class RoomModel{
+    id: string = "";
+    createdUser: string = "";
+    createdDate: string = "";
+
+    updatedUser?: string = "";
+    updatedDate?: string = "";
+    isUpdated: boolean = false;
+
+    deletedUser?: string = "";
+    deletedDate?: string = "";
+    isDeleted: boolean = false;
+
     number: string = "";
 
     departmentId: string = "";
     department?: DepartmentModel = new DepartmentModel();
     
-    roomType: RoomTypeModel = new RoomTypeModel();
+    roomType: RoomTypeEnum = new RoomTypeEnum();
     roomTypeValue: number = 0;
 
     capacity: number = 1;
@@ -17,7 +29,3 @@ export class RoomModel extends EntityModel{
     isOutOfService: boolean = false;
 }
 
-export class RoomTypeModel{
-    name: string = "";
-    value: number = 0;
-}

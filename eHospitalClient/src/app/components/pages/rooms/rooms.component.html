@@ -243,12 +243,6 @@
                 <select [(ngModel)]="updateModel.roomTypeValue" name="updateRoomType" class="form-control">
                   @for (roomType of roomTypes; track roomType) {
                     <option [value]="roomType.value" [selected]="updateModel.roomTypeValue === roomType.value">{{ roomType.name }}</option>
-                    <!-- @if (updateModel.roomTypeValue === roomType.value) {
-                      <option [value]="roomType.value" selected>{{ roomType.name }}</option>
-                    }
-                    @else{
-                      <option [value]="roomType.value">{{ roomType.name }}</option>
-                    } -->
                   }
                 </select>
               </div>

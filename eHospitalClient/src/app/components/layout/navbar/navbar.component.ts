@@ -3,6 +3,7 @@ import { Router, RouterLink } from '@angular/router';
 import { UserModel } from '../../../models/user.model';
 import { AuthService } from '../../../services/auth.service';
 import { HttpService } from '../../../services/http.service';
+import { SwalService } from '../../../services/swal.service';
 
 @Component({
   selector: 'app-navbar',
@@ -17,7 +18,8 @@ export class NavbarComponent implements OnInit{
   constructor(
     public auth: AuthService,
     private router: Router,
-    private http: HttpService
+    private http: HttpService,
+    private swal: SwalService
   ){}
 
 

@@ -7,7 +7,11 @@ using eHospitalServer.Application.Features.Faqs.CreateFaq;
 using eHospitalServer.Application.Features.Faqs.UpdateFaq;
 using eHospitalServer.Application.Features.Rooms.CreateRoom;
 using eHospitalServer.Application.Features.Rooms.UpdateRoom;
+using eHospitalServer.Application.Features.Sliders.CreateSlider;
+using eHospitalServer.Application.Features.Sliders.UpdateSlider;
 using eHospitalServer.Application.Features.Users.Queries.Users.GetAllUsers;
+using eHospitalServer.Application.Features.Vehicles.CreateVehicle;
+using eHospitalServer.Application.Features.Vehicles.UpdateVehicle;
 using eHospitalServer.Domain.Entities;
 using eHospitalServer.Domain.Enums;
 
@@ -21,9 +25,19 @@ public sealed class MappingProfile : Profile
             options.MapFrom(map => RoomTypeEnum.FromValue(map.RoomTypeValue));
         });
 
-        CreateMap<UpdateRoomCommand, Room>().ForMember(member => member.RoomType, options =>
+        CreateMap<UpdateRoomCommand, Room>().ForMember(m => m.RoomType, options =>
         {
             options.MapFrom(map => RoomTypeEnum.FromValue(map.RoomTypeValue));
+        });
+
+        CreateMap<CreateVehicleCommand, Vehicle>().ForMember(m => m.VehicleType, options =>
+        {
+            options.MapFrom(map => VehicleTypeEnum.FromValue(map.VehicleTypeValue));
+        });
+
+        CreateMap<UpdateVehicleCommand, Vehicle>().ForMember(m => m.VehicleType, options =>
+        {
+            options.MapFrom(map => VehicleTypeEnum.FromValue(map.VehicleTypeValue));
         });
 
         CreateMap<GetAllUsersQuery, AppUser>().ReverseMap();
@@ -37,5 +51,8 @@ public sealed class MappingProfile : Profile
 
         CreateMap<CreateFaqCommand, Faq>().ReverseMap();
         CreateMap<UpdateFaqCommand, Faq>().ReverseMap();
+
+        CreateMap<CreateSliderCommand, Slider>().ReverseMap();
+        CreateMap<UpdateSliderCommand, Slider>().ReverseMap();
     }
 }
